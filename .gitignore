@@ -1,0 +1,8 @@
+.DS_Store
+*.tfvars
+*.hcl
+.terraform
+infra/state
+.env
+dist/
+q/
