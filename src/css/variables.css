@@ -1,10 +1,11 @@
 
-@import url(https://fonts.bunny.net/css?family=aclonica:400|fira-sans:400,400i);
+@import url(https://fonts.bunny.net/css?family=amarante:400|hanken-grotesk:400,700,700i|libre-baskerville:400);
 
 :root {
 	/* Fonts */
-	--font-base: 'Fira Sans', sans-serif;
-	--font-heading: 'Aclonica', sans-serif;
+	--font-base: 'Libre Baskerville', serif;
+	--font-heading: 'Amarante', display;
+	--font-secondary: 'Hanken Grotesk', sans-serif;
 	--font-xxs: 0.5rem;
 	--font-xs: 0.75rem;
 	--font-sm: 0.875rem;
@@ -41,17 +42,21 @@
 }
 
 :root {
-	--primary-bg: var(--grey-200);
-	--primary-fg: var(--grey-800);
+	--primary-bg: rgb(255,253,239);
+	--primary-fg: rgb(20,20,20);
 	--primary-border: 1px solid var(--grey-400);
 
-	--secondary-bg: var(--grey-200);
-	--secondary-fg: var(--grey-950);
+	--secondary-bg: rgb(250,247,232);
+	--secondary-fg: rgb(91,80,62);
 
-	--menu-bg: white;
-	--menu-fg: var(--grey-800);
-	--menu-border: 2px solid var(--grey-950);
+	--title-fg: rgb(160,76,62);
 
+	--menu-bg: var(--secondary-bg);
+	--menu-fg: var(--secondary-fg);
+	--menu-border: 1px solid rgb(181,170,157);
+	--menu-width: 250px;
+
+	/* None of these have been used so far */
 	--button-bg: var(--grey-800);
 	--button-fg: var(--grey-50);
 	--button-border: 2px solid var(--grey-950);

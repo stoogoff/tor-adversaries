@@ -17,14 +17,28 @@
 </head>
 <body>
 
-<nav data-q-component="menu">
-	<div data-q-if="loading">Loading...</div>
-	<menu data-q-if="!loading">
-		<li data-q-each="adversaries">
-			<span data-q-text="title" data-q-click="click"></span>
-		</li>
-	</menu>
-</nav>
+<div class="container">
+	<!-- list of adversaries -->
+	<nav data-q-component="menu">
+		<div data-q-if="loading">Loading...</div>
+		<menu data-q-if="!loading">
+			<li data-q-each="adversaries">
+				<span data-q-text="title" data-q-click="click"></span>
+			</li>
+		</menu>
+	</nav>
+
+	<div>
+		<!-- adversary info panel -->
+		<article>
+			<h1>The One Ring: Adversaries</h1>
+			<p>Welcome to the site</p>
+		</article>
+
+		<!-- active adversaries -->
+		<main>Active adversaries</main>
+	</div>
+</div>
 
 <script type="module" src="./js/main.js"></script>
 
