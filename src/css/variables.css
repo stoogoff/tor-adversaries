@@ -1,0 +1,70 @@
+
+@import url(https://fonts.bunny.net/css?family=aclonica:400|fira-sans:400,400i);
+
+:root {
+	/* Fonts */
+	--font-base: 'Fira Sans', sans-serif;
+	--font-heading: 'Aclonica', sans-serif;
+	--font-xxs: 0.5rem;
+	--font-xs: 0.75rem;
+	--font-sm: 0.875rem;
+	--font-md: 1rem;
+	--font-lg: 1.125rem;
+	--font-xl: 1.25rem;
+	--font-2xl: 1.5rem;
+	--font-3xl: 1.875rem;
+	--font-4xl: 2rem;
+
+	/* Shadow */
+	--shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	--shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+	
+	/* Spacing */
+	--spacing-1: 0.25rem;
+	--spacing-2: 0.5rem;
+	--spacing-3: 0.75rem;
+	--spacing-4: 1rem;
+	--spacing-5: 1.25rem;
+	--spacing-6: 1.5rem;
+	--spacing-7: 1.75rem;
+	--spacing-8: 2rem;
+	--spacing-9: 2.25rem;
+	--spacing-10: 2.5rem;
+	--spacing-11: 2.75rem;
+	--spacing-12: 3rem;
+	--spacing-13: 3.25rem;
+	--spacing-14: 3.5rem;
+	--spacing-15: 3.75rem;
+	--spacing-16: 4rem;
+}
+
+:root {
+	--primary-bg: var(--grey-200);
+	--primary-fg: var(--grey-800);
+	--primary-border: 1px solid var(--grey-400);
+
+	--secondary-bg: var(--grey-200);
+	--secondary-fg: var(--grey-950);
+
+	--menu-bg: white;
+	--menu-fg: var(--grey-800);
+	--menu-border: 2px solid var(--grey-950);
+
+	--button-bg: var(--grey-800);
+	--button-fg: var(--grey-50);
+	--button-border: 2px solid var(--grey-950);
+
+	--button-hover-bg: var(--grey-700);
+	--button-hover-fg: var(--grey-50);
+	--button-border: 2px solid var(--grey-950);
+
+	--button-disabled-bg: var(--grey-500);
+	--button-disabled-fg: var(--grey-200);
+	--button-disabled-border: 2px solid var(--grey-700);
+
+	--toast-bg: var(--emerald-200);
+	--toast-fg: var(--emerald-700);
+	--toast-border: 2px solid var(--emerald-500);
+}

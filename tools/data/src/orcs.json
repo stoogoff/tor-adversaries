@@ -1,0 +1,176 @@
+[
+	{
+		"title": "Great Orc Chief",
+		"traits": ["Bold", "Cunning"],
+		"attributes": {
+			"level": 7,
+			"endurance": 48,
+			"might": 2,
+			"hate": 7,
+			"parry": 3,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"title": "Heavy Scimitar",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			},
+			{
+				"title": "Broad Headed Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Horrible Strength", "Snake-like Speed", "Yell of Triumph"]
+	},
+	{
+		"title": "Great Orc Bodyguard",
+		"traits": ["Fierce", "Wary"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"hate": 6,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"title": "Orc-axe",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			},
+			{
+				"title": "Broad Headed Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Hideous Toughness"]
+	},
+	{
+		"title": "Goblin Archer",
+		"traits": ["Cunning", "Keen-eyed"],
+		"attributes": {
+			"level": 2,
+			"endurance": 8,
+			"might": 1,
+			"hate": 2,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"title": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"title": "Jagged Knife",
+				"skill": 2,
+				"damage": 2,
+				"injury": 14,
+				"properties": []
+			}
+		],
+		"abilities": ["Hate Sunlight", "Craven", "Orc-poison"]
+	},
+	{
+		"title": "Orc Chieftain",
+		"traits": ["Cruel", "Hardened"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"hate": 5,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"title": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"title": "Spear",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Great Leap", "Snake-like Speed", "Yell of Triumph"]
+	},
+	{
+		"title": "Orc Guard",
+		"traits": ["Strong", "Vigilant"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"title": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"title": "Spear",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight"]
+	},
+	{
+		"title": "Orc Soldier",
+		"traits": ["Rebellios", "Vengeful"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"hate": 3,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"title": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"title": "Spear",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Craven"]
+	}
+]

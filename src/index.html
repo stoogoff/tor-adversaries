@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The One Ring: Adversaries</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script type="importmap">
+{
+	"imports": {
+		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.1.1/",
+		"utils/": "./js/utils/",
+		"tor/": "./js/modules/tor/"
+	}
+}
+</script>
+</head>
+<body>
+
+<nav data-q-component="menu">
+	<div data-q-if="loading">Loading...</div>
+	<menu data-q-if="!loading">
+		<li data-q-each="adversaries">
+			<span data-q-text="title" data-q-click="click"></span>
+		</li>
+	</menu>
+</nav>
+
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
