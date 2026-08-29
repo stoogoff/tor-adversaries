@@ -18,18 +18,73 @@ h1 {
 	color: var(--title-fg);
 }
 h2 {
-	text-align: center;
-	font-weight: normal;
-	font-style: italic;
-	color: var(--title-fg);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: var(--font-md);
+	line-height: 1rem;
+	margin: 0;
 }
 h3 {
-	font-family: var(--font-heading);
-	font-size: var(--font-xl);
-	margin-bottom: var(--spacing-1);
+	text-transform: uppercase;
+	font-size: var(--font-md);
+	line-height: 1rem;
 	color: var(--title-fg);
+	margin: 0;
 }
 
+dl {
+	margin-bottom: var(--spacing-4);
+	font-weight: bold;
+
+	dt {
+		color: var(--title-fg);
+		line-height: 1rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	dd {
+		font-size: var(--font-2xl);
+		text-align: center;
+	}
+}
+
+table {
+	width: 100%;
+	margin-top: var(--spacing-4);
+	margin-bottom: var(--spacing-4);
+
+	th {
+		text-transform: uppercase;
+		font-size: var(--font-sm);
+		line-height: 1rem;
+		text-align: right;
+		padding: var(--spacing-1);
+
+		&:nth-child(1) {
+			text-align: left;
+		}
+	}
+
+	tbody tr {
+		border-bottom: var(--menu-border);
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		td {
+			text-align: right;
+			padding: var(--spacing-1);
+		}
+
+		td:nth-child(1) {
+			text-align: left;
+		}
+	}
+}
+
+/* Left hand menu bar */
 menu {
 	margin: var(--spacing-4);
 	list-style-type: none;
@@ -64,9 +119,33 @@ main {
 	font-family: var(--font-secondary);
 }
 
+/* Frame for the whole site */
 .container {
 	display: grid;
 	grid-template-columns: var(--menu-width) 1fr;
 	min-height: 100vh;
 	gap: var(--spacing-2);
 }
+
+/* Generic grid classes */
+.grid {
+	display: grid;
+	gap: var(--spacing-4);
+}
+
+.grid-cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+/* Card background */
+.card {
+	background-color: var(--secondary-bg);
+	color: var(--secondary-fg);
+	padding: var(--spacing-4);
+	font-family: var(--font-secondary);
+}
+
+

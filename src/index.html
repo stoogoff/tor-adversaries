@@ -22,17 +22,89 @@
 	<nav data-q-component="menu">
 		<div data-q-if="loading">Loading...</div>
 		<menu data-q-if="!loading">
-			<li data-q-each="adversaries">
-				<span data-q-text="title" data-q-click="click"></span>
-			</li>
+			<li data-q-each="adversaries" data-q-click="click" data-q-text="title"></li>
 		</menu>
 	</nav>
 
 	<div>
 		<!-- adversary info panel -->
-		<article>
-			<h1>The One Ring: Adversaries</h1>
-			<p>Welcome to the site</p>
+		<article data-q-component="info">
+			<div data-q-if="!hasAdversary">
+				<h1>The One Ring: Adversaries</h1>
+				<p>Welcome to the site</p>
+			</div>
+			<div data-q-if="hasAdversary" class="grid grid-cols-2">
+				<div>
+					<h1 data-q-text="title"></h1>
+					<p data-q-text="description"></p>
+				</div>
+				<div class="card">
+					<div class="grid grid-cols-2">
+						<section>
+							<h2 data-q-text="title"></h2>
+							<div data-q-text="traits"></div>
+						</section>
+						<dl>
+							<dt>Attribute Level</dt>
+							<dd data-q-text="level"></dd>
+						</dl>
+					</div>
+					<dl class="grid grid-cols-5">
+						<div>
+							<dt>Endurance</dt>
+							<dd data-q-text="endurance"></dd>
+						</div>
+						<div>
+							<dt>Might</dt>
+							<dd data-q-text="might"></dd>
+						</div>
+						<div data-q-if="hasHate">
+							<dt>Hate</dt>
+							<dd data-q-text="hate"></dd>
+						</div>
+						<div data-q-if="hasResolve">
+							<dt>Resolve</dt>
+							<dd data-q-text="resolve"></dd>
+						</div>
+						<div>
+							<dt>Parry</dt>
+							<dd data-q-text="parry"></dd>
+						</div>
+						<div>
+							<dt>Armour</dt>
+							<dd data-q-text="armour"></dd>
+						</div>
+					</dl>
+					<section>
+						<h3>Combat Proficiencies</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Attack</th>
+									<th>Skill</th>
+									<th>Damage</th>
+									<th>Injury</th>
+									<th>Properties</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-q-each="attacks">
+									<td data-q-text="attack"></td>
+									<td data-q-text="skill"></td>
+									<td data-q-text="damage"></td>
+									<td data-q-text="injury"></td>
+									<td data-q-text="properties"></td>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Abilities</h3>
+						<ul>
+							<!--li data-q-each="abilities" data-q-text=""></li-->
+						</ul>
+					</section>
+				</div>
+			</div>
 		</article>
 
 		<!-- active adversaries -->

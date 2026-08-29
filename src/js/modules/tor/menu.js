@@ -1,5 +1,6 @@
 
 import { FetchStore } from 'utils/fetch-store.js'
+import { infoStore } from 'tor/stores.js'
 
 export default {
 	store: new FetchStore('./data/adversaries.json'),
@@ -12,10 +13,10 @@ export default {
 		this.store.on('loading', () => this.data.loading = true)
 		this.store.on('loaded', () => {
 			// DELME
-			window.setTimeout(() => {
+			//window.setTimeout(() => {
 				this.data.loading = false
 				this.emit('change')
-			}, 1000)
+			//}, 1000)
 		})
 
 		await this.store.load()
@@ -28,11 +29,8 @@ export default {
 	},
 
 	click(evt, context) {
-		console.log({ evt, context })
-		console.log({ ...context.scope.data })
-
 		const adversary = context.scope.data
 
-		console.log({ adversary })
+		infoStore.item = adversary
 	}
 }

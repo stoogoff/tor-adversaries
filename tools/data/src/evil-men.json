@@ -1,0 +1,152 @@
+[
+	{
+		"title": "Southerner Raider",
+		"description": "When a particularly harsh winter has passed, Men from the South may assemble war parties and look for some isolated homestead to plunder, before retreating just as quickly back into the mists where they came from.",
+		"traits": ["Canny", "Hardened"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"resolve": 4,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Axe",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": []
+			},
+			{
+				"attack": "Short Spear",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fierce Folk"]
+	},
+	{
+		"title": "Southerner Champion",
+		"description": "A Southerner Champion may be a chieftain from Dunland, a bandit lord capable of uniting a number of fractious warriors into a small army, or just a particularly vicious brigand.",
+		"traits": ["Cruel", "Tough"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"resolve": 5,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Long-hafted Axe",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Fierce Folk"]
+	},
+	{
+		"title": "Footpad",
+		"description": "A cowardly bandit, ready to rob a defenceless victim, but capable of ambushing a lonely companion with the help of others.",
+		"traits": ["Nimble", "Wary"],
+		"attributes": {
+			"level": 2,
+			"endurance": 8,
+			"might": 1,
+			"resolve": 2,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Cudgel",
+				"skill": 2,
+				"damage": 3,
+				"injury": 12,
+				"properties": []
+			},
+			{
+				"attack": "Bow",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Craven"]
+	},
+	{
+		"title": "Ruffian Chief",
+		"description": "Tougher or simply fiercer, a chief is a ruffian who has reached the top with the help of a sharper mind, or blade.",
+		"traits": ["Ruthless", "Secretive"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"resolve": 3,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Short Sword",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Bow",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Yell of Triumph"]
+	},
+	{
+		"title": "Highway Robber",
+		"description": "More dangerous than a common brigand, a highway robber is used to a life in the Wild, and has learned how to deal with armed victims.",
+		"traits": ["Swift", "Vengeful"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"resolve": 4,
+			"parry": 0,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Snake-like Speed"]
+	}
+]

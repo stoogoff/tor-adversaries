@@ -1,6 +1,7 @@
 [
 	{
 		"title": "Great Orc Chief",
+		"description": "Great Orcs are often encountered as leaders and chieftains of their weaker-blooded relatives.",
 		"traits": ["Bold", "Cunning"],
 		"attributes": {
 			"level": 7,
@@ -12,14 +13,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Heavy Scimitar",
+				"attack": "Heavy Scimitar",
 				"skill": 3,
 				"damage": 5,
 				"injury": 18,
 				"properties": ["Break Shield"]
 			},
 			{
-				"title": "Broad Headed Spear",
+				"attack": "Broad Headed Spear",
 				"skill": 3,
 				"damage": 5,
 				"injury": 16,
@@ -30,6 +31,7 @@
 	},
 	{
 		"title": "Great Orc Bodyguard",
+		"description": "Less cunning than those who lead them, these fell creatures protect their captains at the cost of their lives.",
 		"traits": ["Fierce", "Wary"],
 		"attributes": {
 			"level": 6,
@@ -41,14 +43,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Orc-axe",
+				"attack": "Orc-axe",
 				"skill": 3,
 				"damage": 5,
 				"injury": 18,
 				"properties": ["Break Shield"]
 			},
 			{
-				"title": "Broad Headed Spear",
+				"attack": "Broad Headed Spear",
 				"skill": 3,
 				"damage": 5,
 				"injury": 16,
@@ -59,6 +61,7 @@
 	},
 	{
 		"title": "Goblin Archer",
+		"description": "A Goblin Archer is an Orc chosen for his keen eyes. His ability to see in the dark, coupled with a steady hand, lets him shoot arrows with precision by night or day.",
 		"traits": ["Cunning", "Keen-eyed"],
 		"attributes": {
 			"level": 2,
@@ -70,14 +73,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Bow of Horn",
+				"attack": "Bow of Horn",
 				"skill": 3,
 				"damage": 3,
 				"injury": 14,
 				"properties": ["Pierce"]
 			},
 			{
-				"title": "Jagged Knife",
+				"attack": "Jagged Knife",
 				"skill": 2,
 				"damage": 2,
 				"injury": 14,
@@ -88,6 +91,7 @@
 	},
 	{
 		"title": "Orc Chieftain",
+		"description": "Only the most wicked and cruel Orcs live long enough to become chieftains and lead their tribe or warband to battle. An Orc chieftain is easy to recognise, as it is usually the largest in a group, wielding the meanest weapons and donning superior armour. Often, tell-tale scars or mutilations mark a chieftain’s long service under the Shadow.",
 		"traits": ["Cruel", "Hardened"],
 		"attributes": {
 			"level": 5,
@@ -99,14 +103,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Scimitar",
+				"attack": "Scimitar",
 				"skill": 3,
 				"damage": 3,
 				"injury": 16,
 				"properties": []
 			},
 			{
-				"title": "Spear",
+				"attack": "Spear",
 				"skill": 3,
 				"damage": 3,
 				"injury": 14,
@@ -117,6 +121,7 @@
 	},
 	{
 		"title": "Orc Guard",
+		"description": "The strongest and boldest Orcs are equipped with the toughest armour they can find or put together, and are placed to keep watch on an area wielding a sword and sturdy shield.",
 		"traits": ["Strong", "Vigilant"],
 		"attributes": {
 			"level": 4,
@@ -128,14 +133,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Scimitar",
+				"attack": "Scimitar",
 				"skill": 3,
 				"damage": 3,
 				"injury": 16,
 				"properties": []
 			},
 			{
-				"title": "Spear",
+				"attack": "Spear",
 				"skill": 3,
 				"damage": 3,
 				"injury": 14,
@@ -146,7 +151,8 @@
 	},
 	{
 		"title": "Orc Soldier",
-		"traits": ["Rebellios", "Vengeful"],
+		"description": "Often armed with characteristic bent swords, Orc Soldiers are a loud, undisciplined lot. Only a forceful chieftain with a cruel whip and a sharp blade can keep them in line.",
+		"traits": ["Rebellious", "Vengeful"],
 		"attributes": {
 			"level": 3,
 			"endurance": 12,
@@ -157,14 +163,14 @@
 		},
 		"attacks": [
 			{
-				"title": "Scimitar",
+				"attack": "Scimitar",
 				"skill": 3,
 				"damage": 3,
 				"injury": 16,
 				"properties": []
 			},
 			{
-				"title": "Spear",
+				"attack": "Spear",
 				"skill": 2,
 				"damage": 3,
 				"injury": 14,
