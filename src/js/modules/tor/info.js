@@ -36,9 +36,7 @@ export default {
 			return infoStore?.item?.group ?? ''
 		},
 		traits() {
-			const traits = infoStore?.item?.traits ?? []
-
-			return traits.join(', ')
+			return (infoStore?.item?.traits ?? []).join(', ')
 		},
 		level() {
 			return infoStore?.item?.attributes.level ?? 1

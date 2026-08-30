@@ -47,7 +47,9 @@
 						<span class="chip" data-q-text=group></span>
 						<span class="chip" data-q-text=source></span>
 					</div>
-					<button data-q-click="addAdversary">Add</button>
+					<div class="btn-add">
+						<button data-q-click="addAdversary">Add</button>
+					</div>
 				</div>
 				<div class="card">
 					<div class="grid grid-cols-2">
@@ -124,37 +126,31 @@
 			<div data-q-if="!hasAdversaries">No adversaries</div>
 			<div data-q-if="hasAdversaries">
 				<section class="card adversary" data-q-each="adversaries" data-q-component="adversary">
-					<div>
+					<div class="title">
 						<h2 class="link" data-q-text="title" data-q-click="showInfo"></h2>
-						(<span data-q-text="_id"></span>)
+						<div data-q-text="joinedTraits"></div>
 					</div>
-					<dl class="grid grid-cols-3">
-						<div>
-							<dt>Endurance</dt>
-							<dd>
-								<input type="number" name="currentEndurance" data-q-input="currentEndurance" />
-							</dd>
-						</div>
-						<div>
-							<dt>Might</dt>
-							<dd>
-								<input type="number" name="currentMight" data-q-input="currentMight" />
-							</dd>
-						</div>
-						<div data-q-if="hasHate">
-							<dt>Hate</dt>
-							<dd>
-								<input type="number" name="currentHate" data-q-input="currentHate" />
-							</dd>
-						</div>
-						<div data-q-if="hasResolve">
-							<dt>Resolve</dt>
-							<dd>
-								<input type="number" name="currentResolve" data-q-input="currentResolve" />
-							</dd>
-						</div>
-					</dl>
-					<button data-q-click="removeAdversary">Remove</button>
+					<div class="grid grid-cols-3">
+						<label>
+							<span>Endurance</span>
+							<input type="number" name="currentEndurance" data-q-input="currentEndurance" />
+						</label>
+						<label>
+							<span>Might</span>
+							<input type="number" name="currentMight" data-q-input="currentMight" />
+						</label>
+						<label data-q-if="hasHate">
+							<span>Hate</span>
+							<input type="number" name="currentHate" data-q-input="currentHate" />
+						</label>
+						<label data-q-if="hasResolve">
+							<span>Resolve</span>
+							<input type="number" name="currentResolve" data-q-input="currentResolve" />
+						</label>
+					</div>
+					<div class="button">
+						<button data-q-click="removeAdversary">Remove</button>
+					</div>
 				</section>
 			</div>
 		</main>

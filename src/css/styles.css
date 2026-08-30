@@ -124,6 +124,23 @@ input[type=search] {
 	width: 100%;
 }
 
+button {
+	padding: var(--spacing-1) var(--spacing-2);
+	background-color: var(--button-bg);
+	color: var(--button-fg);
+	border: var(--button-border);
+	border-radius: var(--spacing-1);
+	text-transform: uppercase;
+	font-family: var(--font-secondary);
+	font-weight: bold;
+
+	&:hover {
+		background-color: var(--button-hover-bg);
+		color: var(--button-hover-fg);
+		border: var(--button-hover-border);
+	}
+}
+
 /* Left hand menu bar */
 .menu {
 	margin: var(--spacing-4);
@@ -196,6 +213,15 @@ main {
 	margin-bottom: var(--spacing-4);
 }
 
+.btn-add {
+	margin-top: var(--spacing-8);
+
+	button {
+		display: block;
+		width: 100%;
+	}
+}
+
 .chip {
 	font-family: var(--font-secondary);
 	font-size: var(--font-sm);
@@ -220,11 +246,33 @@ main {
 .adversary {
 	display: flex;
 
+	label {
+		font-size: var(--font-md);
+		font-weight: bold;
+		color: var(--title-fg);
+		line-height: 1rem;
+		text-transform: uppercase;
+		text-align: center;		
+	}
+
 	input[type=number] {
 		max-width: 80px;
 	}
 
-	dl {
+	.title {
+		width: 150px;
+	}
+
+	.button {
+		display: flex;
+
+		button {
+			margin-top: auto;
+			flex-grow: 0;
+		}
+	}
+
+	.grid {
 		flex-grow: 1;
 	}
 }
