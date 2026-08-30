@@ -1,4 +1,6 @@
 
+import { isEmptyString } from 'q/utils/assert.js'
+import { sortByProperty } from 'q/utils/list.js'
 import { FetchStore } from 'utils/fetch-store.js'
 import { infoStore } from 'tor/stores.js'
 
@@ -7,16 +9,14 @@ export default {
 
 	data: {
 		loading: false,
+		filter: '',
 	},
 
 	async created() {
 		this.store.on('loading', () => this.data.loading = true)
 		this.store.on('loaded', () => {
-			// DELME
-			//window.setTimeout(() => {
-				this.data.loading = false
-				this.emit('change')
-			//}, 1000)
+			this.data.loading = false
+			this.emit('change')
 		})
 
 		await this.store.load()
@@ -24,13 +24,26 @@ export default {
 
 	computed: {
 		adversaries() {
-			return this.store ? this.store.all : []
+			const data = (this.store?.all ?? []).sort(sortByProperty('title'))
+
+			if(isEmptyString(this.data.filter)) {
+				return data
+			}
+
+			const filter = this.data.filter.toLowerCase().trim()
+
+			return data.filter(item => 
+				item.group.toLowerCase() === filter ||
+				item.title.toLowerCase().indexOf(filter) !== -1
+			)
 		},
 	},
 
-	click(evt, context) {
-		const adversary = context.scope.data
+	handleFilter(evt) {
+		this.data.filter = evt.srcElement.value
+	},
 
-		infoStore.item = adversary
-	}
+	handleClick(evt, context) {
+		infoStore.item = context.scope.data
+	},
 }

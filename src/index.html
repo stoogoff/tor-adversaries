@@ -21,9 +21,15 @@
 	<!-- list of adversaries -->
 	<nav data-q-component="menu">
 		<div data-q-if="loading">Loading...</div>
-		<menu data-q-if="!loading">
-			<li data-q-each="adversaries" data-q-click="click" data-q-text="title"></li>
-		</menu>
+		<div class="menu" data-q-if="!loading">
+			<label>
+				<span>Filter</span>
+				<input type="search" data-q-keyup="handleFilter" data-q-search="handleFilter" />
+			</label>
+			<menu>
+				<li data-q-each="adversaries" data-q-click="handleClick" data-q-text="title"></li>
+			</menu>
+		</div>
 	</nav>
 
 	<div>

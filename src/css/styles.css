@@ -91,14 +91,44 @@ table {
 	}
 }
 
+/* Form fields */
+label {
+	text-transform: uppercase;
+	font-size: var(--font-xs);
+	font-family: var(--font-secondary);
+	padding: 0 var(--spacing-2);
+	display: block;
+
+	span {
+		display: block;
+		margin-bottom: var(--spacing-1);
+	}
+}
+
+input[type=search] {
+	border: var(--menu-border);
+	padding: var(--spacing-2);
+	border-radius: var(--spacing-1);
+	display: block;
+	width: 100%;
+
+	&:focus {
+		outline-color: var(--title-fg);
+	}
+}
+
 /* Left hand menu bar */
-menu {
+.menu {
 	margin: var(--spacing-4);
-	list-style-type: none;
-	padding: 0;
+	padding: var(--spacing-2) 0 0 0;
+	background-color: var(--menu-bg);
+
+	menu {
+		list-style-type: none;
+		margin-top: var(--spacing-2);
+	}
 
 	li {
-		background-color: var(--menu-bg);
 		color: var(--menu-fg);
 		padding: var(--spacing-2);
 		border-bottom: var(--menu-border);
@@ -109,7 +139,7 @@ menu {
 		}
 
 		&:hover {
-			color: var(--primary-fg);
+			color: var(--title-fg);
 			background-color: var(--primary-bg);
 		}
 	}
