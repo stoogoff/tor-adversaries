@@ -19,17 +19,36 @@ abilities.forEach(ability => abilitiesByTitle.set(ability.name, ability))
 
 // load adversaries
 const adversaryFiles = {
-	'Evil Men': 'evil-men.json',
-	'Orcs': 'orcs.json',
+	'Evil Men': { file: 'evil-men.json', source: 'Core Rules' },
+	'Orcs': { file: 'orcs.json', source: 'Core Rules' },
+	'Trolls': { file: 'trolls.json', source: 'Core Rules' },
+	'Undead': { file: 'undead.json', source: 'Core Rules' },
+	'Wolves': { file: 'wolves.json', source: 'Core Rules' },
 }
+
 let adversaries = []
 
-for(const [group, file] of Object.entries(adversaryFiles)) {
-	const data = await readFileAndParse(file)
+// loop through all adversaries, apply abilities, and merge together
+for(const [group, obj] of Object.entries(adversaryFiles)) {
+	const data = await readFileAndParse(obj.file)
 
-	data.forEach(item => item.group = item.group ?? group)
 	data.forEach(item => {
-		item.abilities = item.abilities.map(title => {
+		// assign group if not set
+		item.group = item.group ?? group
+
+		// assign source based on book
+		item.source = obj.source
+
+		// load abilities and add directly to the adversary
+		// abilities are parsed to make the following changes:
+		// 	:hate: is replaced with either Hate or resolve, whichever the adversary has
+		// 	:group: is replaced with the adversary's group property
+		// 	*... ...* are replacd with <em> and </em> tags
+		// 	:rank: is replaced with the rank from the adversary listing, so Strike Fear:3
+		// 		would set the :rank: value in the description to 3
+		item.abilities = item.abilities.map(fullTitle => {
+			const [title, rank] = fullTitle.split(':')
+
 			if(!abilitiesByTitle.has(title)) {
 				throw new Error(`Ability "${title}" not found`)
 			}
@@ -38,12 +57,11 @@ for(const [group, file] of Object.entries(adversaryFiles)) {
 			const hateOrResolve = 'hate' in item.attributes ? 'Hate' : 'Resolve'
 
 			ability.ability = ability.ability
+				.replace(/:rank:/g, rank)
 				.replace(/:hate:/g, hateOrResolve)
 				.replace(/:group:/g, item.group)
 				.replace(/\s\*/g, ' <em>')
 				.replace(/\*([\s\.])/g, '</em>$1')
-
-			// :rank: - will need to put this in the stat block
 
 			return ability
 		})

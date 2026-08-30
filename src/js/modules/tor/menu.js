@@ -34,6 +34,7 @@ export default {
 
 			return data.filter(item => 
 				item.group.toLowerCase() === filter ||
+				item.source.toLowerCase() === filter ||
 				item.title.toLowerCase().indexOf(filter) !== -1
 			)
 		},

@@ -32,6 +32,10 @@ h3 {
 	margin: 0 0 var(--spacing-2);
 }
 
+p {
+	margin-bottom: var(--spacing-4);
+}
+
 dl {
 	margin-bottom: var(--spacing-4);
 	font-weight: bold;
@@ -185,4 +189,12 @@ main {
 	font-family: var(--font-secondary);
 }
 
+.chip {
+	background-color: var(--title-fg);
+	color: var(--secondary-bg);
+	padding: var(--spacing-1) var(--spacing-2);
+	display: inline-block;
+	margin-right: var(--spacing-1);
+	border-radius: var(--spacing-1);
+}
 

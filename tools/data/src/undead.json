@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Barrow-wight",
+		"description": "Sent to the hills of Tyrn Gorthad by the Witch-king of Angmar to plague his enemies in the wars against Arnor, a Barrow-wight appears as a tall, dark figure, with cold eyes lit by a pale light. It wears rings on its skeletal fingers, and gold chains around its neck. In its grip an ancient, pitted blade.",
+		"traits": ["Cunning", "Vengeful"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Ancient Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Chilling Touch",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Denizen of the Dark", "Dreadful Spells:3", "Hate Sunlight"]
+	},
+	{
+		"title": "Fell Wraith",
+		"description": "Fell Wraiths appear as crooked wanderers, roaming among ancient ruins, wrapped in cloaks hiding their spectral features. Their flesh is almost transparent, and their eyes seem to glow like embers. If encountered in the hours of twilight, they may pass as Men, as they can speak, even if with an unusual hissing voice and strange accents. Fell Wraiths carry old weapons and battered shields, relics from an age of strife that they employ to deadly effectiveness.",
+		"traits": ["Swift", "Wary"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Pitted Blade",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Cruel Spear",
+				"skill": 2,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Denizen of the Dark", "Fear of Fire"]
+	},
+	{
+		"title": "Marsh-dwellers",
+		"description": "The Marsh-dwellers are shambling humanoid creatures with a clammy pale flesh, like that of a corpse left to rot in the water. A fell light in their small eyes suggests a wicked vitality and intent. They dwell among ruins, where Men used to live once, often by dark pools of stagnant water. They hide underground in small groups, ready to ambush unwary travellers and drag them in the cellars where they hoard their stolen gold.",
+		"traits": ["Fierce", "Stealthy"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"hate": 3,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Fear of Fire", "Hate Sunlight"]
+	}
+]

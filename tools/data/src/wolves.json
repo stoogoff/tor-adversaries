@@ -1,0 +1,88 @@
+[
+	{
+		"title": "Wild Wolf",
+		"description": "The average Warg, a Wild Wolf, is slightly larger than an ordinary Wolf, and much more vicious. It can be encountered in a pack, but also as a solitary hunter or scout, ready to howl and alert other Wargs and evil creatures for miles around. Orcs learn how to ride upon Wild Wolves like men do on horses.",
+		"traits": ["Keen-eyed", "Grim"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"hate": 3,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Great Leap", "Fear of Fire", "Snake-like Speed"],
+		"group": "Wargs"
+	},
+	{
+		"title": "Wolf-chieftain",
+		"description": "Greater in stature, cruelty and cunning than ordinary Wargs, a Wolf-chieftain is called upon by its lesser kin to deal with serious threats, like bands of travelling adventurers trespassing into Warg territory. A Wolf-chieftain is never encountered alone, but always surrounded by a pack of Wild Wolves.",
+		"traits": ["Swift", "Vicious"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 2,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Great Leap", "Fear of Fire", "Snake-like Speed", "Howl of Triumph"],
+		"group": "Wargs"
+	},
+	{
+		"title": "Hound of Sauron",
+		"description": "Chosen for its ferocity and malicious intelligence, a Hound of Sauron is a minion of the Dark Lord, a servant sent on a precise errand, be it the gathering of forces for a coming war, the hunt for a specific individual, or spying on an area. Hidden behind the shape of an ordinary Warg, a Hound of Sauron conceals much greater powers.",
+		"traits": ["Cunning", "Fierce"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"hate": 5,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 5,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 3,
+				"damage": 5,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Great Leap", "Deadly Wound", "Hideous Toughness", "Strike Fear:3"],
+		"group": "Werewolves"
+	}
+]

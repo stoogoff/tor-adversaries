@@ -29,6 +29,12 @@ export default {
 		description() {
 			return infoStore?.item?.description ?? ''
 		},
+		source() {
+			return infoStore?.item?.source ?? ''
+		},
+		group() {
+			return infoStore?.item?.group ?? ''
+		},
 		traits() {
 			const traits = infoStore?.item?.traits ?? []
 

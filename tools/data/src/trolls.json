@@ -1,0 +1,122 @@
+[
+	{
+		"title": "Great Cave-troll",
+		"description": "Feared by its own handlers, a Great Cave-troll is sent by Orcs to smash the defences and the morale of the foes they fear the most.",
+		"traits": ["Brutish", "Wicked"],
+		"attributes": {
+			"level": 10,
+			"endurance": 80,
+			"might": 2,
+			"hate": 10,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Bite",
+				"skill": 2,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hideous Toughness", "Dull-witted", "Strike Fear:2", "Thick Hide"]
+	},
+	{
+		"title": "Cave-troll Slinker",
+		"description": "This breed of Cave-troll is smaller than many of its kin, but still larger than most Orc-kind. Used to live in the depths of the earth, a Cave-troll Slinker often hunts alone and in the dark, relying on its acute sense of smell.",
+		"traits": ["Stealthy", "Wary"],
+		"attributes": {
+			"level": 6,
+			"endurance": 50,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Club",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Bite",
+				"skill": 2,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hideous Toughness", "Dull-witted", "Denizen of the Dark", "Thick Hide"]
+	},
+	{
+		"title": "Stone-troll Robber",
+		"description": "A Stone-troll Robber’s appearance, while always frightful, is made less monstrous by their tendency to wear simple clothes, cook their food and use tools like drinking jugs and barrels.",
+		"traits": ["Hungry", "Irritable"],
+		"attributes": {
+			"level": 8,
+			"endurance": 60,
+			"might": 2,
+			"hate": 8,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Club",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Hideous Toughness", "Dull-witted", "Hatred (Dwarves)", "Horrible Strength"]
+	},
+	{
+		"title": "Stone-troll Chief",
+		"description": "Small groups of Stone-trolls may band together around a stronger member of their breed, to attack caravans of merchants or isolated farmhouses.",
+		"traits": ["Cruel", "Suspicious"],
+		"attributes": {
+			"level": 9,
+			"endurance": 70,
+			"might": 2,
+			"hate": 9,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Club",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Hideous Toughness", "Dull-witted", "Hatred (Dwarves)", "Horrible Strength", "Yell of Triumph"]
+	}
+]
