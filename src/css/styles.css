@@ -109,16 +109,19 @@ label {
 	}
 }
 
-input[type=search] {
+input {
 	border: var(--menu-border);
 	padding: var(--spacing-2);
 	border-radius: var(--spacing-1);
-	display: block;
-	width: 100%;
 
 	&:focus {
 		outline-color: var(--title-fg);
 	}
+}
+
+input[type=search] {
+	display: block;
+	width: 100%;
 }
 
 /* Left hand menu bar */
@@ -177,6 +180,9 @@ main {
 .grid-cols-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
+.grid-cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
 .grid-cols-5 {
 	grid-template-columns: repeat(5, 1fr);
 }
@@ -187,14 +193,38 @@ main {
 	color: var(--secondary-fg);
 	padding: var(--spacing-4);
 	font-family: var(--font-secondary);
+	margin-bottom: var(--spacing-4);
 }
 
 .chip {
+	font-family: var(--font-secondary);
+	font-size: var(--font-sm);
 	background-color: var(--title-fg);
 	color: var(--secondary-bg);
 	padding: var(--spacing-1) var(--spacing-2);
 	display: inline-block;
 	margin-right: var(--spacing-1);
-	border-radius: var(--spacing-1);
+	border-radius: var(--spacing-4);
 }
 
+/* Linkify */
+.link {
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Adversary component */
+.adversary {
+	display: flex;
+
+	input[type=number] {
+		max-width: 80px;
+	}
+
+	dl {
+		flex-grow: 1;
+	}
+}

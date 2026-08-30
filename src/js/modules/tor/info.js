@@ -1,6 +1,6 @@
 
 import { isNull } from 'q/utils/assert.js'
-import { infoStore } from 'tor/stores.js'
+import { infoStore, adversaryStore } from 'tor/stores.js'
 
 export default {
 	created() {
@@ -78,5 +78,17 @@ export default {
 		abilities() {
 			return infoStore?.item?.abilities ?? []
 		},
+	},
+
+	addAdversary() {
+		const adversary = infoStore.item
+
+		adversaryStore.add({
+			...adversary,
+			currentEndurance: adversary.attributes.endurance,
+			currentMight: adversary.attributes.might,
+			currentHate: adversary.attributes.hate,
+			currentResolve: adversary.attributes.resolve,
+		})
 	},
 }
