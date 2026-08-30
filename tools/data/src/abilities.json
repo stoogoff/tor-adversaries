@@ -4,6 +4,10 @@
 		"ability": "When affected by the Intimidate Foe combat task, the creature also loses 1 :hate:."
 	},
 	{
+		"name": "Darker then Darkness",
+		"ability": "Spend 1 Hate to summon a supernatural darkness. Player-heroes in close combat *lose (2d)* on their first attack against the creature, while ranged attacks *lose (2d)* for the whole fight."
+	},
+	{
 		"name": "Deadly Wound",
 		"ability": "Wounded targets make an *Ill-favoured* Feat die roll to determine the severity of their injury."
 	},
@@ -64,6 +68,10 @@
 		"ability": "If an attack results in a Wound, the target is also poisoned (see page 134 of the Core book for the effects of poison)."
 	},
 	{
+		"name": "Savage Assault",
+		"ability": "Spend 1 Hate after a Fangs attack to immediately roll a Claws attack on the same target."
+	},
+	{
 		"name": "Snake-like Speed",
 		"ability": "When targeted by an attack, spend 1 :hate: to make the attack roll *Ill-favoured*."
 	},
@@ -74,6 +82,10 @@
 	{
 		"name": "Thick Hide",
 		"ability": "Spend 1 Hate point to *gain (2d)* on a Protection roll."
+	},
+	{
+		"name": "Thing of Terror",
+		"ability": "At the start of the first round of the battle all Player-heroes in sight of one or more creatures with this ability gain 3 Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight."
 	},
 	{
 		"name": "Yell of Triumph",

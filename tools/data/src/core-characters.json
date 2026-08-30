@@ -1,0 +1,126 @@
+[
+	{
+		"title": "The Wight-king",
+		"description": "Scant few have seen the Wight-king and lived to tell the tale, but mad tomb-robbers who have come out of the Barrow-downs tell of a fleshless warrior wearing the blackened raiment of an ancient noble. Empty black eyes burn behind a great, cracked helm, and a pitted blade is clutched in his left hand. All that is dead and yet still lives by sorcery or the will of the Enemy is his to command. The Wight-king leaves the Great Barrow only at night, and moves in darkness and silence across Tyrn Gorthad, singing songs of hopelessness and sorrow in both the Common Tongue and the Black Speech of Mordor.",
+		"traits": ["Cunning", "Fierce", "Vengeful"],
+		"attributes": {
+			"level": 9,
+			"endurance": 45,
+			"might": 2,
+			"hate": 9,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Ancient Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Icy Touch",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Thing of Terror", "Darker then Darkness", "Denizen of the Dark", "Dreadful Spells:3", "Hate Sunlight"],
+		"group": "Undead"
+	},
+	{
+		"title": "Búrzgul",
+		"description": "Búrzgul is a wicked Orc warrior, the chieftain of a ragged band of Orcs from Goblin Gate that made the trip from the Misty Mountains to the South Downs, to join forces with the Wolves of the Howling Hollows. Búrzgul heard of the place from his most trusted friend, a large Warg with midnight-­ black fur and gleaming yellow eyes, going by the name of Ash. For the moment, no one, not even the Rangers of the North know of the threat festering under the hills of the South Downs. On their part, the Wolves and Orcs bide their time, and for the moment have made only a few careful attacks, leaving no survivors. Perhaps most dangerous of all is that Búrzgul regularly sends runners back to larger Orc forces in both Angmar and the Misty Mountains, so news of Bree is never far from the ears of the agents of the Shadow.",
+		"traits": ["Cruel", "Keen-eyed"],
+		"attributes": {
+			"level": 5,
+			"endurance": 22,
+			"might": 1,
+			"hate": 5,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Spear",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Orc-poison", "Snake-like Speed", "Yell of Triumph"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Ash",
+		"description": "",
+		"traits": ["Cunning", "Swift"],
+		"attributes": {
+			"level": 4,
+			"endurance": 20,
+			"might": 1,
+			"hate": 4,
+			"parry": 2,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 2,
+				"damage": 5,
+				"injury": 14,
+				"properties": []
+			}
+		],
+		"abilities": ["Great Leap", "Fear of Fire", "Savage Assault"],
+		"group": "Wargs"
+	},
+	{
+		"title": "Elwen",
+		"description": "Fell wraith",
+		"traits": ["Horrific", "Sorrowful"],
+		"attributes": {
+			"level": 5,
+			"endurance": 24,
+			"might": 2,
+			"hate": 5,
+			"parry": 2,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Pitted Blade",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Spear",
+				"skill": 2,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Thing of Terror", "Denizen of the Dark", "Fear of Fire"],
+		"group": "Undead"
+	}
+]

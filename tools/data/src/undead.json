@@ -27,7 +27,7 @@
 				"properties": ["Seize"]
 			}
 		],
-		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Denizen of the Dark", "Dreadful Spells:3", "Hate Sunlight"]
+		"abilities": ["Deathless", "Heartless", "Thing of Terror", "Denizen of the Dark", "Dreadful Spells:3", "Hate Sunlight"]
 	},
 	{
 		"title": "Fell Wraith",
@@ -57,7 +57,7 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Denizen of the Dark", "Fear of Fire"]
+		"abilities": ["Deathless", "Heartless", "Thing of Terror", "Denizen of the Dark", "Fear of Fire"]
 	},
 	{
 		"title": "Marsh-dwellers",
@@ -87,6 +87,6 @@
 				"properties": ["Seize"]
 			}
 		],
-		"abilities": ["Deathless", "Heartless", "Strike Fear:3", "Fear of Fire", "Hate Sunlight"]
+		"abilities": ["Deathless", "Heartless", "Thing of Terror", "Fear of Fire", "Hate Sunlight"]
 	}
 ]
