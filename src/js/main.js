@@ -7,14 +7,16 @@ import { TOR_LOG_KEY } from 'tor/logger.js'
 
 setLogger(TOR_LOG_KEY, ConsoleLogger, LOG_LEVEL_INFO)
 
+// dangerously set innerHTML
+directives.register('html', (context) => {
+	context.node.innerHTML = context.value
 
-
-// register custom component
-/*directives.register('colour', (context) => {
-	context.node.style.backgroundColor = context.value
+	context.scope.on(`change:${context.property}`, (key, value, old) => {
+		context.node.innerText = value
+	})
 
 	return false
-})*/
+})
 
 // register components and load
 directives.registerComponent('info', TorInfo)

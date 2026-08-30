@@ -27,7 +27,8 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Fierce Folk"]
+		"abilities": ["Fierce Folk"],
+		"group": "Hostile Southerners"
 	},
 	{
 		"title": "Southerner Champion",
@@ -57,7 +58,8 @@
 				"properties": ["Break Shield"]
 			}
 		],
-		"abilities": ["Fierce Folk"]
+		"abilities": ["Fierce Folk"],
+		"group": "Hostile Southerners"
 	},
 	{
 		"title": "Footpad",
@@ -87,7 +89,8 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Craven"]
+		"abilities": ["Craven"],
+		"group": "Ruffians"
 	},
 	{
 		"title": "Ruffian Chief",
@@ -117,7 +120,8 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Yell of Triumph"]
+		"abilities": ["Yell of Triumph"],
+		"group": "Ruffians"
 	},
 	{
 		"title": "Highway Robber",
@@ -147,6 +151,7 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Snake-like Speed"]
+		"abilities": ["Snake-like Speed"],
+		"group": "Ruffians"
 	}
 ]

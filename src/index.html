@@ -98,10 +98,11 @@
 						</table>
 					</section>
 					<section>
-						<h3>Abilities</h3>
-						<ul>
-							<!--li data-q-each="abilities" data-q-text=""></li-->
-						</ul>
+						<h3>Fell Abilities</h3>
+						<details data-q-each="abilities">
+							<summary data-q-text="name"></summary>
+							<p data-q-html="ability"></p>
+						</details>
 					</section>
 				</div>
 			</div>

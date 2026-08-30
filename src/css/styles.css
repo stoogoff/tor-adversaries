@@ -29,7 +29,7 @@ h3 {
 	font-size: var(--font-md);
 	line-height: 1rem;
 	color: var(--title-fg);
-	margin: 0;
+	margin: 0 0 var(--spacing-2);
 }
 
 dl {
@@ -49,9 +49,16 @@ dl {
 	}
 }
 
+details {
+	margin-bottom: var(--spacing-2);
+}
+
+summary {
+	font-weight: bold;
+}
+
 table {
 	width: 100%;
-	margin-top: var(--spacing-4);
 	margin-bottom: var(--spacing-4);
 
 	th {

@@ -1,0 +1,82 @@
+[
+	{
+		"name": "Craven",
+		"ability": "When affected by the Intimidate Foe combat task, the creature also loses 1 :hate:."
+	},
+	{
+		"name": "Deadly Wound",
+		"ability": "Wounded targets make an *Ill-favoured* Feat die roll to determine the severity of their injury."
+	},
+	{
+		"name": "Deathless",
+		"ability": "Spend 1 Hate to cancel a Wound. When an attack inflicts damage to the creature that would cause it to go to zero Endurance, spend 1 Hate to bring the creatures back to full Endurance instead. This ability is ineffective against Player-heroes wield-ing a magical weapon enchanted with spells for the Bane of the Undead."
+	},
+	{
+		"name": "Denizen of the Dark",
+		"ability": "All attack rolls are *Favoured* while in darkness."
+	},
+	{
+		"name": "Dull-witted",
+		"ability": "Player-heroes can attempt a special combat task against the creature while in Forward stance. The acting player makes a RIDDLE roll as the main action for the round: on a success, the Troll loses 1 point of Hate, plus 1 point for each Success icon rolled."
+	},
+	{
+		"name": "Dreadful Spells",
+		"ability": "Spend 1 Hate to make one Player-hero gain :rank: Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable fall unconscious and may be roused only with a SONG roll. Otherwise, they wake up after one hour."
+	},
+	{
+		"name": "Fear of Fire",
+		"ability": "The creature loses 1 Hate at the start of each round it is engaged in close combat with an adversary wielding a torch or other burning item."
+	},
+	{
+		"name": "Fierce Folk",
+		"ability": "Spend 1 :hate: point to *gain (1d)* and make the attack roll *Favoured*."
+	},
+	{
+		"name": "Great Leap",
+		"ability": "Spend 1 Hate to attack any Player-hero, in any combat stance, including Rearward."
+	},
+	{
+		"name": "Hate Sunlight",
+		"ability": "The creature loses 1 Hate for each round it is exposed to the full light of the sun."
+	},
+	{
+		"name": "Hatred (Dwarves)",
+		"ability": "When fighting Dwarves, all the creature’s rolls are *Favoured*."
+	},
+	{
+		"name": "Heartless",
+		"ability": "The creature is not affected by the Intimidate Foe combat task, unless a Magical success is obtained."
+	},
+	{
+		"name": "Hideous Toughness",
+		"ability": "When an attack inflicts damage to the creature that would cause it to go to zero Endurance, it causes a Piercing Blow instead. Then, if the creature is still alive, it returns to full Endurance."
+	},
+	{
+		"name": "Horrible Strength",
+		"ability": "If the creature scored a Piercing Blow with a close combat attack, spend 1 Hate to make the target’s Protection roll *Ill-favoured*."
+	},
+	{
+		"name": "Howl of Triumph",
+		"ability": "Spend 1 Hate to restore 1 Hate to all other Wargs in the fight."
+	},
+	{
+		"name": "Orc-poison",
+		"ability": "If an attack results in a Wound, the target is also poisoned (see page 134 of the Core book for the effects of poison)."
+	},
+	{
+		"name": "Snake-like Speed",
+		"ability": "When targeted by an attack, spend 1 :hate: to make the attack roll *Ill-favoured*."
+	},
+	{
+		"name": "Strike Fear",
+		"ability": "Spend 1 Hate to make all Player-heroes in sight gain :rank: Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight."
+	},
+	{
+		"name": "Thick Hide",
+		"ability": "Spend 1 Hate point to *gain (2d)* on a Protection roll."
+	},
+	{
+		"name": "Yell of Triumph",
+		"ability": "Spend 1 :hate: to restore 1 :hate: to all other :group: in the fight."
+	}
+]
