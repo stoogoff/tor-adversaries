@@ -49,6 +49,10 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 		// 	:rank: is replaced with the rank from the adversary listing, so Strike Fear:3
 		// 		would set the :rank: value in the description to 3
 		item.abilities = item.abilities.map(fullTitle => {
+			if(typeof fullTitle !== 'string') {
+				return fullTitle
+			}
+
 			const [title, rank] = fullTitle.split(':')
 
 			if(!abilitiesByTitle.has(title)) {

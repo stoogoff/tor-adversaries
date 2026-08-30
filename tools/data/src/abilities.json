@@ -60,6 +60,10 @@
 		"ability": "Spend 1 Hate to attack any Player-hero, in any combat stance, including Rearward."
 	},
 	{
+		"name": "Great Strength",
+		"ability": "If the creature scored a Piercing Blow with a close combat attack, spend 1 :hate: to make the target’s Protection roll *Ill-favoured*."
+	},
+	{
 		"name": "Hate Sunlight",
 		"ability": "The creature loses 1 Hate for each round it is exposed to the full light of the sun."
 	},
@@ -104,12 +108,16 @@
 		"ability": "Spend 1 Hate to make all Player-heroes in sight gain :rank: Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight."
 	},
 	{
-		"name": "Thick Hide",
-		"ability": "Spend 1 Hate point to *gain (2d)* on a Protection roll."
+		"name": "Thick Armour",
+		"ability": "Spend 1 :hate: point to *gain (2d)* on a Protection roll."
 	},
 	{
-		"name": "Thick Armour",
-		"ability": "Spend 1 Resolve point to *gain (2d)* on a Protection roll."
+		"name": "Thick Bark",
+		"ability": "Spend 1 :hate: point to *gain (2d)* on a Protection roll."
+	},
+	{
+		"name": "Thick Hide",
+		"ability": "Spend 1 :hate: point to *gain (2d)* on a Protection roll."
 	},
 	{
 		"name": "Thing of Terror",

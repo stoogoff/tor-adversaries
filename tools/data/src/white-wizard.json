@@ -119,5 +119,289 @@
 		"abilities": ["Fearless", "Thick Armour"],
 		"group": "Sea-Prince",
 		"adventure": "The Sea-Prince of the Shore"
+	},
+	{
+		"title": "Nambar, the Sea-Prince",
+		"description": "Nambar trained in the fighting pits and duelling schools of Umbar, and thought it was his destiny to win renown in the conquest of Gondor. Instead, he finds himself on a strange and distant shore.",
+		"traits": ["Arrogant", "Vain"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"hate": 6,
+			"parry": 3,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Long Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", { "name": "Lesser Ring", "ability": "Spend 1 Hate to either recover 6 Endurance or heal 1 Wound." }, "Snake-like Speed", "Yell of Triumph"],
+		"group": "Sea-Prince",
+		"adventure": "The Sea-Prince of the Shore"
+	},
+	{
+		"title": "Baugrim",
+		"description": "Baugrim is a dogged veteran commander in the garrison of Dol Guldur. For him, the big war started years ago; he’s been skirmishing with Mirkwood Elves and Woodmen and pesky heroes from Dale for a long time now. But he has never crossed the River, and knows how much peril he’s in. He’s eager to get this job done and leg it back across the Anduin.",
+		"traits": ["Cruel", "Hardened"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 3,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed Sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Horrible Strength", "Yell of Triumph"],
+		"group": "Orcs",
+		"adventure": "The Disaster of the Gladden Fields"
+	},
+	{
+		"title": "Baugrim’s Black Uruks",
+		"description": "Large and evil Orcs of great strength, picked from among the fiercest to act as lieutenants, bodyguards or chosen warriors, sent to reinforce a colony of lesser Orcs.",
+		"traits": ["Fierce", "Strong"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"hate": 5,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed Sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Horrible Strength", "Thick Armour"],
+		"group": "Orcs",
+		"adventure": "The Disaster of the Gladden Fields"
+	},
+	{
+		"title": "Lightroot",
+		"description": "",
+		"traits": ["Eager", "Wary"],
+		"attributes": {
+			"level": 8,
+			"endurance": 60,
+			"might": 2,
+			"resolve": 8,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 8,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Fear of Fire", "Great Strength", { "name": "Mighty Toughness", "ability": "Lightroot is unaffected by unarmed attacks. Additionally, when an attack inflicts damage to Lightroot that would cause him to go to zero Endurance, it causes a Piercing Blow instead. Then, if Lightroot is still alive his Endurance score is set back at half its maximum rating." }, "Thick Bark"],
+		"group": "Ents",
+		"adventure": "There Let them Lie Until the End"
+	},
+	{
+		"title": "Zoril",
+		"description": "",
+		"traits": ["Proud", "Wilful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 4,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "The Blade Magolach",
+				"skill": 4,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Fiery Blow"]
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", "Snake-like Speed", "Yell of Triumph" { "name": "Fiery Blow", "ability": "The attack burns the target, inflicting a severe Endurance loss from fire damage (see page 134 of The One Ring)." }],
+		"group": "Corsairs of Umbar",
+		"adventure": "There Let them Lie Until the End"
+	},
+	{
+		"title": "Usapthon",
+		"description": "",
+		"traits": ["Secretive", "Unsettling"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 3,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Club",
+				"skill": 4,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Knockback"]
+			},
+			{
+				"attack": "Dagger",
+				"skill": 3,
+				"damage": 2,
+				"injury": 12,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Combat Sorcerer", "Denizen of the Dark", "Fearless", "Strike Fear:2",
+			{
+				"name": "Dreadful Spells (Lure of Shadow)",
+				"ability": "Usapthon weaves a web of darkness around her victim. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who both are Miserable and fail their Shadow test suffer a Bout of Madness."
+			},
+			{
+				"name": "Dreadful Spells (Misfortune)",
+				"ability": "Usapthon curses her foes with bad luck. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable increase all their Attribute TNs by their Shadow score for the rest of the combat."
+			}
+		],
+		"group": "Corsairs of Umbar",
+		"adventure": "There Let them Lie Until the End"
+	},
+	{
+		"title": "The Watcher in the Water",
+		"description": "",
+		"traits": ["Secretive", "Watchful"],
+		"attributes": {
+			"level": 10,
+			"endurance": 100,
+			"might": 3,
+			"hate": 10,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Tentacles",
+				"skill": 3,
+				"damage": 8,
+				"injury": 16,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": [
+			"Denizen of the Dark",
+			{
+				"name": "Foul Reek",
+				"ability": "Spend 1 Hate to cause all combatants engaged with the Watcher in the Water to *lose (1d)* on all attacks for the round."
+			},
+			"Hate Sunlight", "Hideous Toughness", "Horrible Strength",
+			{
+				"name": "Long Arms",
+				"ability": "Spend 1 Hate to attack any Player-hero, in any combat stance, including rearward."
+			},
+			{
+				"name": "Many Arms",
+				"ability": "The Watcher in the Water makes one additional attack each round. Each time it receives a Wound, however, for the rest of the fight the Watcher in the Water can make one less attack than those normally allowed (three attacks if Wounded once, two attacks if Wounded twice)."
+			}
+		],
+		"group": "Nameless Things",
+		"adventure": "The Quest of Moria"
+	},
+	{
+		"title": "Gorgol",
+		"description": "",
+		"traits": ["Bold", "Cunning"],
+		"attributes": {
+			"level": 8,
+			"endurance": 60,
+			"might": 2,
+			"hate": 8,
+			"parry": 4,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Scimitar of Azog",
+				"skill": 3,
+				"damage": 6,
+				"injury": 20,
+				"properties": ["Break Shield", "Pierce"]
+			}
+		],
+		"abilities": ["Hatred (Dwarves)", "Hate Sunlight", "Horrible Strength", "Snake-like Speed", "Yell of Triumph"],
+		"group": "Orcs",
+		"adventure": "The Quest of Moria"
+	},
+	{
+		"title": "Kinir the Ring-Wight",
+		"description": "",
+		"traits": ["Doleful", "Dreadful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 50,
+			"might": 2,
+			"hate": 7,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Ancient Hammer",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [
+			"Deathless", "Heartless", "Thing of Terror", "Denizen of the Dark", "Hate Sunlight",
+			{
+				"name": "Dreadful Spells",
+				"ability": "Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow Test or who are Miserable fall victim to Moria-­ madness, seeing the city as it was in the days of old, not its present fallen state. A victim of Moria-madness may only be restored to reality with an ENHEARTEN roll from a companion (who must spend their main action to do so, if in combat). Otherwise, they wander blinded by glory for one hour."
+			}
+		],
+		"group": "Undead",
+		"adventure": "The Quest of Moria"
 	}
 ]
