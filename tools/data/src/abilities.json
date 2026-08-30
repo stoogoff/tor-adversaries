@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Combat Sorcerer",
+		"ability": "Can cast Dreadful Spells in place of an attack without expending Hate."
+	},
+	{
 		"name": "Craven",
 		"ability": "When affected by the Intimidate Foe combat task, the creature also loses 1 :hate:."
 	},
@@ -28,12 +32,28 @@
 		"ability": "Spend 1 Hate to make one Player-hero gain :rank: Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable fall unconscious and may be roused only with a SONG roll. Otherwise, they wake up after one hour."
 	},
 	{
+		"name": "Dreadful Spells (Murder of Crows)",
+		"ability": "Spend 1 Hate to make each Player-hero in sight gain 2 Shadow points (Sorcery) and *lose (1d)* on any attack rolls they make during their next turn. Those who fail their Shadow test or who are Miserable also suffer a severe Endurance loss (consider it as if from falling)."
+	},
+	{
+		"name": "Fearless",
+		"ability": "This creature’s Might is considered 1 higher for the purpose of resisting the Intimidate Foes combat task."
+	},
+	{
 		"name": "Fear of Fire",
 		"ability": "The creature loses 1 Hate at the start of each round it is engaged in close combat with an adversary wielding a torch or other burning item."
 	},
 	{
+		"name": "Fierce",
+		"ability": "Spend 1 :hate: point to *gain (1d)* on an attack roll and make it *Favoured*."
+	},
+	{
 		"name": "Fierce Folk",
 		"ability": "Spend 1 :hate: point to *gain (1d)* and make the attack roll *Favoured*."
+	},
+	{
+		"name": "Foul Slime",
+		"ability": "Spend 1 Hate to cause all combatants engaged with the Beithir to *lose (1d)* on all rolls for the round."
 	},
 	{
 		"name": "Great Leap",
@@ -68,6 +88,10 @@
 		"ability": "If an attack results in a Wound, the target is also poisoned (see page 134 of the Core book for the effects of poison)."
 	},
 	{
+		"name": "Poison",
+		"ability": "If an attack results in a Wound, the target is also poisoned."
+	},
+	{
 		"name": "Savage Assault",
 		"ability": "Spend 1 Hate after a Fangs attack to immediately roll a Claws attack on the same target."
 	},
@@ -82,6 +106,10 @@
 	{
 		"name": "Thick Hide",
 		"ability": "Spend 1 Hate point to *gain (2d)* on a Protection roll."
+	},
+	{
+		"name": "Thick Armour",
+		"ability": "Spend 1 Resolve point to *gain (2d)* on a Protection roll."
 	},
 	{
 		"name": "Thing of Terror",

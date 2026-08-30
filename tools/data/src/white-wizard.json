@@ -1,0 +1,123 @@
+[
+	{
+		"title": "Dunwalla",
+		"description": "The Witch of Dunland, some call her. She is the twin sister of Dunrach. While he trained to fight, she ran wild, vanishing for days into the deep woods. There are stone idols there, squat and ugly, and it’s said they speak to her, and taught her the crow-speech.",
+		"traits": ["Cruel", "Uncanny"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"hate": 5,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Knife",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Combat Sorcerer", "Dreadful Spells (Murder of Crows)", "Snake-like Speed"],
+		"group": "Dunlendings",
+		"adventure": "The Beast of Dunland"
+	},
+	{
+		"title": "The Beast of Dunland",
+		"description": "Snow-trolls may be smaller than many of their kin, but their ferocity more than compensates for their size. Typically residing in caves, they usually lie dormant until a snow-storm hits. As the winds howl and snow limits visibility to mere inches, they emerge to hunt. Despite their stature, Snow-trolls are stealthy hunters, adept at sneaking up on their prey and catching them off guard.",
+		"traits": ["Fierce", "Stealthy"],
+		"attributes": {
+			"level": 9,
+			"endurance": 70,
+			"might": 2,
+			"hate": 9,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Dull-witted", "Fear of Fire", "Fierce", "Hideous Toughness", "Horrible Strength"],
+		"group": "Trolls",
+		"adventure": "The Beast of Dunland"
+	},
+	{
+		"title": "The Beithir",
+		"description": "What is it? A failed dragon, maybe, a wingless worm, fiery breath long grown cold. A survivor from some previous age of the world. Fat it is, and long, a swollen tadpole with paddle-like limbs. It has a sting in its tail, and its slack, gaping maw has countless venomous teeth. It holds some unearthly power over the mud through the slime that it constantly secretes from its fleshy form.",
+		"traits": ["Hungry", "Stealthy"],
+		"attributes": {
+			"level": 8,
+			"endurance": 80,
+			"might": 2,
+			"hate": 8,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Stinging Tail",
+				"skill": 3,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Foul Slime", "Hate Sunlight", "Hideous Toughness", "Horrible Strength", "Poison"],
+		"group": "Nameless Things",
+		"adventure": "The Sea-Prince of the Shore"
+	},
+	{
+		"title": "Sea-Prince Guard",
+		"description": "",
+		"traits": ["Disciplined", "Wary"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"resolve": 5,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Short Sword",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", "Thick Armour"],
+		"group": "Sea-Prince",
+		"adventure": "The Sea-Prince of the Shore"
+	}
+]

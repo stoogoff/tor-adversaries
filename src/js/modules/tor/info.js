@@ -35,6 +35,9 @@ export default {
 		group() {
 			return infoStore?.item?.group ?? ''
 		},
+		adventure() {
+			return infoStore?.item?.adventure ?? ''
+		},
 		traits() {
 			return (infoStore?.item?.traits ?? []).join(', ')
 		},

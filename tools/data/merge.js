@@ -25,6 +25,7 @@ const adversaryFiles = {
 	'Undead': { file: 'undead.json', source: 'Core Rules' },
 	'Wolves': { file: 'wolves.json', source: 'Core Rules' },
 	'Core Characters': { file: 'core-characters.json', source: 'Core Rules' },
+	'White Wizard': { file: 'white-wizard.json', source: 'Hand of the White Wizard' },
 }
 
 let adversaries = []
