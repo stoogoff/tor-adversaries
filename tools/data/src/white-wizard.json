@@ -262,7 +262,10 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Fearless", "Snake-like Speed", "Yell of Triumph" { "name": "Fiery Blow", "ability": "The attack burns the target, inflicting a severe Endurance loss from fire damage (see page 134 of The One Ring)." }],
+		"abilities": [
+			"Fearless", "Snake-like Speed", "Yell of Triumph",
+			{ "name": "Fiery Blow", "ability": "The attack burns the target, inflicting a severe Endurance loss from fire damage (see page 134 of The One Ring)." }
+		],
 		"group": "Corsairs of Umbar",
 		"adventure": "There Let them Lie Until the End"
 	},
@@ -398,10 +401,217 @@
 			"Deathless", "Heartless", "Thing of Terror", "Denizen of the Dark", "Hate Sunlight",
 			{
 				"name": "Dreadful Spells",
-				"ability": "Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow Test or who are Miserable fall victim to Moria-­ madness, seeing the city as it was in the days of old, not its present fallen state. A victim of Moria-madness may only be restored to reality with an ENHEARTEN roll from a companion (who must spend their main action to do so, if in combat). Otherwise, they wander blinded by glory for one hour."
+				"ability": "Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow Test or who are Miserable fall victim to Moria-madness, seeing the city as it was in the days of old, not its present fallen state. A victim of Moria-madness may only be restored to reality with an ENHEARTEN roll from a companion (who must spend their main action to do so, if in combat). Otherwise, they wander blinded by glory for one hour."
 			}
 		],
 		"group": "Undead",
 		"adventure": "The Quest of Moria"
+	},
+	{
+		"title": "Heledirien",
+		"description": "Her kinfolk have dwelt in Ithilien since long before Elendil came over the sea. She fiercely loves the dryad loveliness of Ithilien, so she volunteered for the Rangers when she came of age. She takes every Orc trespass as a personal affront, making her seem blood-thirsty compared to the more restrained knights of the Tower. However, she can be soft-hearted too — she protects those who still dwell in Ithilien in defiance of the Steward’s command. How can she do otherwise? She understands all too well their desire to dwell in this beautiful land.",
+		"traits": ["Fierce", "True-hearted"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 1,
+			"resolve": 7,
+			"parry": 1,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", "Wind-like Speed", "Yell of Triumph"],
+		"group": "Range of Ithilien",
+		"adventure": "The Ithil-Stone"
+	},
+	{
+		"title": "Ranger of Ithilien",
+		"description": "",
+		"traits": ["Stealthy", "Wary"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"resolve": 6,
+			"parry": 1,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", "Wind-like Speed"],
+		"group": "Range of Ithilien",
+		"adventure": "The Ithil-Stone"
+	},
+	{
+		"title": "Hill-troll",
+		"description": "",
+		"traits": ["Fierce", "Strong"],
+		"attributes": {
+			"level": 8,
+			"endurance": 60,
+			"might": 2,
+			"hate": 8,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Hammer",
+				"skill": 3,
+				"damage": 8,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Bite",
+				"skill": 2,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Hideous Toughness", "Hate Sunlight", "Horrible Strength"],
+		"group": "Trolls",
+		"adventure": "The Ithil-Stone"
+	},
+	{
+		"title": "Ringwraith",
+		"description": "Nine (rings) he gave to Mortal Men, proud and great, and so ensnared them. Long ago they fell under the dominion of the One, and they became Ringwraiths, shadows under his great Shadow, his most terrible servants.",
+		"traits": ["Merciless", "Proud"],
+		"attributes": {
+			"level": 7,
+			"endurance": 60,
+			"might": 2,
+			"hate": 7,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Long Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Black Dart",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			{ "name": "Black Breath", "ability": "At the start of the first round of the battle, all Player-heroes near one or more Ringwraiths gain 4 Shadow points (Dread). The VALOUR roll is *Ill-favoured* while in darkness. Those who fail their Shadow test fall unconscious for the rest of the fight. A successful HEALING roll from another Player-hero (who must spend their main action to do so) revives the target, who is daunted and cannot spend Hope for the rest of the fight. If the Shadow test failed with an , then the Player-hero has been stricken by the Black Shadow (see *Hands of the White Wizard* pg 136)." },
+			{ "name": "Deadly Voice", "ability": "Once per round, spend 1 Hate to make all Player-heroes in sight gain 2 Shadow points (Dread). The VALOUR roll is *Ill-favoured* while in darkness. Those who fail their Shadow test or are Miserable are daunted and cannot spend Hope for the rest of the fight. Those who fail their Shadow test and are Miserable suffer the same effects as failing the Shadow test against the *Black Breath*." },
+			{ "name": "Dwimmerlaik", "ability": "The Ringwraith is immune to Endurance loss and Wounds from all sources of injury except fire and magical weapons, and can spend 1 Hate to cancel a Wound from such weapons (unless they have been wrought for the Bane of the Undead). When an attack inflicts damage to the Ringwraith that would cause it to go to zero Endurance, it causes a Piercing Blow instead. Then, if the Ringwraith is still alive, its Endurance score is set back at half its maximum rating." },
+			"Fear of Fire",
+			"Hate Sunlight",
+			"Heartless"
+		],
+		"group": "Undead",
+		"adventure": "The Ithil-Stone"
+	},
+	{
+		"title": "Shelob",
+		"description": "",
+		"traits": ["Stealthy", "Swift"],
+		"attributes": {
+			"level": 11,
+			"endurance": 130,
+			"might": 3,
+			"hate": 11,
+			"parry": 0,
+			"armour": 5
+		},
+		"attacks": [
+			{
+				"attack": "Beak and Claws",
+				"skill": 3,
+				"damage": 9,
+				"injury": 16,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Sting",
+				"skill": 2,
+				"damage": 9,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			{ "name": "Beloved Flesh", "ability": "Each time Shelob is Wounded, she also loses 1 Hate. In addition, whenever Shelob loses or spends Hate, increase that loss or expenditure by 1 for each Wound she has." },
+			"Craven",
+			{ "name": "Foul Reek", "ability": "Spend 1 Hate to cause all Player-heroes engaged with Shelob to *lose (1d)* on all rolls for the round." },
+			"Great Leap", "Hate Sunlight", "Hideous Toughness",
+			{ "name": "Shelob Poisons", "ability": "If an attack results in a Wound, the target immediately suffers a grievous Endurance loss from poison. If the poison reduces the target to zero Endurance, Shelob can choose that the target does not become Dying." },
+			"Snake-like Speed", "Thick Hide", "Thing of Terror"
+		],
+		"group": "Spiders",
+		"adventure": "The Ithil-Stone"
+	},
+	{
+		"title": "Saruman of Many Colours",
+		"description": "",
+		"traits": ["Cunning", "Lordly", "Traitorous"],
+		"attributes": {
+			"level": 12,
+			"endurance": 100,
+			"might": 2,
+			"hate": 12,
+			"parry": 1,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Wizard’s Staff",
+				"skill": 4,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Knockback"]
+			}
+		],
+		"abilities": [
+			{ "name": "A Mind of Metal and Wheels", "ability": "Saruman is not affected by the Intimidate Foes combat task." },
+			"Combat Sorcerer",
+			{ "name": "Cunning Mind", "ability": "While inside Orthanc, Saruman cannot be surprised and all his rolls are *Favoured*." },
+			{ "name": "Devilry of Saruman", "ability": "Once per round, spend 1 Hate to cause a grievous Endurance loss from fire to one Player-hero engaged with Saruman, and a severe Endurance loss from fire to all other Player-heroes either in a Close Combat stance or Rearward stance (Loremaster’s choice). Targets who lose at least 1 Endurance are also set on fire, suffering a moderate Endurance loss at the end of each combat round, unless they put out the fire as their main action for the round." },
+			{ "name": "Dreadful Spells: The Voice of Saruman", "ability": "Once per round, spend 1 Hate to make all Player-heroes who can hear Saruman gain 4 Shadow points (Sorcery). The WISDOM roll is Ill-favoured. Those who fail their Shadow test or who are Miserable are enthralled and cannot attack Saruman for the rest of the fight, or until they suffer any Endurance loss. Those who fail their Shadow test and are Miserable suffer the same effects, and must spend their next main action to attack another Player-hero of the Loremaster’s choice (in any combat stance, including Rearward). Use the higher of the attacker’s Strength TN and the target’s Parry as the TN for the attack, and ignore any stance modifiers for this attack; the Loremaster chooses the weapon used for the attack and how to spend any Success icons ( ). A successful AWE or PERSUADE roll from a Player-hero who is not enthralled (and who must spend their main action to do so) breaks the enchantment." },
+			{ "name": "Dreadful Spells: The Will of Saruman", "ability": "Once per round, spend 1 Hate to restore 1 Hate to all Saruman’s allies and make all Player-heroes in the fight gain 3 Shadow points (Sorcery). The WISDOM roll is *Ill-favoured*. Those who fail their Shadow test or who are Miserable are Weary for the rest of the fight. Those who fail their Shadow test and are Miserable suffer the same effects, and cannot Harden Will for the rest of the fight." },
+			{ "name": "Dwimmer-crafty", "ability": "If Saruman is not surprised, opening volleys against him are not possible, he acts first during each round of combat, and all attack rolls against him are *Ill-favoured*." },
+			{ "name": "Istar", "ability": "Spend 1 Hate to cancel a Wound. When an attack inflicts damage to Saruman that would cause him to go to zero Endurance, it causes a Piercing Blow instead. Then, if Saruman is still alive, his Endurance score is set back at half its maximum rating." }
+		],
+		"group": "Istari"
 	}
 ]

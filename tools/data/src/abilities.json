@@ -124,6 +124,10 @@
 		"ability": "At the start of the first round of the battle all Player-heroes in sight of one or more creatures with this ability gain 3 Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight."
 	},
 	{
+		"name": "Wind-like Speed",
+		"ability": "When targeted by an attack, spend 1 :hate: to make the attack roll *Ill-favoured*."
+	},
+	{
 		"name": "Yell of Triumph",
 		"ability": "Spend 1 :hate: to restore 1 :hate: to all other :group: in the fight."
 	}
