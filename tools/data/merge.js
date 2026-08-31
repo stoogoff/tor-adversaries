@@ -26,6 +26,7 @@ const adversaryFiles = {
 	'Wolves': { file: 'wolves.json', source: 'Core Rules' },
 	'Core Characters': { file: 'core-characters.json', source: 'Core Rules' },
 	'White Wizard': { file: 'white-wizard.json', source: 'Hand of the White Wizard' },
+	'Lost Realm': { file: 'lost-realm.json', source: 'Ruins of the Lost Realm' },
 }
 
 let adversaries = []
@@ -39,7 +40,7 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 		item.group = item.group ?? group
 
 		// assign source based on book
-		item.source = obj.source
+		item.sources = item.sources ?? [obj.source]
 
 		// load abilities and add directly to the adversary
 		// abilities are parsed to make the following changes:

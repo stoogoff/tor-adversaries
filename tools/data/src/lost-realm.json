@@ -1,0 +1,492 @@
+[
+	{
+		"title": "Zoril",
+		"description": "Zoril might easily be mistaken for one of the Dúnedain of old; in her, the blood of Númenor is strong, giving her the long limbs and lordly height of that folk. She was a reaver and an adventurer in the south for long years, wandering under strange stars as a freebooter, before she returned home to Umbar.",
+		"traits": ["Proud", "Wilful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 4,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "The Blade Magolach",
+				"skill": 4,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Fiery Blow"]
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Fearless", "Snake-like Speed", "Yell of Triumph",
+			{ "name": "Fiery Blow", "ability": "The attack burns the target, inflicting a severe Endurance loss from fire damage (see page 134 of The One Ring)." }
+		],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans", "There Let them Lie Until the End"],
+		"sources": ["Hand of the White Wizard", "Ruins of the Lost Realm"]
+	},
+	{
+		"title": "Usapthon",
+		"description": "Of old, the Black Númenóreans studied the arts of the Enemy, and learned sorcery under the tutelage of Sauron. During the long centuries after the Enemy’s defeat at the hands of the Last Alliance, knowledge of sorcery was preserved by secret cults and schools. Usapthon was trained in such a school; she was raised in underground catacombs and did not see sunlight until she was nine years old, so that she was consecrated to Shadow. Her mother tongue is the Black Speech of Mordor, and she was taught to read by studying crumbling scrolls of magic.",
+		"traits": ["Secretive", "Unsettling"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 3,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Club",
+				"skill": 4,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Knockback"]
+			},
+			{
+				"attack": "Dagger",
+				"skill": 3,
+				"damage": 2,
+				"injury": 12,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Combat Sorcerer", "Denizen of the Dark", "Fearless", "Strike Fear:2",
+			{
+				"name": "Dreadful Spells (Lure of Shadow)",
+				"ability": "Usapthon weaves a web of darkness around her victim. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who both are Miserable and fail their Shadow test suffer a Bout of Madness."
+			},
+			{
+				"name": "Dreadful Spells (Misfortune)",
+				"ability": "Usapthon curses her foes with bad luck. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable increase all their Attribute TNs by their Shadow score for the rest of the combat."
+			}
+		],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans", "There Let them Lie Until the End"],
+		"sources": ["Hand of the White Wizard", "Ruins of the Lost Realm"]
+	},
+	{
+		"title": "Captain Nerek",
+		"description": "Old Nerek is a veteran of the Corsairs of Umbar, a raider and reaver of the shores of Middle-earth. He has lost the wild courage of his youth, and now tends towards caution. Preserving his ship and the lives of his crew seems more important to him than some valley of a few ancient Elves, so this mission to Eriador fills him with doubt.",
+		"traits": ["Commanding", "Seasoned"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"resolve": 5,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Heavy Scimitar",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [
+			{
+				"name": "Master and Commander",
+				"ability": "While Nerek commands his crew, his and their Might counts as 1 higher for the purpose of resisting the Intimidate Foe combat task."
+			},
+			"Snake-like Speed", "Yell of Triumph"
+		],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans"]
+	},
+	{
+		"title": "Lug, Lord of the Lash",
+		"description": "The only Orc on board the Kâthuphazgân is the slave-master, Lug, called the Lord of the Lash by the slaves. Orcs are not seafarers, and have a natural terror of the open ocean, so Lug stays below on the slave decks and takes his fear out on the unfortunate rowers.",
+		"traits": ["Proud", "Wilful"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 3,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed Sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Horrible Strength", "Yell of Triumph"],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans"]
+	},
+	{
+		"title": "Black Númenórean Spies",
+		"description": "Cunning spies, trained to infiltrate and recruit more agents to Sauron’s cause.",
+		"traits": ["Deceptive", "Patient"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"hate": 3,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Short Sword",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Craven", "Snake-like Speed"],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans"]
+	},
+	{
+		"title": "Black Númenórean Sailors",
+		"description": "Most of the crew of the Kâthuphazgân are slaves and will not fight for the Black Númenóreans; the statistics below describe one of the deck crew or guards on board the ship.",
+		"traits": ["Proud", "Superstitious"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"resolve": 4,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Axe",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans"]
+	},
+	{
+		"title": "Black Númenórean Soldiers",
+		"description": "These warriors are among the best and highest-honoured soldiers amid the Black Númenóreans, the counterparts of Gondor’s elite guard of the citadel. There are only a few of these warriors on board, but few in Eriador can match them.",
+		"traits": ["Cruel", "Disciplined"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"hate": 5,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Long Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fearless", "Thick Armour"],
+		"group": "Corsairs of Umbar",
+		"adventures": ["The Black Númenóreans"]
+	},
+	{
+		"title": "Drustan the Mercenary",
+		"description": "Of Gondorian stock, Drustan has been one of Saruman’s servants and messengers for several years. Drustan’s a cynic, believing that the end of the world will come soon; all that remains is to eke out some little pleasure from these last days of the Sun before darkness swallows all Middle-earth forever. He’s an accomplished traveller, tracker and swordsman, and is high in Saruman’s counsels. His current task is to watch the Shire and the lands around it, seeking news of Gandalf; he’s a regular at The Prancing Pony and the Bridge Inn at Tharbad.",
+		"traits": ["Cunning", "Hardened"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"resolve": 6,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Long Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": []
+			},
+			{
+				"attack": "Great Bow",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Snake-like Speed"],
+		"group": "Hostile Southerners",
+		"adventures": ["The White Hand of Saruman"]
+	},
+	{
+		"title": "Ivoch the Boneless",
+		"description": "Now Ivoch was the son of a mighty chieftain named Imlar, but when Ivoch was seven years old, he fell ill with a fever that wracked his body with terrible pains. Imlar brought the boy to Isengard, and there his life was saved — but he was not made whole, for the boy’s legs were left numb and unmoving as stone. Never would Ivoch ride a stolen horse, or walk the stony hills. Furious, Imlar ordered that the boy be abandoned in the wilds to die, as is the custom of the hillfolk.",
+		"traits": ["Crippled", "Lordly"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"resolve": 5,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Long-hafted Axe",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Fierce", "Horrible Strength", "Yell of Triumph"],
+		"group": "Dunlendings",
+		"adventures": ["Raiders from Dunland"]
+	},
+	{
+		"title": "Tembur",
+		"description": "A full accounting of the many injuries and insults inflicted on Tembur by the men of Rohan is too long to list here; it begins in the time of his great-great-grandfather, who was put to death by the Strawheads. Thus began a long and bloody feud, as the carven stones in Tembur’s fort tell; death upon death, echoing down through many generations. Tembur was born into this feud, raised upon hatred like mother’s milk. All his life, he knew his destiny — to be the Forgoil-bane, the ruin of Rohan.",
+		"traits": ["Cruel", "Fierce"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"resolve": 5,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Rune-scored Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fierce", "Hatred (Rohirrim)", "Hideous Toughness"],
+		"group": "Dunlendings",
+		"adventures": ["Raiders from Dunland"]
+	},
+	{
+		"title": "Eater of Ghosts",
+		"description": "Eater of Ghosts comes from the dark places under the hills. She paints her face skull-white, for she walks in the other-world, the land of the dead. Even though she is young, she speaks with the voices of many old men, and knows things no young woman should know. It is said of Eater of Ghosts that she consumes the dead, and makes them part of her.",
+		"traits": ["Fey", "Wicked"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"resolve": 5,
+			"parry": 3,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Long-hafted Axe",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Fierce", "Heartless", "Strike Fear:1"],
+		"group": "Dunlendings",
+		"adventures": ["Raiders from Dunland"]
+	},
+	{
+		"title": "Beast of Angmar",
+		"description": "The Beast resembles a great, blind, misshapen grey bear, with an eerily human-like face and hands; it hunts by smell, so its snuffling may warn Player-heroes of its approach.",
+		"traits": ["Cunning", "Hungry"],
+		"attributes": {
+			"level": 9,
+			"endurance": 70,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 2,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 2,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": [
+			{ "name": "Unnatural Hunger", "ability": "When first encountered, the Beast is sluggish and slow. If the Beast eats a victim, it returns to full Endurance and Hate, heals any Wound it has and becomes faster and stronger, giving it a *Hate of 9*, *gain (1d)* to all attacks and gaining the Fell Ability *Fierce*." },
+			"Fierce", "Horrible Strength", "Hideous Toughness", "Strike Fear:2", "Thick Hide"
+		],
+		"group": "Nameless Things",
+		"adventures": ["The Old-Dwarf Mines"]
+	},
+	{
+		"title": "Snow-wights",
+		"description": "The tales of the Lossoth speak of evil spirits sent by the Witch-king to torment his foes: Wights who in other lands inhabited corpses in barrows. Here, though, they found no bodies to steal, and so must clothe themselves in shapes of snow.",
+		"traits": ["Cruel", "Stealthy"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Icy Blade",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Deathless", "Heartless",
+			{ "name": "Freeze the Blood", "ability": "At the start of the first round of the battle all Player-heroes in sight of one or more Snow-wights gain 2 Shadow points (Dread). Those who fail their Shadow test are dismayed and all their rolls are *Ill-favoured* for the rest of the fight." }
+		],
+		"group": "Undead",
+		"adventures": ["The Old-Dwarf Mines"]
+	},
+	{
+		"title": "Tree-folk Warrior",
+		"description": "These evil Men dwell in the deep forest, and hate and fear outsiders. While in these fallen years they resemble the Drúedain of the woods in the south, they are in fact descended from the same folk as the ancestors of the Númenoreans. They are long of limb and strong of body, and have become very wood-crafty over the centuries. They wear little armour, but paint their bodies in mud and crushed leaves to blend in with the dark shadows of the forest.",
+		"traits": ["Nimble", "Ferocious"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 2,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Poison", "Snake-like Speed"],
+		"group": "Evil Men",
+		"adventures": ["The Tree of Sorrow"]
+	},
+	{
+		"title": "Thunir Blood-drinker",
+		"description": "When Sauron went to war against the Elves of Hollin, the hated Men of Númenor fought against the Dark Lord. A few warriors from Eryn Vorn, therefore, joined with Sauron’s armies for the chance to fight and kill their ancient foes from the West. Thunir was among them, and he was the only one to return from the war. That was four thousand years ago, and Thunir still lives.",
+		"traits": ["Nimble", "Ferocious"],
+		"attributes": {
+			"level": 6,
+			"endurance": 50,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Crush",
+				"skill": 4,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Fear of Fire", "Heartless", "Hideous Toughness", "Horrible Strength", "Thick Hide"],
+		"group": "Evil Men",
+		"adventures": ["The Tree of Sorrow"]
+	},
+	{
+		"title": "Large Spider",
+		"description": "",
+		"traits": ["Pitiless", "Swift"],
+		"attributes": {
+			"level": 4,
+			"endurance": 12,
+			"might": 1,
+			"hate": 4,
+			"parry": 0,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Webs",
+				"skill": 4,
+				"damage": 0,
+				"injury": 0,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Great Leap", "Poison", "Snake-like Speed", "Thick Hide"],
+		"group": "Spiders",
+		"adventures": ["Fort Arlas"]
+	}
+]

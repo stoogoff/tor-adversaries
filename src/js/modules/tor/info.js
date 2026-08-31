@@ -29,14 +29,18 @@ export default {
 		description() {
 			return infoStore?.item?.description ?? ''
 		},
-		source() {
-			return infoStore?.item?.source ?? ''
+		sources() {
+			const sources = (infoStore?.item?.sources ?? []).map(source => ({ source }))
+			console.log({ sources })
+			return sources
 		},
 		group() {
 			return infoStore?.item?.group ?? ''
 		},
-		adventure() {
-			return infoStore?.item?.adventure ?? ''
+		adventures() {
+			const adventures = (infoStore?.item?.adventures ?? []).map(adventure => ({ adventure }))
+			console.log({ adventures })
+			return adventures
 		},
 		traits() {
 			return (infoStore?.item?.traits ?? []).join(', ')

@@ -34,7 +34,7 @@ export default {
 
 			return data.filter(item => 
 				item.group.toLowerCase() === filter ||
-				item.source.toLowerCase() === filter ||
+				item.sources.filter(source => source.toLowerCase() === filter).length > 0 ||
 				item.title.toLowerCase().indexOf(filter) !== -1
 			)
 		},

@@ -22,7 +22,7 @@
 		],
 		"abilities": ["Combat Sorcerer", "Dreadful Spells (Murder of Crows)", "Snake-like Speed"],
 		"group": "Dunlendings",
-		"adventure": "The Beast of Dunland"
+		"adventures": ["The Beast of Dunland"]
 	},
 	{
 		"title": "The Beast of Dunland",
@@ -54,7 +54,7 @@
 		],
 		"abilities": ["Dull-witted", "Fear of Fire", "Fierce", "Hideous Toughness", "Horrible Strength"],
 		"group": "Trolls",
-		"adventure": "The Beast of Dunland"
+		"adventures": ["The Beast of Dunland"]
 	},
 	{
 		"title": "The Beithir",
@@ -86,7 +86,7 @@
 		],
 		"abilities": ["Foul Slime", "Hate Sunlight", "Hideous Toughness", "Horrible Strength", "Poison"],
 		"group": "Nameless Things",
-		"adventure": "The Sea-Prince of the Shore"
+		"adventures": ["The Sea-Prince of the Shore"]
 	},
 	{
 		"title": "Sea-Prince Guard",
@@ -118,7 +118,7 @@
 		],
 		"abilities": ["Fearless", "Thick Armour"],
 		"group": "Sea-Prince",
-		"adventure": "The Sea-Prince of the Shore"
+		"adventures": ["The Sea-Prince of the Shore"]
 	},
 	{
 		"title": "Nambar, the Sea-Prince",
@@ -143,7 +143,7 @@
 		],
 		"abilities": ["Fearless", { "name": "Lesser Ring", "ability": "Spend 1 Hate to either recover 6 Endurance or heal 1 Wound." }, "Snake-like Speed", "Yell of Triumph"],
 		"group": "Sea-Prince",
-		"adventure": "The Sea-Prince of the Shore"
+		"adventures": ["The Sea-Prince of the Shore"]
 	},
 	{
 		"title": "Baugrim",
@@ -175,7 +175,7 @@
 		],
 		"abilities": ["Horrible Strength", "Yell of Triumph"],
 		"group": "Orcs",
-		"adventure": "The Disaster of the Gladden Fields"
+		"adventures": ["The Disaster of the Gladden Fields"]
 	},
 	{
 		"title": "Baugrim’s Black Uruks",
@@ -207,7 +207,7 @@
 		],
 		"abilities": ["Horrible Strength", "Thick Armour"],
 		"group": "Orcs",
-		"adventure": "The Disaster of the Gladden Fields"
+		"adventures": ["The Disaster of the Gladden Fields"]
 	},
 	{
 		"title": "Lightroot",
@@ -232,84 +232,7 @@
 		],
 		"abilities": ["Fear of Fire", "Great Strength", { "name": "Mighty Toughness", "ability": "Lightroot is unaffected by unarmed attacks. Additionally, when an attack inflicts damage to Lightroot that would cause him to go to zero Endurance, it causes a Piercing Blow instead. Then, if Lightroot is still alive his Endurance score is set back at half its maximum rating." }, "Thick Bark"],
 		"group": "Ents",
-		"adventure": "There Let them Lie Until the End"
-	},
-	{
-		"title": "Zoril",
-		"description": "",
-		"traits": ["Proud", "Wilful"],
-		"attributes": {
-			"level": 7,
-			"endurance": 28,
-			"might": 2,
-			"hate": 7,
-			"parry": 4,
-			"armour": 4
-		},
-		"attacks": [
-			{
-				"attack": "The Blade Magolach",
-				"skill": 4,
-				"damage": 6,
-				"injury": 18,
-				"properties": ["Fiery Blow"]
-			},
-			{
-				"attack": "Great Bow",
-				"skill": 3,
-				"damage": 4,
-				"injury": 16,
-				"properties": ["Pierce"]
-			}
-		],
-		"abilities": [
-			"Fearless", "Snake-like Speed", "Yell of Triumph",
-			{ "name": "Fiery Blow", "ability": "The attack burns the target, inflicting a severe Endurance loss from fire damage (see page 134 of The One Ring)." }
-		],
-		"group": "Corsairs of Umbar",
-		"adventure": "There Let them Lie Until the End"
-	},
-	{
-		"title": "Usapthon",
-		"description": "",
-		"traits": ["Secretive", "Unsettling"],
-		"attributes": {
-			"level": 7,
-			"endurance": 28,
-			"might": 2,
-			"hate": 7,
-			"parry": 3,
-			"armour": 2
-		},
-		"attacks": [
-			{
-				"attack": "Club",
-				"skill": 4,
-				"damage": 4,
-				"injury": 14,
-				"properties": ["Knockback"]
-			},
-			{
-				"attack": "Dagger",
-				"skill": 3,
-				"damage": 2,
-				"injury": 12,
-				"properties": ["Pierce"]
-			}
-		],
-		"abilities": [
-			"Combat Sorcerer", "Denizen of the Dark", "Fearless", "Strike Fear:2",
-			{
-				"name": "Dreadful Spells (Lure of Shadow)",
-				"ability": "Usapthon weaves a web of darkness around her victim. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who both are Miserable and fail their Shadow test suffer a Bout of Madness."
-			},
-			{
-				"name": "Dreadful Spells (Misfortune)",
-				"ability": "Usapthon curses her foes with bad luck. Spend 1 Hate to make one Player-hero gain 3 Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable increase all their Attribute TNs by their Shadow score for the rest of the combat."
-			}
-		],
-		"group": "Corsairs of Umbar",
-		"adventure": "There Let them Lie Until the End"
+		"adventures": ["There Let them Lie Until the End"]
 	},
 	{
 		"title": "The Watcher in the Water",
@@ -349,7 +272,7 @@
 			}
 		],
 		"group": "Nameless Things",
-		"adventure": "The Quest of Moria"
+		"adventures": ["The Quest of Moria"]
 	},
 	{
 		"title": "Gorgol",
@@ -374,7 +297,7 @@
 		],
 		"abilities": ["Hatred (Dwarves)", "Hate Sunlight", "Horrible Strength", "Snake-like Speed", "Yell of Triumph"],
 		"group": "Orcs",
-		"adventure": "The Quest of Moria"
+		"adventures": ["The Quest of Moria"]
 	},
 	{
 		"title": "Kinir the Ring-Wight",
@@ -405,7 +328,7 @@
 			}
 		],
 		"group": "Undead",
-		"adventure": "The Quest of Moria"
+		"adventures": ["The Quest of Moria"]
 	},
 	{
 		"title": "Heledirien",
@@ -437,7 +360,7 @@
 		],
 		"abilities": ["Fearless", "Wind-like Speed", "Yell of Triumph"],
 		"group": "Range of Ithilien",
-		"adventure": "The Ithil-Stone"
+		"adventures": ["The Ithil-Stone"]
 	},
 	{
 		"title": "Ranger of Ithilien",
@@ -469,7 +392,7 @@
 		],
 		"abilities": ["Fearless", "Wind-like Speed"],
 		"group": "Range of Ithilien",
-		"adventure": "The Ithil-Stone"
+		"adventures": ["The Ithil-Stone"]
 	},
 	{
 		"title": "Hill-troll",
@@ -501,7 +424,7 @@
 		],
 		"abilities": ["Hideous Toughness", "Hate Sunlight", "Horrible Strength"],
 		"group": "Trolls",
-		"adventure": "The Ithil-Stone"
+		"adventures": ["The Ithil-Stone"]
 	},
 	{
 		"title": "Ringwraith",
@@ -540,7 +463,7 @@
 			"Heartless"
 		],
 		"group": "Undead",
-		"adventure": "The Ithil-Stone"
+		"adventures": ["The Ithil-Stone"]
 	},
 	{
 		"title": "Shelob",
@@ -579,7 +502,7 @@
 			"Snake-like Speed", "Thick Hide", "Thing of Terror"
 		],
 		"group": "Spiders",
-		"adventure": "The Ithil-Stone"
+		"adventures": ["The Ithil-Stone"]
 	},
 	{
 		"title": "Saruman of Many Colours",

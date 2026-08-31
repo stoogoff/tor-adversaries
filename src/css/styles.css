@@ -230,6 +230,7 @@ main {
 	padding: var(--spacing-1) var(--spacing-2);
 	display: inline-block;
 	margin-right: var(--spacing-1);
+	margin-bottom: var(--spacing-1);
 	border-radius: var(--spacing-4);
 }
 

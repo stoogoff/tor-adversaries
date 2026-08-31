@@ -72,6 +72,10 @@
 		"ability": "When fighting Dwarves, all the creature’s rolls are *Favoured*."
 	},
 	{
+		"name": "Hatred (Rohirrim)",
+		"ability": "When targeting Rohirrim, all the creature’s rolls are *Favoured*."
+	},
+	{
 		"name": "Heartless",
 		"ability": "The creature is not affected by the Intimidate Foe combat task, unless a Magical success is obtained."
 	},
