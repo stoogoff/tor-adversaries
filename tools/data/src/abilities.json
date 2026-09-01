@@ -32,10 +32,6 @@
 		"ability": "Spend 1 Hate to make one Player-hero gain :rank: Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable fall unconscious and may be roused only with a SONG roll. Otherwise, they wake up after one hour."
 	},
 	{
-		"name": "Dreadful Spells (Murder of Crows)",
-		"ability": "Spend 1 Hate to make each Player-hero in sight gain 2 Shadow points (Sorcery) and *lose (1d)* on any attack rolls they make during their next turn. Those who fail their Shadow test or who are Miserable also suffer a severe Endurance loss (consider it as if from falling)."
-	},
-	{
 		"name": "Fearless",
 		"ability": "This creature’s Might is considered 1 higher for the purpose of resisting the Intimidate Foes combat task."
 	},
@@ -72,6 +68,10 @@
 		"ability": "When fighting Dwarves, all the creature’s rolls are *Favoured*."
 	},
 	{
+		"name": "Hatred (Hobbits)",
+		"ability": "When fighting Hobbits, all the creature’s rolls are *Favoured*."
+	},
+	{
 		"name": "Hatred (Rohirrim)",
 		"ability": "When targeting Rohirrim, all the creature’s rolls are *Favoured*."
 	},
@@ -89,15 +89,15 @@
 	},
 	{
 		"name": "Howl of Triumph",
-		"ability": "Spend 1 Hate to restore 1 Hate to all other Wargs in the fight."
+		"ability": "Spend 1 Hate to restore 1 Hate to all other :group: in the fight."
 	},
 	{
 		"name": "Orc-poison",
-		"ability": "If an attack results in a Wound, the target is also poisoned (see page 134 of the Core book for the effects of poison)."
+		"ability": "If an attack results in a Wound, the target is also poisoned (:rank: Endurance loss; see *The One Ring*, page 134, for the effects of poison)."
 	},
 	{
 		"name": "Poison",
-		"ability": "If an attack results in a Wound, the target is also poisoned."
+		"ability": "If an attack results in a Wound, the target is also poisoned (:rank: Endurance loss; see *The One Ring*, page 134, for the effects of poison)."
 	},
 	{
 		"name": "Savage Assault",

@@ -428,7 +428,7 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Poison", "Snake-like Speed"],
+		"abilities": ["Poison:moderate", "Snake-like Speed"],
 		"group": "Evil Men",
 		"adventures": ["The Tree of Sorrow"]
 	},
@@ -458,6 +458,293 @@
 		"adventures": ["The Tree of Sorrow"]
 	},
 	{
+		"title": "Doom of Nenuial",
+		"description": "The Doom of Nenuial is a hideous creature, looking like a misshapen deep-sea fish, with a huge gaping mouth filled with row upon row of sharp fangs. Multiple small, blind eyes surmount its head, and a single horn protrudes from its snout, ending in a luminescent lure that the creature uses to attract its prey when hunting.",
+		"traits": ["Cunning", "Territorial"],
+		"attributes": {
+			"level": 10,
+			"endurance": 100,
+			"might": 3,
+			"hate": 10,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 8,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Tail",
+				"skill": 3,
+				"damage": 10,
+				"injury": 12,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [
+			{
+				"name": "Aquatic",
+				"ability": "All rolls are *Ill-favoured* while on land."
+			},
+			"Denizen of the Dark", "Fear of Fire", "Hate Sunlight", "Hideous Toughness", "Snake-like Speed"],
+		"group": "Nameless Things",
+		"adventures": ["The Shrouded Islets"]
+	},
+	{
+		"title": "Herunen",
+		"description": "Herunen was once the benevolent keeper of Tindailin, a water spirit whose essence has been corrupted by years of brooding over the betrayal suffered by his friend Thalion. He is filled with anger and bitterness, and vents his rage on any who come close to the refuge, especially Elves. He appears as a slender man with Elven features, but sporting a long beard. He rarely shows himself clearly to visitors, instead trying to get them away from the refuge by any means at his disposal.",
+		"traits": ["Bitter", "Vengeful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"resolve": 7,
+			"parry": 1,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Conjured Waves",
+				"skill": 3,
+				"damage": 7,
+				"injury": 12,
+				"properties": []
+			}
+		],
+		"abilities": [
+			{
+				"name": "Drown",
+				"ability": "Spend 1 Resolve to make one Player-hero suffer a severe Endurance loss from suffocation."
+			},
+			"Heartless",
+			{
+				"name": "Spirit",
+				"ability": "Spend 1 Resolve to cancel a Wound. When an attack inflicts damage to the creature that would cause it to go to zero Endurance, it causes a Piercing Blow instead. Then, if the creature is still alive, it returns to full Endurance. This ability is ineffective against Player-heroes wielding any magical weapon."
+			}
+		],
+		"group": "Spirits",
+		"adventures": ["Tindailin"]
+	},
+	{
+		"title": "Drameth the Houseless",
+		"description": "",
+		"traits": ["Swift", "Tormented"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"resolve": 6,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Great Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Deathless",
+			{
+				"name": "Dreadful Wrath",
+				"ability": "On a successful attack roll, the targeted Player-hero gains 1 Shadow point (Dread), +1 Shadow point for each Success icon on the attack roll. Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight."
+			},
+			"Heartless", "Snake-like Speed"
+		],
+		"group": "Undead",
+		"adventures": ["The Field of Slaughter"]
+	},
+	{
+		"title": "Hill-troll Stalker",
+		"description": "",
+		"traits": ["Hungry", "Wary"],
+		"attributes": {
+			"level": 8,
+			"endurance": 60,
+			"might": 2,
+			"hate": 8,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Hammer",
+				"skill": 3,
+				"damage": 7,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Dull-witted", "Hideous Toughness", "Horrible Strength"],
+		"group": "Trolls",
+		"adventures": ["The Field of Slaughter"]
+	},
+	{
+		"title": "Ghost Bird",
+		"description": "According to the tales, the Ghost Bird is a marsh-wight or monster that has haunted Swanfleet for as long as anyone can remember, slaying outsiders and the unworthy with his terrible spear, then vanishing back into the mists. No weapon can harm the Ghost Bird, and no foe can catch him.",
+		"traits": ["Swift", "Stealthy"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"resolve": 6,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Magic Spear",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Fierce",
+			{ "name": "Ghost Bird’s Nest", "ability": "While the Ghost Bird is in the Hill of the Sleeper, all their rolls are *Favoured* and all attack rolls against it are *Ill-favoured*." },
+			{ "name": "Ghost Bird’s Speed", "ability": "When targeted by an attack, spend 1 Resolve to make the attack roll *lose (1d)* and make it *Ill-favoured*." },
+			{ "name": "Wooden Stilts", "ability": "The Ghost Bird may attack any Player-hero, in any combat stance, including Rearward, and may escape from combat on their turn without making any roll. The Ghost Bird is stripped of this Fell Ability if wounded twice or reduced to zero Endurance: in either case, cancel the Wound, return the Ghost Bird to full Endurance, and delete this Fell Ability." }
+		],
+		"group": "Spirits",
+		"adventures": ["The Hill of the Sleeper"]
+	},
+	{
+		"title": "Marsh-snake",
+		"description": "These beautiful many-hued serpents are things of Shadow, corrupted by the echo of Sauron’s presence here long ago. Their lair is in the upper part of the hill, but they can slither anywhere, hiding and waiting for the right moment to strike.",
+		"traits": [],
+		"attributes": {
+			"level": 1,
+			"endurance": 4,
+			"might": 1,
+			"hate": 1,
+			"parry": 0,
+			"armour": 0
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 2,
+				"damage": 1,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Poison:grievous", "Snake-like Speed"],
+		"group": "—",
+		"adventures": ["The Hill of the Sleeper"]
+	},
+	{
+		"title": "Evil in the Shadows",
+		"description": "So called by the Orcs and Goblins, this is a servant of the Shadow who has been feeding on the anguish and suffering of every poor individual who has been imprisoned in these dungeons for thousands of years. Now, it uses this energy and resentment to spread horror to those that seem vulnerable. If anyone in the Company gains a Shadow Point while in the Haunted Dungeons, the Evil in the Shadows wakes to exact its revenge.",
+		"traits": ["Shadow", "Vengeful"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Broken Sword",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Chilling Touch",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Denizen of the Dark", "Dreadful Spells:2", "Hate Sunlight", "Howl of Triumph", "Thing of Terror"],
+		"group": "Undead",
+		"adventures": ["Mount Gram"]
+	},
+	{
+		"title": "Forgotten Dead",
+		"description": "",
+		"traits": ["Soulless", "Stealthy"],
+		"attributes": {
+			"level": 3,
+			"endurance": 12,
+			"might": 1,
+			"hate": 3,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Rusted Sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 2,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Deathless", "Heartless", "Thing of Terror"],
+		"group": "Undead",
+		"adventures": ["Mount Gram"]
+	},
+	{
+		"title": "Radgul",
+		"description": "This wily, sneering and cunning Orc is the chieftain of all the Goblins and Orcs of Mount Gram and is full of his own plans and desires, which makes him unpredictable. As ambitious as he is fierce, Radgul schemes to become the ruler of all Orcs in northern Eriador, overthrowing his rivals, the Orcs of Mount Gundabad.",
+		"traits": ["Vengeful", "Wily"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"hate": 6,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Orc-axe",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Spear",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Great Leap", "Hatred (Hobbits)", "Hideous Toughness", "Snake-like Speed", "Yell of Triumph"],
+		"group": "Orcs",
+		"adventures": ["Mount Gram"]
+	},
+	{
 		"title": "Large Spider",
 		"description": "",
 		"traits": ["Pitiless", "Swift"],
@@ -485,8 +772,72 @@
 				"properties": ["Seize"]
 			}
 		],
-		"abilities": ["Great Leap", "Poison", "Snake-like Speed", "Thick Hide"],
+		"abilities": ["Great Leap", "Poison:grievous", "Snake-like Speed", "Thick Hide"],
 		"group": "Spiders",
+		"adventures": ["Fort Arlas"]
+	},
+	{
+		"title": "Dolomedia",
+		"description": "Dolomedia is a creature of myth, many ages old, spawned from the belly of the seventh daughter of Ungoliant. Her bulbous body is covered in white spiky hair, with two dark grey streaks running over her back from her head to the tip of her abdomen. Her body is full of bald spots where water Spiders of similar appearance and different sizes constantly run over wet pustules. She is taller than a war-horse, and much longer. She is at home both on the surface and underwater, and has made the swamps of the Ettenmoors her hunting grounds and home.",
+		"traits": ["Cunning", "Cruel"],
+		"attributes": {
+			"level": 9,
+			"endurance": 70,
+			"might": 2,
+			"hate": 9,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Webs",
+				"skill": 4,
+				"damage": 0,
+				"injury": 0,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Hate Sunlight", "Hideous Toughness", "Great Leap", "Poison:grievous", "Snake-like Speed", "Thick Hide", "Thing of Terror"],
+		"group": "Spiders",
+		"adventures": ["Fort Arlas"]
+	},
+	{
+		"title": "Gnarsh",
+		"description": "This monster was a feared commander and warrior who killed hundreds with his club. Belonging to a superior breed of Orc, Gnarsh was an incarnated servant spirit. When he was slain by a mere young mortal, the spirit could not find rest. He lingered in confusion among the hills of Rhudaur for centuries, but was drawn to Fort Arlas once again when Dolomedia uncovered his remains.",
+		"traits": ["Brutal", "Vengeful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Orc-club",
+				"skill": 3,
+				"damage": 8,
+				"injury": 14,
+				"properties": []
+			}
+		],
+		"abilities": [
+			"Deathless",
+			{
+				"name": "Hatred (owner of the dagger)",
+				"ability": "When targeting the owner of the dagger, all attacks by Gnarsh are *Favoured*."
+			},
+			"Horrible Strength", "Snake-like Speed"
+		],
+		"group": "Undead",
 		"adventures": ["Fort Arlas"]
 	}
 ]

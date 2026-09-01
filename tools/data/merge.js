@@ -68,7 +68,7 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 				.replace(/:hate:/g, hateOrResolve)
 				.replace(/:group:/g, item.group)
 				.replace(/\s\*/g, ' <em>')
-				.replace(/\*([\s\.])/g, '</em>$1')
+				.replace(/\*([\s\.,])/g, '</em>$1')
 
 			return ability
 		})

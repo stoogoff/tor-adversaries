@@ -32,7 +32,7 @@
 	},
 	{
 		"title": "Búrzgul",
-		"description": "Búrzgul is a wicked Orc warrior, the chieftain of a ragged band of Orcs from Goblin Gate that made the trip from the Misty Mountains to the South Downs, to join forces with the Wolves of the Howling Hollows. Búrzgul heard of the place from his most trusted friend, a large Warg with midnight-­ black fur and gleaming yellow eyes, going by the name of Ash. For the moment, no one, not even the Rangers of the North know of the threat festering under the hills of the South Downs. On their part, the Wolves and Orcs bide their time, and for the moment have made only a few careful attacks, leaving no survivors. Perhaps most dangerous of all is that Búrzgul regularly sends runners back to larger Orc forces in both Angmar and the Misty Mountains, so news of Bree is never far from the ears of the agents of the Shadow.",
+		"description": "Búrzgul is a wicked Orc warrior, the chieftain of a ragged band of Orcs from Goblin Gate that made the trip from the Misty Mountains to the South Downs, to join forces with the Wolves of the Howling Hollows. Búrzgul heard of the place from his most trusted friend, a large Warg with midnight-black fur and gleaming yellow eyes, going by the name of Ash. For the moment, no one, not even the Rangers of the North know of the threat festering under the hills of the South Downs. On their part, the Wolves and Orcs bide their time, and for the moment have made only a few careful attacks, leaving no survivors. Perhaps most dangerous of all is that Búrzgul regularly sends runners back to larger Orc forces in both Angmar and the Misty Mountains, so news of Bree is never far from the ears of the agents of the Shadow.",
 		"traits": ["Cruel", "Keen-eyed"],
 		"attributes": {
 			"level": 5,
@@ -58,7 +58,7 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Hate Sunlight", "Orc-poison", "Snake-like Speed", "Yell of Triumph"],
+		"abilities": ["Hate Sunlight", "Orc-poison:severe", "Snake-like Speed", "Yell of Triumph"],
 		"group": "Orcs"
 	},
 	{

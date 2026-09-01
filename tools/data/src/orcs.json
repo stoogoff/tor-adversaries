@@ -87,7 +87,7 @@
 				"properties": []
 			}
 		],
-		"abilities": ["Hate Sunlight", "Craven", "Orc-poison"]
+		"abilities": ["Hate Sunlight", "Craven", "Orc-poison:severe"]
 	},
 	{
 		"title": "Orc Chieftain",

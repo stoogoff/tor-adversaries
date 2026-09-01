@@ -20,7 +20,14 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Combat Sorcerer", "Dreadful Spells (Murder of Crows)", "Snake-like Speed"],
+		"abilities": [
+			"Combat Sorcerer",
+			{
+				"name": "Dreadful Spells (Murder of Crows)",
+				"ability": "Spend 1 Hate to make each Player-hero in sight gain 2 Shadow points (Sorcery) and *lose (1d)* on any attack rolls they make during their next turn. Those who fail their Shadow test or who are Miserable also suffer a severe Endurance loss (consider it as if from falling)."
+			},
+			"Snake-like Speed"
+		],
 		"group": "Dunlendings",
 		"adventures": ["The Beast of Dunland"]
 	},
@@ -84,7 +91,7 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Foul Slime", "Hate Sunlight", "Hideous Toughness", "Horrible Strength", "Poison"],
+		"abilities": ["Foul Slime", "Hate Sunlight", "Hideous Toughness", "Horrible Strength", "Poison:moderate"],
 		"group": "Nameless Things",
 		"adventures": ["The Sea-Prince of the Shore"]
 	},
