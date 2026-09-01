@@ -23,6 +23,14 @@ export default {
 	},
 
 	computed: {
+		count() {
+			return (this.data.adversaries ?? []).length
+		},
+
+		total() {
+			return (this.store?.all ?? []).length
+		},
+
 		adversaries() {
 			const data = (this.store?.all ?? []).sort(sortByProperty('title'))
 

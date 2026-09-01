@@ -23,7 +23,10 @@
 		<div data-q-if="loading">Loading...</div>
 		<div class="menu" data-q-if="!loading">
 			<label>
-				<span>Filter</span>
+				<div>
+					<span>Filter</span>
+					<small>(<span data-q-text="count"></span> of <span data-q-text="total"></span>)</small>
+				</div>
 				<input name="filter" type="search" data-q-keyup="handleFilter" data-q-search="handleFilter" />
 			</label>
 			<menu>
@@ -113,6 +116,7 @@
 					</section>
 					<section>
 						<h3>Fell Abilities</h3>
+						<div data-q-if="!hasAbilities">—</div>
 						<details data-q-each="abilities">
 							<summary data-q-text="name"></summary>
 							<p data-q-html="ability"></p>

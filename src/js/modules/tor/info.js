@@ -30,17 +30,13 @@ export default {
 			return infoStore?.item?.description ?? ''
 		},
 		sources() {
-			const sources = (infoStore?.item?.sources ?? []).map(source => ({ source }))
-			console.log({ sources })
-			return sources
+			return (infoStore?.item?.sources ?? []).map(source => ({ source }))
 		},
 		group() {
 			return infoStore?.item?.group ?? ''
 		},
 		adventures() {
-			const adventures = (infoStore?.item?.adventures ?? []).map(adventure => ({ adventure }))
-			console.log({ adventures })
-			return adventures
+			return (infoStore?.item?.adventures ?? []).map(adventure => ({ adventure }))
 		},
 		traits() {
 			return (infoStore?.item?.traits ?? []).join(', ')
@@ -82,6 +78,9 @@ export default {
 		},
 		abilities() {
 			return infoStore?.item?.abilities ?? []
+		},
+		hasAbilities() {
+			return (infoStore?.item?.abilities ?? []).length > 0
 		},
 	},
 

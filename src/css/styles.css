@@ -103,9 +103,14 @@ label {
 	padding: 0 var(--spacing-2);
 	display: block;
 
-	span {
+	div {
 		display: block;
 		margin-bottom: var(--spacing-1);
+		display: flex;
+		
+		span {
+			flex-grow: 1;
+		}
 	}
 }
 
@@ -261,7 +266,7 @@ main {
 	}
 
 	.title {
-		width: 150px;
+		width: 250px;
 	}
 
 	.button {
