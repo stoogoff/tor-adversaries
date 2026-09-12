@@ -25,7 +25,11 @@ export default {
 	},
 
 	showInfo() {
-		infoStore.item = this.data
+		const data = { ...this.data }
+
+		delete data._id
+
+		infoStore.item = data
 	},
 
 	removeAdversary() {
