@@ -1,6 +1,6 @@
 
 import { notNull } from 'q/utils/assert.js'
-import { Emittable } from 'utils/emittable.js'
+import { Emittable } from 'q/utils/emittable.js'
 import { logger } from 'tor/logger.js'
 
 export class ObjectStore extends Emittable {

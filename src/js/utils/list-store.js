@@ -1,7 +1,7 @@
 
 import { throwIfNull } from 'q/utils/assert.js'
 import { createId } from 'q/utils/string.js'
-import { Emittable } from 'utils/emittable.js'
+import { Emittable } from 'q/utils/emittable.js'
 
 const mapItem = item => ({ ...item, _id: item._id ?? createId(12) })
 
