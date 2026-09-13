@@ -8,13 +8,25 @@ export class FetchStore extends Emittable {
 
 	constructor(url) {
 		super()
-		this.#url = url
+
+		const baseUrl = new URL(import.meta.url)
+		const [, versionPath] = baseUrl.pathname.split('/')
+		const isVersioned = /^\d+\.\d+\.\d+$/
+
+		if(isVersioned.test(versionPath)) {
+			this.#url = [baseUrl.origin, versionPath, url].join('/')
+		}
+		else {
+			this.#url = url
+		}
 	}
 
 	async load() {
 		this._emitter.emit('loading')
 
 		try {
+			logger().log('FetchStore', this.#url)
+
 			const data = await fetch(this.#url)
 
 			logger().log('FetchStore', data)

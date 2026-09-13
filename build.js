@@ -64,17 +64,14 @@ await clean(dist)
 await create(distVersioned)
 
 // copy media files, dir by dir
-const mediaDirs = ['css', 'js']
+const mediaDirs = ['css', 'js', 'data']
 
 await Promise.all(mediaDirs.map(dir => copy(join(source, dir), join(distVersioned, dir))))
 
 // copy images to dist
-await copy(join(source, 'media'), join(dist, 'media'))
+//await copy(join(source, 'media'), join(dist, 'media'))
 
 // copy and update HTML
 await versionHtml(source, dist, version)
-
-await create(join(dist, 'about'))
-await versionHtml(join(source, 'about'), join(dist, 'about'), version)
 
 console.log('Done')

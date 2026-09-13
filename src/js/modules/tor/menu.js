@@ -5,7 +5,7 @@ import { FetchStore } from 'utils/fetch-store.js'
 import { infoStore, filterStore } from 'tor/stores.js'
 
 export default {
-	store: new FetchStore('./data/adversaries.json'),
+	store: new FetchStore('/data/adversaries.json'),
 
 	data: {
 		loading: false,
