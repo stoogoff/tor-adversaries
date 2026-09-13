@@ -1,0 +1,74 @@
+
+#responsive {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-weight: bold;
+	padding: 0.5rem;
+	color: oklch(88.5% 0.062 18.334);
+	background-color: oklch(44.4% 0.177 26.899);
+
+	&:before {
+		content: attr(data-xs);
+	}
+}
+
+/* Small */
+@media screen and (min-width: 25em) {
+	#responsive {
+		color: oklch(93.8% 0.127 124.321);
+		background-color: oklch(45.3% 0.124 130.933);
+
+		&:before {
+			content: attr(data-sm);
+		}
+	}
+}
+
+/* Medium */
+@media screen and (min-width: 36em) {
+	#responsive {
+		color: oklch(90.1% 0.058 230.902);
+		background-color: oklch(44.3% 0.11 240.79);
+
+		&:before {
+			content: attr(data-md);
+		}
+	}
+}
+
+/* Large */
+@media screen and (min-width: 55em) {
+	#responsive {
+		color: oklch(87% 0.065 274.039);
+		background-color: oklch(39.8% 0.195 277.366);
+
+		&:before {
+			content: attr(data-lg);
+		}
+	}
+}
+
+/* X large */
+@media screen and (min-width: 75em) {
+	#responsive {
+		color: oklch(90.3% 0.076 319.62);
+		background-color: oklch(45.2% 0.211 324.591);
+
+		&:before {
+			content: attr(data-xl);
+		}
+	}
+}
+
+/* XX large */
+@media screen and (min-width: 90em) {
+	#responsive {
+		color: oklch(89.9% 0.061 343.231);
+		background-color: oklch(45.9% 0.187 3.815);
+
+		&:before {
+			content: attr(data-2xl);
+		}
+	}
+}

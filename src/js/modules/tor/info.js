@@ -1,6 +1,6 @@
 
 import { isNull } from 'q/utils/assert.js'
-import { infoStore, adversaryStore } from 'tor/stores.js'
+import { infoStore, adversaryStore, filterStore } from 'tor/stores.js'
 
 export default {
 	created() {
@@ -82,6 +82,10 @@ export default {
 		hasAbilities() {
 			return (infoStore?.item?.abilities ?? []).length > 0
 		},
+	},
+
+	openChip(event, context) {
+		filterStore.item = event.target.innerText
 	},
 
 	addAdversary() {

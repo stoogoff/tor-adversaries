@@ -27,7 +27,7 @@
 					<span>Filter</span>
 					<small>(<span data-q-text="count"></span> of <span data-q-text="total"></span>)</small>
 				</div>
-				<input name="filter" type="search" data-q-keyup="handleFilter" data-q-search="handleFilter" />
+				<input name="filter" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
 			</label>
 			<menu>
 				<li data-q-each="adversaries" data-q-click="handleClick" data-q-text="title"></li>
@@ -35,99 +35,104 @@
 		</div>
 	</nav>
 
-	<div>
+	<main>
 		<!-- adversary info panel -->
 		<article data-q-component="info">
 			<div data-q-if="!hasAdversary">
 				<h1>The One Ring: Adversaries</h1>
 				<p>Welcome to the site</p>
 			</div>
-			<div data-q-if="hasAdversary" class="grid grid-cols-2">
+			<div id="adversary-panel" data-q-if="hasAdversary" class="grid">
 				<div>
 					<h1 data-q-text="title"></h1>
 					<p data-q-text="description"></p>
 					<div>
-						<span class="chip" data-q-text="group"></span>
-						<span class="chip" data-q-each="sources" data-q-text="source"></span>
-						<span class="chip" data-q-each="adventures" data-q-text="adventure"></span>
+						<span class="chip" data-q-click="openChip" data-q-text="group"></span>
+						<span class="chip" data-q-click="openChip" data-q-each="sources" data-q-text="source"></span>
+						<span class="chip" data-q-click="openChip" data-q-each="adventures" data-q-text="adventure"></span>
 					</div>
 					<div class="btn-add">
 						<button data-q-click="addAdversary">Add</button>
 					</div>
 				</div>
 				<div class="card">
-					<div class="grid grid-cols-2">
+					<div id="adversary-stats" class="grid">
+						<div>
+							<div class="grid grid-cols-2">
+								<section>
+									<h2 data-q-text="title"></h2>
+									<div data-q-text="traits"></div>
+								</section>
+								<dl>
+									<dt>Attribute Level</dt>
+									<dd data-q-text="level"></dd>
+								</dl>
+							</div>
+							<dl class="grid grid-cols-5">
+								<div>
+									<dt>Endurance</dt>
+									<dd data-q-text="endurance"></dd>
+								</div>
+								<div>
+									<dt>Might</dt>
+									<dd data-q-text="might"></dd>
+								</div>
+								<div data-q-if="hasHate">
+									<dt>Hate</dt>
+									<dd data-q-text="hate"></dd>
+								</div>
+								<div data-q-if="hasResolve">
+									<dt>Resolve</dt>
+									<dd data-q-text="resolve"></dd>
+								</div>
+								<div>
+									<dt>Parry</dt>
+									<dd data-q-text="parry"></dd>
+								</div>
+								<div>
+									<dt>Armour</dt>
+									<dd data-q-text="armour"></dd>
+								</div>
+							</dl>
+							<section>
+								<h3>Combat Proficiencies</h3>
+								<table>
+									<thead>
+										<tr>
+											<th>Attack</th>
+											<th>Skill</th>
+											<th>Damage</th>
+											<th>Injury</th>
+											<th>Properties</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-q-each="attacks">
+											<td data-q-text="attack"></td>
+											<td data-q-text="skill"></td>
+											<td data-q-text="damage"></td>
+											<td data-q-text="injury"></td>
+											<td data-q-text="properties"></td>
+										</tr>
+									</tbody>
+								</table>
+							</section>
+						</div>
 						<section>
-							<h2 data-q-text="title"></h2>
-							<div data-q-text="traits"></div>
+							<h3>Fell Abilities</h3>
+							<div data-q-if="!hasAbilities">—</div>
+							<details data-q-each="abilities">
+								<summary data-q-text="name"></summary>
+								<p data-q-html="ability"></p>
+							</details>
 						</section>
-						<dl>
-							<dt>Attribute Level</dt>
-							<dd data-q-text="level"></dd>
-						</dl>
 					</div>
-					<dl class="grid grid-cols-5">
-						<div>
-							<dt>Endurance</dt>
-							<dd data-q-text="endurance"></dd>
-						</div>
-						<div>
-							<dt>Might</dt>
-							<dd data-q-text="might"></dd>
-						</div>
-						<div data-q-if="hasHate">
-							<dt>Hate</dt>
-							<dd data-q-text="hate"></dd>
-						</div>
-						<div data-q-if="hasResolve">
-							<dt>Resolve</dt>
-							<dd data-q-text="resolve"></dd>
-						</div>
-						<div>
-							<dt>Parry</dt>
-							<dd data-q-text="parry"></dd>
-						</div>
-						<div>
-							<dt>Armour</dt>
-							<dd data-q-text="armour"></dd>
-						</div>
-					</dl>
-					<section>
-						<h3>Combat Proficiencies</h3>
-						<table>
-							<thead>
-								<tr>
-									<th>Attack</th>
-									<th>Skill</th>
-									<th>Damage</th>
-									<th>Injury</th>
-									<th>Properties</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-q-each="attacks">
-									<td data-q-text="attack"></td>
-									<td data-q-text="skill"></td>
-									<td data-q-text="damage"></td>
-									<td data-q-text="injury"></td>
-									<td data-q-text="properties"></td>
-							</tbody>
-						</table>
-					</section>
-					<section>
-						<h3>Fell Abilities</h3>
-						<div data-q-if="!hasAbilities">—</div>
-						<details data-q-each="abilities">
-							<summary data-q-text="name"></summary>
-							<p data-q-html="ability"></p>
-						</details>
-					</section>
 				</div>
 			</div>
 		</article>
 
 		<!-- active adversaries -->
-		<main data-q-component="manager">
+		<div id="active-adversaries" data-q-component="manager">
 			<div data-q-if="!hasAdversaries">No adversaries</div>
 			<div data-q-if="hasAdversaries">
 				<section class="card adversary" data-q-each="adversaries" data-q-component="adversary">
@@ -158,9 +163,11 @@
 					</div>
 				</section>
 			</div>
-		</main>
-	</div>
+		</div>
+	</main>
 </div>
+
+<div id="responsive" data-xs="xs" data-sm="sm" data-md="md" data-lg="lg" data-xl="xl" data-2xl="2xl"></div>
 
 <script type="module" src="./js/main.js"></script>
 

@@ -2,7 +2,7 @@
 import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { FetchStore } from 'utils/fetch-store.js'
-import { infoStore } from 'tor/stores.js'
+import { infoStore, filterStore } from 'tor/stores.js'
 
 export default {
 	store: new FetchStore('./data/adversaries.json'),
@@ -17,6 +17,10 @@ export default {
 		this.store.on('loaded', () => {
 			this.data.loading = false
 			this.emit('change')
+		})
+
+		filterStore.on('change', () => {
+			this.data.filter = filterStore.item
 		})
 
 		await this.store.load()
