@@ -36,6 +36,7 @@ const versionHtml = async (source, target, version) => {
 		if(file.isFile && file.name.endsWith('.html')) {
 			const text = await Deno.readTextFile(join(source, file.name))
 			const converted = text
+				.replace('<link rel="stylesheet" href="/css/debug.css" />', '')
 				.replace(/href="\/css/g, `href="/${version}/css`)
 				.replace(/"\.\/js/g, `"./${version}/js`)
 				.replace(/"\.\.\/js/g, `"../${version}/js`)
@@ -67,9 +68,6 @@ await create(distVersioned)
 const mediaDirs = ['css', 'js', 'data']
 
 await Promise.all(mediaDirs.map(dir => copy(join(source, dir), join(distVersioned, dir))))
-
-// copy images to dist
-//await copy(join(source, 'media'), join(dist, 'media'))
 
 // copy and update HTML
 await versionHtml(source, dist, version)

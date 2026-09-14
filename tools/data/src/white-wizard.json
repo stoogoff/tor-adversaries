@@ -366,7 +366,7 @@
 			}
 		],
 		"abilities": ["Fearless", "Wind-like Speed", "Yell of Triumph"],
-		"group": "Range of Ithilien",
+		"group": "Ranger of Ithilien",
 		"adventures": ["The Ithil-Stone"]
 	},
 	{
@@ -398,7 +398,7 @@
 			}
 		],
 		"abilities": ["Fearless", "Wind-like Speed"],
-		"group": "Range of Ithilien",
+		"group": "Ranger of Ithilien",
 		"adventures": ["The Ithil-Stone"]
 	},
 	{

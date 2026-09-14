@@ -1,6 +1,7 @@
 
 import { Emittable } from 'q/utils/emittable.js'
 import { logger } from 'tor/logger.js'
+import { isVersionedPath, versionedPath } from 'utils/lib.js'
 
 export class FetchStore extends Emittable {
 	#url = ''
@@ -9,11 +10,9 @@ export class FetchStore extends Emittable {
 	constructor(url) {
 		super()
 
-		const baseUrl = new URL(import.meta.url)
-		const [, versionPath] = baseUrl.pathname.split('/')
-		const isVersioned = /^v?\d+\.\d+\.\d+$/
+		if(isVersionedPath()) {
+			const { baseUrl, versionPath } = versionedPath()
 
-		if(isVersioned.test(versionPath)) {
 			this.#url = [baseUrl.origin, versionPath, url].join('/')
 		}
 		else {
