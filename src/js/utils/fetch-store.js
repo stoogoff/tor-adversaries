@@ -11,7 +11,7 @@ export class FetchStore extends Emittable {
 
 		const baseUrl = new URL(import.meta.url)
 		const [, versionPath] = baseUrl.pathname.split('/')
-		const isVersioned = /^\d+\.\d+\.\d+$/
+		const isVersioned = /^v?\d+\.\d+\.\d+$/
 
 		if(isVersioned.test(versionPath)) {
 			this.#url = [baseUrl.origin, versionPath, url].join('/')
