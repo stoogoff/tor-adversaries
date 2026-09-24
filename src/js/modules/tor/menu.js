@@ -4,6 +4,7 @@ import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
 import { FetchStore } from 'utils/fetch-store.js'
 import { infoStore, filterStore } from 'tor/stores.js'
+import { closeMenu } from 'utils/menu.js'
 
 export default {
 	store: new FetchStore('data/adversaries.json'),
@@ -60,5 +61,7 @@ export default {
 
 	handleClick(evt, context) {
 		infoStore.item = context.scope.data
+
+		closeMenu()
 	},
 }

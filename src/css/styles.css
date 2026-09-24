@@ -61,6 +61,7 @@ details {
 
 summary {
 	font-weight: bold;
+	cursor: pointer;
 }
 
 table {
@@ -148,11 +149,61 @@ button {
 	}
 }
 
+/* Topbar with logo */
+.topbar {
+	background-color: var(--menu-bg);
+	color: var(--menu-fg);
+	border-bottom: var(--menu-border);
+	box-shadow: var(--shadow-md);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: var(--spacing-2) var(--spacing-4);
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-4);
+	color: var(--title-fg);
+	min-height: var(--spacing-top);
+
+	button {
+		flex-grow: 0;
+		background-color: var(--title-fg);
+		color: var(--primary-bg);
+		border: 0;
+		line-height: 1;
+
+		&:hover {
+			background-color: var(--button-bg);
+			color: var(--button-fg);
+			transform: scale(1.1);
+			transition: transform .2s;
+		}
+	}
+
+	.logo {
+		flex-grow: 1;
+		font-family: var(--font-heading);
+	}
+}
+
 /* Left hand menu bar */
 nav {
-	height: 100vh;
+	height: calc(100vh - var(--spacing-top));
 	overflow: hidden;
 	padding: var(--spacing-4);
+	display: block;
+	max-width: var(--menu-width);
+	position: absolute;
+	top: var(--spacing-top);
+	left: 0;
+	bottom: 0;
+	transform: translateX(calc(var(--menu-width) * -1));
+	transition: transform .5s;
+
+	&.active {
+		transform: translateX(0);
+	}
 }
 
 .menu {
@@ -160,7 +211,7 @@ nav {
 	background-color: var(--menu-bg);
 
 	menu {
-		height: calc(100vh - 6rem);
+		height: calc(100vh - var(--spacing-top) - 6rem);
 		overflow-y: scroll;
 		list-style-type: none;
 		margin-top: var(--spacing-2);
@@ -194,21 +245,6 @@ article {
 	padding: var(--spacing-4);
 }
 
-#adversary-panel {
-	grid-template-columns: repeat(2, 1fr);
-}
-
-@media screen and (min-width: 90em) {
-	#adversary-panel {
-		grid-template-columns: 1fr 2fr;
-	}
-
-	#adversary-stats {
-		gap: var(--spacing-6);
-		grid-template-columns: 3fr 2fr;
-	}
-}
-
 /* Bottom panel with active adversaries */
 #active-adversaries {
 	padding: var(--spacing-4);
@@ -217,10 +253,8 @@ article {
 
 /* Frame for the whole site */
 .container {
-	display: grid;
-	grid-template-columns: var(--menu-width) 1fr;
+	padding-top: var(--spacing-top);
 	min-height: 100vh;
-	gap: var(--spacing-2);
 }
 
 /* Generic grid classes */

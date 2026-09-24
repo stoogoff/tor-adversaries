@@ -2,6 +2,7 @@
 @import url(colours.css);
 @import url(https://fonts.bunny.net/css?family=amarante:400|hanken-grotesk:400,400i,700,700i|libre-baskerville:400);
 
+/* Generic */
 :root {
 	/* Fonts */
 	--font-base: 'Libre Baskerville', serif;
@@ -42,7 +43,10 @@
 	--spacing-16: 4rem;
 }
 
+/* Specific */
 :root {
+	--spacing-top: var(--spacing-12);
+
 	--primary-bg: rgb(255,253,239);
 	--primary-fg: rgb(20,20,20);
 	--primary-border: 1px solid var(--grey-400);
@@ -55,7 +59,7 @@
 	--menu-bg: var(--secondary-bg);
 	--menu-fg: var(--secondary-fg);
 	--menu-border: 1px solid rgb(181,170,157);
-	--menu-width: 250px;
+	--menu-width: 20rem;
 
 	--button-bg: var(--grey-800);
 	--button-fg: var(--grey-50);

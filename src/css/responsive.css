@@ -1,0 +1,63 @@
+
+@import url(variables.css);
+
+/**
+ * Screen sizes, from:
+ * X-Small: 0
+ * Small: 37em
+ * Medium: 56em
+ * Large: 75em
+ * X-Large: 96em
+ * XX-Large: 120em
+ */
+
+/* Medium */
+@media screen and (min-width: 56em) {
+	#adversary-panel {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Large */
+@media screen and (min-width: 75em) {
+	.topbar button {
+		display: none;
+	}
+
+	nav {
+		transform: translateX(0);
+		max-width: auto;
+		position: relative;
+		top: auto;
+		left: auto;
+		bottom: auto;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: var(--menu-width) 1fr;
+		gap: var(--spacing-2);
+	}
+}
+
+/* X large */
+@media screen and (min-width: 96em) {
+	#adversary-panel {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	#adversary-stats {
+		gap: var(--spacing-6);
+		grid-template-columns: 3fr 2fr;
+	}
+
+	.adversaries-group {
+		display: grid;
+		gap: var(--spacing-4);
+		grid-template-columns: 1fr 1fr;
+
+		.adversary .grid {
+			gap: var(--spacing-2);
+		}
+	}
+}

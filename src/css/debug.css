@@ -1,4 +1,14 @@
 
+/**
+ * Screen sizes, from:
+ * X-Small: 0
+ * Small: 37em
+ * Medium: 56em
+ * Large: 75em
+ * X-Large: 96em
+ * XX-Large: 120em
+ */
+
 #responsive {
 	position: fixed;
 	bottom: 0;
@@ -14,7 +24,7 @@
 }
 
 /* Small */
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 37em) {
 	#responsive {
 		color: oklch(93.8% 0.127 124.321);
 		background-color: oklch(45.3% 0.124 130.933);
@@ -26,7 +36,7 @@
 }
 
 /* Medium */
-@media screen and (min-width: 36em) {
+@media screen and (min-width: 56em) {
 	#responsive {
 		color: oklch(90.1% 0.058 230.902);
 		background-color: oklch(44.3% 0.11 240.79);
@@ -38,7 +48,7 @@
 }
 
 /* Large */
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 75em) {
 	#responsive {
 		color: oklch(87% 0.065 274.039);
 		background-color: oklch(39.8% 0.195 277.366);
@@ -50,7 +60,7 @@
 }
 
 /* X large */
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 96em) {
 	#responsive {
 		color: oklch(90.3% 0.076 319.62);
 		background-color: oklch(45.2% 0.211 324.591);
@@ -62,7 +72,7 @@
 }
 
 /* XX large */
-@media screen and (min-width: 90em) {
+@media screen and (min-width: 120em) {
 	#responsive {
 		color: oklch(89.9% 0.061 343.231);
 		background-color: oklch(45.9% 0.187 3.815);
