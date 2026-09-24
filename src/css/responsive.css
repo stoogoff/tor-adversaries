@@ -7,14 +7,41 @@
  * Small: 37em
  * Medium: 56em
  * Large: 75em
- * X-Large: 96em
+ * X-Large: 90em
  * XX-Large: 120em
  */
+
+.xs-only {
+	white-space: nowrap;
+}
+
+.sm-up {
+	display: none;
+}
+ 
+/* Small */
+@media screen and (min-width: 37em) {
+	.xs-only {
+		display: none;
+	}
+
+	.sm-up {
+		display: table-cell;
+	}
+
+	#adversary-stats .stat-block {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
 
 /* Medium */
 @media screen and (min-width: 56em) {
 	#adversary-panel {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.adversary .button button span {
+		display: inline-block;
 	}
 }
 
@@ -40,13 +67,17 @@
 	}
 }
 
+/* grid grid-cols-3 */
+
 /* X large */
-@media screen and (min-width: 96em) {
+@media screen and (min-width: 90em) {
 	#adversary-panel {
+		display: grid;
 		grid-template-columns: 1fr 2fr;
 	}
 
 	#adversary-stats {
+		display: grid;
 		gap: var(--spacing-6);
 		grid-template-columns: 3fr 2fr;
 	}
@@ -58,6 +89,10 @@
 
 		.adversary .grid {
 			gap: var(--spacing-2);
+		}
+
+		.adversary .button button span {
+			display: none;
 		}
 	}
 }

@@ -33,14 +33,6 @@
 		block-size: auto;
 	}
 
-	svg {
-		max-inline-size: 100%;
-	}
-
-	svg:not([fill]) {
-		fill: currentColor;
-	}
-
 	input,
 	button,
 	textarea,

@@ -18,6 +18,12 @@ export default {
 		this.store.on('loading', () => this.data.loading = true)
 		this.store.on('loaded', () => {
 			this.data.loading = false
+
+			// DELME
+			const enemy = this.store.byTitle('Great Orc Chief')
+
+			infoStore.item = enemy
+
 			this.emit('change')
 		})
 

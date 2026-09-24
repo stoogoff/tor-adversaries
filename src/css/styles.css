@@ -42,6 +42,12 @@ dl {
 	margin-bottom: var(--spacing-4);
 	font-weight: bold;
 
+	div {
+		background-color: var(--primary-bg);
+		padding: var(--spacing-1);
+		border-radius: var(--spacing-1);
+	}
+
 	dt {
 		color: var(--title-fg);
 		line-height: 1rem;
@@ -72,11 +78,18 @@ table {
 		text-transform: uppercase;
 		font-size: var(--font-sm);
 		line-height: 1rem;
-		text-align: right;
+		text-align: center;
 		padding: var(--spacing-1);
+		border-bottom: var(--menu-border);
+		border-right: var(--menu-border);
 
 		&:nth-child(1) {
 			text-align: left;
+		}
+
+		&:last-child {
+			border-right: 0;
+			text-align: right;
 		}
 	}
 
@@ -88,12 +101,18 @@ table {
 		}
 
 		td {
-			text-align: right;
+			text-align: center;
 			padding: var(--spacing-1);
+			border-right: var(--menu-border);
 		}
 
 		td:nth-child(1) {
 			text-align: left;
+		}
+
+		td:last-child {
+			border-right: 0;
+			text-align: right;
 		}
 	}
 }
@@ -105,6 +124,11 @@ label {
 	font-family: var(--font-secondary);
 	padding: 0 var(--spacing-2);
 	display: block;
+
+	& > span {
+		display: block;
+		margin-bottom: var(--spacing-1);
+	}
 
 	div {
 		display: block;
@@ -133,6 +157,8 @@ input[type=search] {
 }
 
 button {
+	--transition-duration: .2s;
+
 	padding: var(--spacing-1) var(--spacing-2);
 	background-color: var(--button-bg);
 	color: var(--button-fg);
@@ -141,19 +167,25 @@ button {
 	text-transform: uppercase;
 	font-family: var(--font-secondary);
 	font-weight: bold;
+	transition:
+		transform var(--transition-duration),
+		color var(--transition-duration),
+		background-color var(--transition-duration),
+		border var(--transition-duration);
 
 	&:hover {
 		background-color: var(--button-hover-bg);
 		color: var(--button-hover-fg);
 		border: var(--button-hover-border);
+		transform: scale(1.02);
 	}
 }
 
 /* Topbar with logo */
 .topbar {
 	background-color: var(--menu-bg);
-	color: var(--menu-fg);
 	border-bottom: var(--menu-border);
+	color: var(--title-fg);
 	box-shadow: var(--shadow-md);
 	position: fixed;
 	top: 0;
@@ -163,7 +195,6 @@ button {
 	display: flex;
 	align-items: center;
 	gap: var(--spacing-4);
-	color: var(--title-fg);
 	min-height: var(--spacing-top);
 
 	button {
@@ -172,12 +203,12 @@ button {
 		color: var(--primary-bg);
 		border: 0;
 		line-height: 1;
+		transition: transform .2s;
 
 		&:hover {
 			background-color: var(--button-bg);
 			color: var(--button-fg);
 			transform: scale(1.1);
-			transition: transform .2s;
 		}
 	}
 
@@ -238,6 +269,7 @@ nav {
 main {
 	height: 100vh;
 	overflow-y: scroll;
+	padding-bottom: var(--spacing-4);
 }
 
 /* Top information panel */
@@ -288,9 +320,12 @@ article {
 	button {
 		display: block;
 		width: 100%;
+
+
 	}
 }
 
+/* Chips - TODO add hover transition as they're clickable */
 .chip {
 	font-family: var(--font-secondary);
 	font-size: var(--font-sm);
@@ -340,6 +375,14 @@ article {
 		button {
 			margin-top: auto;
 			flex-grow: 0;
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			gap: var(--spacing-2);
+
+			span {
+				display: none;
+			}
 		}
 	}
 
@@ -347,3 +390,17 @@ article {
 		flex-grow: 1;
 	}
 }
+
+#adversary-stats {
+	h2 {
+		text-align: center;
+		margin-bottom: var(--spacing-2);
+	}
+
+	.stat-block {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing-2);
+	}
+}
+
