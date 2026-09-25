@@ -46,6 +46,7 @@
 /* Specific */
 :root {
 	--spacing-top: var(--spacing-12);
+	--transition-duration: .3s;
 
 	--primary-bg: rgb(255,253,239);
 	--primary-fg: rgb(20,20,20);

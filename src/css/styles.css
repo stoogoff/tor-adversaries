@@ -157,8 +157,6 @@ input[type=search] {
 }
 
 button {
-	--transition-duration: .2s;
-
 	padding: var(--spacing-1) var(--spacing-2);
 	background-color: var(--button-bg);
 	color: var(--button-fg);
@@ -203,7 +201,6 @@ button {
 		color: var(--primary-bg);
 		border: 0;
 		line-height: 1;
-		transition: transform .2s;
 
 		&:hover {
 			background-color: var(--button-bg);
@@ -320,12 +317,10 @@ article {
 	button {
 		display: block;
 		width: 100%;
-
-
 	}
 }
 
-/* Chips - TODO add hover transition as they're clickable */
+/* Chips */
 .chip {
 	font-family: var(--font-secondary);
 	font-size: var(--font-sm);
@@ -337,6 +332,12 @@ article {
 	margin-bottom: var(--spacing-1);
 	border-radius: var(--spacing-4);
 	cursor: pointer;
+	transition: transform var(--transition-duration), filter var(--transition-duration);
+
+	&:hover {
+		filter: brightness(1.2);
+		transform: scale(1.1);
+	}
 }
 
 /* Linkify */
@@ -350,15 +351,28 @@ article {
 
 /* Adversary component */
 .adversary {
-	display: flex;
+	position: relative;
 
 	label {
+		background-color: var(--primary-bg);
+		display: flex;
 		font-size: var(--font-md);
 		font-weight: bold;
 		color: var(--title-fg);
-		line-height: 1rem;
+		line-height: var(--spacing-4);
 		text-transform: uppercase;
 		text-align: center;		
+		gap: var(--spacing-4);
+		align-items: center;
+		margin-bottom: var(--spacing-2);
+		padding: var(--spacing-2);
+		border-radius: var(--spacing-1);
+
+		span {
+			min-width: 7rem;
+			text-align: left;
+			margin-bottom: 0;
+		}
 	}
 
 	input[type=number] {
@@ -366,14 +380,16 @@ article {
 	}
 
 	.title {
-		width: 250px;
+		margin-bottom: var(--spacing-2);
+		margin-right: var(--spacing-2);
 	}
 
 	.button {
-		display: flex;
+		position: absolute;
+		top: var(--spacing-4);
+		right: var(--spacing-4);
 
 		button {
-			margin-top: auto;
 			flex-grow: 0;
 			display: flex;
 			align-items: center;

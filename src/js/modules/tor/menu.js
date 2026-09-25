@@ -3,7 +3,7 @@ import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
 import { FetchStore } from 'utils/fetch-store.js'
-import { infoStore, filterStore } from 'tor/stores.js'
+import { infoStore, filterStore, adversaryStore } from 'tor/stores.js'
 import { closeMenu } from 'utils/menu.js'
 
 export default {
@@ -18,12 +18,6 @@ export default {
 		this.store.on('loading', () => this.data.loading = true)
 		this.store.on('loaded', () => {
 			this.data.loading = false
-
-			// DELME
-			const enemy = this.store.byTitle('Great Orc Chief')
-
-			infoStore.item = enemy
-
 			this.emit('change')
 		})
 

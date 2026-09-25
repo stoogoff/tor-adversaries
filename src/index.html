@@ -53,7 +53,8 @@
 		<article data-q-component="info">
 			<div data-q-if="!hasAdversary">
 				<h1>The One Ring: Adversaries</h1>
-				<p>Welcome to the site</p>
+				<p>Welcome to <strong>One Ring: Adversaries</strong>. Use the navigation on the left or via the top menu to choose an adversary and see its stats.</p>
+				<p>Pressing the Add button will add it to the tracker panel below. There you can track <em>Endurance</em>, <em>Might</em>, <em>Hate</em>, and <em>Resolve</em>.</p>
 			</div>
 			<div id="adversary-panel" data-q-if="hasAdversary" class="grid">
 				<div>
@@ -156,7 +157,7 @@
 						<h2 class="link" data-q-text="title" data-q-click="showInfo"></h2>
 						<div data-q-text="joinedTraits"></div>
 					</div>
-					<div class="grid grid-cols-3">
+					<div class="stat-block">
 						<label>
 							<span>Endurance</span>
 							<input type="number" name="currentEndurance" data-q-input="currentEndurance" />
