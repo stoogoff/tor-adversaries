@@ -3,7 +3,6 @@ import { join } from '@std/path'
 import { create, clean, isDir } from './utils/fs.js'
 import config from './utils/config.js'
 
-
 // recursively copy non-html files
 const copy = async (source, target) => {
 	await create(target)

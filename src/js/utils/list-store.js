@@ -2,6 +2,7 @@
 import { throwIfNull } from 'q/utils/assert.js'
 import { createId } from 'q/utils/string.js'
 import { Emittable } from 'q/utils/emittable.js'
+import { Events } from 'utils/config.js'
 
 const mapItem = item => ({ ...item, _id: item._id ?? createId(12) })
 
@@ -20,13 +21,23 @@ export class ListStore extends Emittable {
 		return Object.values(this.#data)
 	}
 
+	set(items) {
+		items.forEach(item => {
+			const model = mapItem(item)
+
+			this.#data[model._id] = model
+		})
+
+		this._emitter.emit(Events.CHANGE_ALL, 'all', this.all)
+	}
+
 	add(item) {
 		const model = mapItem(item)
 
 		this.#data[model._id] = model
 
-		this._emitter.emit('add', model)
-		this._emitter.emit('change:all', 'all', this.all)
+		this._emitter.emit(Events.ADD, model)
+		this._emitter.emit(Events.CHANGE_ALL, 'all', this.all)
 
 		return model
 	}
@@ -36,8 +47,8 @@ export class ListStore extends Emittable {
 
 		delete this.#data[item._id]
 
-		this._emitter.emit('remove', item)
-		this._emitter.emit('change:all', 'all', this.all)
+		this._emitter.emit(Events.REMOVE, item)
+		this._emitter.emit(Events.CHANGE_ALL, 'all', this.all)
 
 		return item
 	}

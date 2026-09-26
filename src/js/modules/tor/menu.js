@@ -2,30 +2,28 @@
 import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
-import { FetchStore } from 'utils/fetch-store.js'
-import { infoStore, filterStore, adversaryStore } from 'tor/stores.js'
+import { infoStore, filterStore, adversaryStore, dataStore } from 'tor/stores.js'
 import { closeMenu } from 'utils/menu.js'
+import { Events } from 'utils/config.js'
 
 export default {
-	store: new FetchStore('data/adversaries.json'),
-
 	data: {
 		loading: false,
 		filter: '',
 	},
 
 	async created() {
-		this.store.on('loading', () => this.data.loading = true)
-		this.store.on('loaded', () => {
+		dataStore.on(Events.LOADING, () => this.data.loading = true)
+		dataStore.on(Events.LOADED, () => {
 			this.data.loading = false
-			this.emit('change')
+			this.emit(Events.CHANGE)
 		})
 
-		filterStore.on('change', () => {
+		filterStore.on(Events.CHANGE, () => {
 			this.data.filter = filterStore.item
 		})
 
-		await this.store.load()
+		await dataStore.load()
 	},
 
 	computed: {
@@ -34,11 +32,11 @@ export default {
 		},
 
 		total() {
-			return (this.store?.all ?? []).length
+			return (dataStore?.all ?? []).length
 		},
 
 		adversaries() {
-			const data = (this.store?.all ?? []).sort(sortByProperty('title'))
+			const data = (dataStore?.all ?? []).sort(sortByProperty('title'))
 
 			if(isEmptyString(this.data.filter)) {
 				return data

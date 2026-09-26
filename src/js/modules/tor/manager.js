@@ -2,12 +2,13 @@
 import { notEmptyArray } from 'q/utils/assert.js'
 import { adversaryStore } from 'tor/stores.js'
 import { logger } from 'tor/logger.js'
+import { Events } from 'utils/config.js'
 
 export default {
 	mounted() {
-		adversaryStore.on('change:all', (_, adversaries) => {
+		adversaryStore.on(Events.CHANGE_ALL, (_, adversaries) => {
 			logger().info('manager: adversaryStore.on("change:all")', [ ...adversaries ])
-			this.emit('change')
+			this.emit(Events.CHANGE)
 		})
 	},
 

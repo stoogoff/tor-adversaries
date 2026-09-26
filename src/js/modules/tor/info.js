@@ -1,10 +1,11 @@
 
 import { isNull } from 'q/utils/assert.js'
 import { infoStore, adversaryStore, filterStore } from 'tor/stores.js'
+import { Events } from 'utils/config.js'
 
 export default {
 	created() {
-		infoStore.on('change', () => this.emit('change'))
+		infoStore.on(Events.CHANGE, () => this.emit(Events.CHANGE))
 	},
 
 	computed: {

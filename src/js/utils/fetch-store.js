@@ -2,6 +2,7 @@
 import { Emittable } from 'q/utils/emittable.js'
 import { logger } from 'tor/logger.js'
 import { isVersionedPath, versionedPath } from 'utils/lib.js'
+import { Events } from 'utils/config.js'
 
 export class FetchStore extends Emittable {
 	#url = ''
@@ -21,7 +22,7 @@ export class FetchStore extends Emittable {
 	}
 
 	async load() {
-		this._emitter.emit('loading')
+		this._emitter.emit(Events.LOADING)
 
 		try {
 			logger().log('FetchStore', this.#url)
@@ -41,7 +42,7 @@ export class FetchStore extends Emittable {
 		}
 
 		logger().log('FetchStore', this.#data)
-		this._emitter.emit('loaded', this.#data)
+		this._emitter.emit(Events.LOADED, this.#data)
 	}
 
 	get all() {
