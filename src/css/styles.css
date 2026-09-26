@@ -8,7 +8,7 @@ body {
 	color: var(--primary-fg);
 	background-color: var(--primary-bg);
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	overflow: hidden;
 }
 
@@ -181,6 +181,7 @@ button {
 
 /* Topbar with logo */
 .topbar {
+	z-index: 100;
 	background-color: var(--menu-bg);
 	border-bottom: var(--menu-border);
 	color: var(--title-fg);
@@ -217,7 +218,7 @@ button {
 
 /* Left hand menu bar */
 nav {
-	height: calc(100vh - var(--spacing-top));
+	height: calc(100dvh - var(--spacing-top));
 	overflow: hidden;
 	padding: var(--spacing-4);
 	display: block;
@@ -240,7 +241,7 @@ nav {
 	background-color: var(--menu-bg);
 
 	menu {
-		height: calc(100vh - var(--spacing-top) - 6rem);
+		height: calc(100dvh - var(--spacing-top) - 6rem);
 		overflow-y: scroll;
 		list-style-type: none;
 		margin-top: var(--spacing-2);
@@ -265,7 +266,7 @@ nav {
 
 /* Large content panel */
 main {
-	height: 100vh;
+	height: 100dvh;
 	overflow-y: scroll;
 	padding-bottom: var(--spacing-4);
 }
@@ -284,7 +285,7 @@ article {
 /* Frame for the whole site */
 .container {
 	padding-top: var(--spacing-top);
-	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 /* Generic grid classes */
