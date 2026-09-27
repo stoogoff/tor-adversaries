@@ -8,7 +8,7 @@ body {
 	color: var(--primary-fg);
 	background-color: var(--primary-bg);
 	width: 100vw;
-	height: 100dvh;
+	height: 100svh;
 	overflow: hidden;
 }
 
@@ -218,7 +218,7 @@ button {
 
 /* Left hand menu bar */
 nav {
-	height: calc(100dvh - var(--spacing-top));
+	height: calc(100svh - var(--spacing-top));
 	overflow: hidden;
 	padding: var(--spacing-4);
 	display: block;
@@ -241,7 +241,7 @@ nav {
 	background-color: var(--menu-bg);
 
 	menu {
-		height: calc(100dvh - var(--spacing-top) - 6rem);
+		height: calc(100svh - var(--spacing-top) - 6rem);
 		overflow-y: scroll;
 		list-style-type: none;
 		margin-top: var(--spacing-2);
@@ -266,7 +266,7 @@ nav {
 
 /* Large content panel */
 main {
-	height: 100dvh;
+	height: 100svh;
 	overflow-y: scroll;
 	padding-bottom: var(--spacing-4);
 }
@@ -285,7 +285,7 @@ article {
 /* Frame for the whole site */
 .container {
 	padding-top: var(--spacing-top);
-	min-height: 100dvh;
+	min-height: 100svh;
 }
 
 /* Generic grid classes */
