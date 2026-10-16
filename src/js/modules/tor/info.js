@@ -97,7 +97,7 @@ export default {
 		},
 	},
 
-	openChip(event, context) {
+	openChip(event) {
 		filterStore.item = event.target.innerText
 	},
 

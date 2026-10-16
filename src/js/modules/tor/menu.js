@@ -5,7 +5,6 @@ import { normalise } from 'q/utils/string.js'
 import {
 	infoStore,
 	filterStore,
-	adversaryStore,
 	dataStore,
 	favouriteStore,
 } from 'tor/stores.js'
@@ -69,7 +68,7 @@ export default {
 		this.data.filter = evt.srcElement.value
 	},
 
-	handleClick(evt, context) {
+	handleClick(_evt, context) {
 		infoStore.item = context.scope.data
 
 		closeMenu()
