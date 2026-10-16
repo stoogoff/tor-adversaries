@@ -2,6 +2,7 @@
 // local storage keys
 export const STORAGE_KEY_OBJECT = 'tor:adversary'
 export const STORAGE_KEY_LIST = 'tor:adversaries'
+export const STORAGE_KEY_FAVOURITES = 'tor:favourites'
 
 export const Events = {
 	CHANGE: 'change',

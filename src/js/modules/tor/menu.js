@@ -2,7 +2,13 @@
 import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
-import { infoStore, filterStore, adversaryStore, dataStore } from 'tor/stores.js'
+import {
+	infoStore,
+	filterStore,
+	adversaryStore,
+	dataStore,
+	favouriteStore,
+} from 'tor/stores.js'
 import { closeMenu } from 'utils/menu.js'
 import { Events } from 'utils/config.js'
 
@@ -23,6 +29,8 @@ export default {
 			this.data.filter = filterStore.item
 		})
 
+		favouriteStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
+
 		await dataStore.load()
 	},
 
@@ -39,7 +47,9 @@ export default {
 			const data = (dataStore?.all ?? []).sort(sortByProperty('title'))
 
 			if(isEmptyString(this.data.filter)) {
-				return data
+				return data.map(adversary => (
+				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
+				))
 			}
 
 			const filter = normalise(this.data.filter).trim()
@@ -49,7 +59,9 @@ export default {
 				item.sources.filter(source => normalise(source) === filter).length > 0 ||
 				(item.adventures ?? []).filter(source => normalise(source) === filter).length > 0 ||
 				normalise(item.title).indexOf(filter) !== -1
-			)
+			).map(adversary => (
+				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
+			))
 		},
 	},
 

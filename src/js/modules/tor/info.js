@@ -1,16 +1,28 @@
 
 import { isNull } from 'q/utils/assert.js'
-import { infoStore, adversaryStore, filterStore } from 'tor/stores.js'
+import {
+	infoStore,
+	adversaryStore,
+	filterStore,
+	favouriteStore,
+} from 'tor/stores.js'
 import { Events } from 'utils/config.js'
 
 export default {
 	created() {
 		infoStore.on(Events.CHANGE, () => this.emit(Events.CHANGE))
+		favouriteStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
 	},
 
 	computed: {
 		hasAdversary() {
 			return infoStore && infoStore.has
+		},
+
+		isFavourite() {
+			if(isNull(infoStore?.item)) return false
+
+			return favouriteStore.hasFavourite(infoStore.item.title)
 		},
 
 		hasHate() {
@@ -99,5 +111,13 @@ export default {
 			currentHate: adversary.attributes.hate,
 			currentResolve: adversary.attributes.resolve,
 		})
+	},
+
+	addFavourite() {
+		favouriteStore.addFavourite(infoStore.item.title)
+	},
+
+	removeFavourite() {
+		favouriteStore.removeFavourite(infoStore.item.title)
 	},
 }

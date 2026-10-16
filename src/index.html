@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="/css/debug.css" />
 <link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/responsive.css" />
+<!--"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/",-->
 <script type="importmap">
 {
 	"imports": {
-		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/",
+		"q/": "./q/",
 		"utils/": "./js/utils/",
 		"tor/": "./js/modules/tor/"
 	}
@@ -53,7 +54,10 @@
 				<input name="filter" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
 			</label>
 			<menu>
-				<li data-q-each="adversaries" data-q-click="handleClick" data-q-text="title"></li>
+				<li data-q-each="adversaries" data-q-click="handleClick">
+					<span data-q-text="title"></span>
+					<span data-q-if="isFavourite">F</span>
+				</li>
 			</menu>
 		</div>
 	</nav>
@@ -69,7 +73,10 @@
 			<div id="adversary-panel" data-q-if="hasAdversary" class="grid">
 				<div>
 					<h1 data-q-text="title"></h1>
-					<!-- p data-q-text="description"></p -->
+					<button data-q-if="!isFavourite" data-q-click="addFavourite">Add Favourite</button>
+					<button data-q-if="isFavourite" data-q-click="removeFavourite">Remove Favourite</button>
+					<span data-q-if="isFavourite">Favourite</span>
+					<span data-q-if="!isFavourite">NOT Favourite</span>
 					<div>
 						<span class="chip" data-q-click="openChip" data-q-text="group"></span>
 						<span class="chip" data-q-click="openChip" data-q-each="sources" data-q-text="source"></span>
