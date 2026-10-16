@@ -177,6 +177,16 @@ button {
 		border: var(--button-hover-border);
 		transform: scale(1.02);
 	}
+
+	&.btn-icon {
+		background-color: transparent;
+		color: var(--button-bg);
+		border: 0;
+
+		&:hover {
+			color: var(--button-hover-bg);
+		}
+	}
 }
 
 /* Topbar with logo */
@@ -252,6 +262,7 @@ nav {
 		padding: var(--spacing-2);
 		border-bottom: var(--menu-border);
 		cursor: pointer;
+		display: flex;
 
 		&:last-child {
 			border-bottom: 0;
@@ -260,6 +271,13 @@ nav {
 		&:hover {
 			color: var(--title-fg);
 			background-color: var(--primary-bg);
+		}
+
+		span:first-child {
+			flex-grow: 1;
+		}
+		span:last-child {
+			flex-grow: 0;
 		}
 	}
 }

@@ -56,7 +56,7 @@
 			<menu>
 				<li data-q-each="adversaries" data-q-click="handleClick">
 					<span data-q-text="title"></span>
-					<span data-q-if="isFavourite">F</span>
+					<svg data-q-if="isFavourite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"></path></svg>
 				</li>
 			</menu>
 		</div>
@@ -72,11 +72,15 @@
 			</div>
 			<div id="adversary-panel" data-q-if="hasAdversary" class="grid">
 				<div>
-					<h1 data-q-text="title"></h1>
-					<button data-q-if="!isFavourite" data-q-click="addFavourite">Add Favourite</button>
-					<button data-q-if="isFavourite" data-q-click="removeFavourite">Remove Favourite</button>
-					<span data-q-if="isFavourite">Favourite</span>
-					<span data-q-if="!isFavourite">NOT Favourite</span>
+					<h1>
+						<span data-q-text="title"></span>
+						<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="m12 2l3.104 6.728l7.358.873l-5.44 5.03l1.444 7.268L12 18.28L5.534 21.9l1.444-7.268L1.538 9.6l7.359-.873z"></path></svg>
+						</button>
+						<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"></path></svg>
+						</button>
+					</h1>
 					<div>
 						<span class="chip" data-q-click="openChip" data-q-text="group"></span>
 						<span class="chip" data-q-click="openChip" data-q-each="sources" data-q-text="source"></span>
