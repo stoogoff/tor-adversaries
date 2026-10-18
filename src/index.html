@@ -31,7 +31,7 @@
 <body>
 
 <div class="topbar" data-q-component="top-menu">
-	<button data-q-click="toggleMenu">
+	<button id="mobile-toggle" data-q-click="toggleMenu">
 		<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
 			<path d="M20 7L4 7" stroke-width="1.5" stroke-linecap="round"/>
 			<path d="M20 12L4 12" stroke-width="1.5" stroke-linecap="round"/>
@@ -40,7 +40,7 @@
 	</button>
 	<strong class="logo">The One Ring</strong>
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
-	<button data-q-click="createAdversary">Create</button><!-- TODO add iconn -->
+	<button command="show-modal" commandfor="create-modal">Create</button><!-- TODO add iconn -->
 </div>
 
 <div class="container">
@@ -211,6 +211,75 @@
 		</div>
 	</main>
 </div>
+
+<dialog id="create-modal" data-q-component="form">
+	<form>
+		<h1>Create Adversary</h1>
+		<!--
+			name
+			description <-- reinstate this but update the data builder to remove it from the official ones
+			attribute level
+			might
+			endurance
+			hate / resolve
+			armour
+			parry
+			attacks[]
+				attack
+				skill
+				damage
+				injury
+				properties[]
+			abilities[] <-- will need to expose the available list
+		-->
+		<label>
+			<span>Name <strong>*</strong></span>
+			<input name="name" type="text" data-q-input="name" />
+			<span class="error" data-q-if="!isValidName">This field is required.</span>
+		</label>
+		<label>
+			<span>Description</span>
+			<textarea name="description" data-q-input="description"></textarea>
+		</label>
+		<div class="grid grid-cols-2">
+			<label>
+				<span>Attribute Level <strong>*</strong></span>
+				<input name="attribute" type="number" data-q-input="attribute" />
+				<span class="error" data-q-if="!isValidAttribute">This field is required.</span>
+			</label>
+			<label>
+				<span>Endurance <strong>*</strong></span>
+				<input name="endurance" type="number" data-q-input="endurance" />
+				<span class="error" data-q-if="!isValidEndurance">This field is required.</span>
+			</label>
+			<label>
+				<span>Might <strong>*</strong></span>
+				<input name="might" type="number" data-q-input="might" />
+				<span class="error" data-q-if="!isValidMight">This field is required.</span>
+			</label>
+			<label>
+				<span>Hate / Resolve <strong>*</strong></span>
+				<select name="hateOrResolve" data-q-input="hateOrResolve" />
+					<option>Hate</option>
+					<option>Resolve</option>
+				</select>
+			</label>
+			<label>
+				<span>Parry</span>
+				<input name="parry" type="number" data-q-input="parry" />
+			</label>
+			<label>
+				<span>Armour</span>
+				<input name="armour" type="number" data-q-input="armour" />
+			</label>
+		</div>
+
+		<div class="form-actions">
+			<button class="btn-outline" type="button" command="close" commandfor="create-modal">Cancel</button>
+			<button data-q-click="submit" data-q-disabled="!isValid">Save</button>
+		</div>
+	</form>
+</dialog>
 
 <div id="responsive" data-xs="xs" data-sm="sm" data-md="md" data-lg="lg" data-xl="xl" data-2xl="2xl"></div>
 

@@ -94,7 +94,7 @@
 
 /* Large */
 @media screen and (min-width: 75em) {
-	.topbar button {
+	.topbar button#mobile-toggle {
 		display: none;
 	}
 

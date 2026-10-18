@@ -22,4 +22,8 @@ export default {
 		filterStore.item = CHIP_FAVOURITE
 		this.toggleMenu()
 	},
+
+	createAdversary() {
+		
+	},
 }

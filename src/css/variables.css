@@ -71,9 +71,9 @@
 	--button-hover-border: 2px solid var(--grey-950);
 
 	/* None of these have been used so far */
-	--button-disabled-bg: var(--grey-500);
-	--button-disabled-fg: var(--grey-200);
-	--button-disabled-border: 2px solid var(--grey-700);
+	--button-disabled-bg: var(--grey-600);
+	--button-disabled-fg: var(--grey-300);
+	--button-disabled-border: 2px solid var(--grey-800);
 
 	--toast-bg: var(--emerald-200);
 	--toast-fg: var(--emerald-700);

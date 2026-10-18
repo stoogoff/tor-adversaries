@@ -141,7 +141,7 @@ label {
 	}
 }
 
-input {
+input, textarea, select {
 	border: var(--menu-border);
 	padding: var(--spacing-2);
 	border-radius: var(--spacing-1);
@@ -150,6 +150,10 @@ input {
 		outline-color: var(--title-fg);
 	}
 }
+textarea {
+	min-height: var(--spacing-16);
+}
+
 
 input[type=search] {
 	display: block;
@@ -178,6 +182,12 @@ button {
 		transform: scale(1.02);
 	}
 
+	&[disabled] {
+		background-color: var(--button-disabled-bg);
+		color: var(--button-disabled-fg);
+		border-color: var(--button-disabled-border);
+	}
+
 	&.btn-icon {
 		background-color: transparent;
 		color: var(--button-bg);
@@ -185,6 +195,17 @@ button {
 
 		&:hover {
 			color: var(--button-hover-bg);
+		}
+	}
+
+	&.btn-outline {
+		background-color: transparent;
+		color: var(--button-hover-bg);
+		border-color: var(--button-hover-bg);
+
+		&:hover {
+			color: var(--button-bg);
+			border-color: var(--button-bg);
 		}
 	}
 }
@@ -206,7 +227,7 @@ button {
 	gap: var(--spacing-4);
 	min-height: var(--spacing-top);
 
-	button {
+	button#mobile-toggle {
 		flex-grow: 0;
 		background-color: var(--title-fg);
 		color: var(--primary-bg);
@@ -440,3 +461,51 @@ article {
 	}
 }
 
+/* Modal dialogues */
+dialog form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	background-color: var(--primary-bg);
+	color: var(--primary-fg);
+	padding: var(--spacing-4);
+
+	.grid {
+		gap: var(--spacing-2);
+
+		label {
+			margin-bottom: var(--spacing-2);
+		}
+	}
+
+	.form-actions {
+		margin-top: var(--spacing-4);
+		display: flex;
+		gap: var(--spacing-2);
+		justify-content: end;
+	}
+
+	input[type=text], textarea, select {
+		width: 100%;
+	}
+
+	label {
+		span.error {
+			text-transform: none;
+			color: var(--title-fg);
+			margin-top: var(--spacing-2);
+			font-size: var(--font-sm);
+		}
+
+		strong {
+			color: var(--title-fg);
+		}
+	}
+
+	&>label {
+		margin-bottom: var(--spacing-4);
+	}
+}
