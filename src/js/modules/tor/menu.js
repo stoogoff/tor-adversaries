@@ -44,11 +44,12 @@ export default {
 
 		adversaries() {
 			const data = (dataStore?.all ?? []).sort(sortByProperty('title'))
-
-			if(isEmptyString(this.data.filter)) {
-				return data.map(adversary => (
+				.map(adversary => (
 				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
 				))
+
+			if(isEmptyString(this.data.filter)) {
+				return data
 			}
 
 			const filter = normalise(this.data.filter).trim()
@@ -57,10 +58,9 @@ export default {
 				normalise(item.group) === filter ||
 				item.sources.filter(source => normalise(source) === filter).length > 0 ||
 				(item.adventures ?? []).filter(source => normalise(source) === filter).length > 0 ||
-				normalise(item.title).indexOf(filter) !== -1
-			).map(adversary => (
-				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
-			))
+				normalise(item.title).indexOf(filter) !== -1 ||
+				(item.isFavourite && filter.startsWith('fav'))
+			)
 		},
 	},
 

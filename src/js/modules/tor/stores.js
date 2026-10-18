@@ -26,11 +26,10 @@ export const favouriteStore = new ListStore()
 favouriteStore.addFavourite = title => {
 	favouriteStore.add({ title })
 }
-favouriteStore.hasFavourite  = title => {
-	const favourites = favouriteStore.all
-	
-	return favourites.find(favourite => favourite.title === title)
-}
+
+favouriteStore.hasFavourite  = title => favouriteStore.all.find(favourite => favourite.title === title)
+favouriteStore.hasFavourites = () => favouriteStore.all.length > 0
+
 favouriteStore.removeFavourite = title => {
 	const currentFavourite = favouriteStore.all
 		.find(favourite => favourite.title === title)
