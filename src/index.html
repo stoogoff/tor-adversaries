@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="/css/debug.css" />
 <link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/responsive.css" />
+<!-- "q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/", -->
 <script type="importmap">
 {
 	"imports": {
-		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/",
+		"q/": "./q/",
 		"utils/": "./js/utils/",
 		"tor/": "./js/modules/tor/"
 	}
@@ -29,7 +30,7 @@
 </head>
 <body>
 
-<div class="topbar" data-q-component="mobile-menu">
+<div class="topbar" data-q-component="top-menu">
 	<button data-q-click="toggleMenu">
 		<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
 			<path d="M20 7L4 7" stroke-width="1.5" stroke-linecap="round"/>
@@ -39,6 +40,7 @@
 	</button>
 	<strong class="logo">The One Ring</strong>
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
+	<button data-q-click="createAdversary">Create</button><!-- TODO add iconn -->
 </div>
 
 <div class="container">

@@ -5,7 +5,7 @@ import TorAdversary from 'tor/adversary.js'
 import TorInfo from 'tor/info.js'
 import TorManager from 'tor/manager.js'
 import TorMenu from 'tor/menu.js'
-import TorMobileMenu from 'tor/mobile-menu.js'
+import TorTopMenu from 'tor/top-menu.js'
 import { TOR_LOG_KEY } from 'tor/logger.js'
 import { isVersionedPath } from 'utils/lib.js'
 
@@ -16,5 +16,5 @@ directives.registerComponent('adversary', TorAdversary)
 directives.registerComponent('info', TorInfo)
 directives.registerComponent('manager', TorManager)
 directives.registerComponent('menu', TorMenu)
-directives.registerComponent('mobile-menu', TorMobileMenu)
+directives.registerComponent('top-menu', TorTopMenu)
 directives.load(document.body)
