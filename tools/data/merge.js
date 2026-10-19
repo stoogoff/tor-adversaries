@@ -39,6 +39,9 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 		// assign group if not set
 		item.group = item.group ?? group
 
+		// remove description from official statt blocks
+		item.description = null
+
 		// assign source based on book
 		item.sources = item.sources ?? [obj.source]
 
@@ -80,3 +83,7 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 await Deno.writeTextFile(join(target, 'adversaries.json'), JSON.stringify(adversaries))
 
 console.log(`Written ${adversaries.length} adversaries`)
+
+await Deno.writeTextFile(join(target, 'abilities.json'), JSON.stringify(abilities))
+
+console.log(`Writtern ${abilities.length} abilities`)

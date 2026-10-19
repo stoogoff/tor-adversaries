@@ -468,6 +468,7 @@ dialog form {
 	bottom: 0;
 	right: 0;
 
+	overflow-y: scroll;
 	background-color: var(--primary-bg);
 	color: var(--primary-fg);
 	padding: var(--spacing-4);
@@ -492,11 +493,14 @@ dialog form {
 	}
 
 	label {
-		span.error {
+		span.error, span.info {
 			text-transform: none;
-			color: var(--title-fg);
 			margin-top: var(--spacing-2);
 			font-size: var(--font-sm);
+		}
+
+		span.error {
+			color: var(--title-fg);
 		}
 
 		strong {
