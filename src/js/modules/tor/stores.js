@@ -4,6 +4,7 @@ import { STORAGE_KEY_LIST, STORAGE_KEY_OBJECT, STORAGE_KEY_FAVOURITES } from 'ut
 import { FetchStore } from 'utils/fetch-store.js'
 import { ListStore } from 'utils/list-store.js'
 import { ObjectStore } from 'utils/object-store.js'
+import { FavouriteStore } from 'utils/favourite-store.js'
 import { logger } from 'tor/logger.js'
 import { Events } from 'utils/config.js'
 
@@ -21,23 +22,7 @@ export const filterStore = new ObjectStore()
 export const dataStore = new FetchStore('data/adversaries.json')
 
 // all adversaries stored as favourites
-export const favouriteStore = new ListStore()
-
-favouriteStore.addFavourite = title => {
-	favouriteStore.add({ title })
-}
-
-favouriteStore.hasFavourite  = title => favouriteStore.all.find(favourite => favourite.title === title)
-favouriteStore.hasFavourites = () => favouriteStore.all.length > 0
-
-favouriteStore.removeFavourite = title => {
-	const currentFavourite = favouriteStore.all
-		.find(favourite => favourite.title === title)
-
-	if(currentFavourite) {
-		favouriteStore.remove(currentFavourite)
-	}
-}
+export const favouriteStore = new FavouriteStore()
 
 // changes to the primary stores are save to local storage
 // and loaded when the page is refreshed

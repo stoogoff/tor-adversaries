@@ -12,6 +12,7 @@
 	"imports": {
 		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/",
 		"utils/": "./js/utils/",
+		"create/": "./js/modules/create/",
 		"tor/": "./js/modules/tor/"
 	}
 }
@@ -269,6 +270,7 @@
 					<option>Hate</option>
 					<option>Resolve</option>
 				</select>
+				<span class="info">Hate / Resolve is equal to Attribute Level.</span>
 			</label>
 			<label>
 				<span>Parry</span>
@@ -282,6 +284,21 @@
 
 		<div class="card">
 			<h3>Fell Abilities</h3>
+
+			<!-- search or create -->
+			<div data-q-component="ability-filter">
+				<label>
+					<div>
+						<span>Ability</span>
+					</div>
+					<input name="filter-ability" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
+				</label>
+				<ul>
+					<li data-q-each="abilities" data-q-click="handleClick">
+						<span data-q-text="name"></span> (<em data-q-text="ranked"></em>)
+					</li>
+				</li>
+			</div>
 		</div>
 
 		<div class="card">

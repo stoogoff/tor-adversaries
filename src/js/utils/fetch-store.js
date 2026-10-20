@@ -7,9 +7,12 @@ import { Events } from 'utils/config.js'
 export class FetchStore extends Emittable {
 	#url = ''
 	#data = {}
+	#key = ''
 
-	constructor(url) {
+	constructor(url, key = 'title') {
 		super()
+
+		this.#key = key
 
 		if(isVersionedPath()) {
 			const { baseUrl, versionPath } = versionedPath()
@@ -34,7 +37,9 @@ export class FetchStore extends Emittable {
 			const json = await data.json()
 
 			json.forEach(item => {
-				this.#data[item.title] = item
+				const key = item[this.#key]
+
+				this.#data[key] = item
 			})
 		}
 		catch(err) {
@@ -49,7 +54,7 @@ export class FetchStore extends Emittable {
 		return Object.values(this.#data)
 	}
 
-	byTitle(title) {
-		return title in this.#data ? this.#data[title] : null
+	byKey(key) {
+		return key in this.#data ? this.#data[key] : null
 	}
 }

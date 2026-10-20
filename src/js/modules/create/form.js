@@ -69,5 +69,7 @@ export default {
 		}
 
 		console.log(newAdversary)
+
+		// TODO save this to a store somewhere
 	},
 }
