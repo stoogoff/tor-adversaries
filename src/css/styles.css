@@ -277,29 +277,29 @@ nav {
 		list-style-type: none;
 		margin-top: var(--spacing-2);
 	}
+}
 
-	li {
-		color: var(--menu-fg);
-		padding: var(--spacing-2);
-		border-bottom: var(--menu-border);
-		cursor: pointer;
-		display: flex;
+menu li {
+	color: var(--menu-fg);
+	padding: var(--spacing-2);
+	border-bottom: var(--menu-border);
+	cursor: pointer;
+	display: flex;
 
-		&:last-child {
-			border-bottom: 0;
-		}
+	&:last-child {
+		border-bottom: 0;
+	}
 
-		&:hover {
-			color: var(--title-fg);
-			background-color: var(--primary-bg);
-		}
+	&:hover {
+		color: var(--title-fg);
+		background-color: var(--primary-bg);
+	}
 
-		span:first-child {
-			flex-grow: 1;
-		}
-		span:last-child {
-			flex-grow: 0;
-		}
+	span:first-child {
+		flex-grow: 1;
+	}
+	span:last-child {
+		flex-grow: 0;
 	}
 }
 

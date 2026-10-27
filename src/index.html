@@ -285,19 +285,27 @@
 		<div class="card">
 			<h3>Fell Abilities</h3>
 
+			<div data-q-if="hasAbilities">
+				<details data-q-each="abilities">
+					<summary data-q-text="name"></summary>
+					<p data-q-html="ability"></p>
+				</details>
+			</div>
+
 			<!-- search or create -->
-			<div data-q-component="ability-filter">
+			<div class="ability-filter" data-q-component="ability-filter">
 				<label>
 					<div>
 						<span>Ability</span>
 					</div>
 					<input name="filter-ability" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
+					<span class="info">Use the filter to find an ability and click to add it.</span>
 				</label>
-				<ul>
+				<menu>
 					<li data-q-each="abilities" data-q-click="handleClick">
-						<span data-q-text="name"></span> (<em data-q-text="ranked"></em>)
+						<span data-q-text="name"></span> <em data-q-if="ranked">(ranked)</em>
 					</li>
-				</li>
+				</menu>
 			</div>
 		</div>
 

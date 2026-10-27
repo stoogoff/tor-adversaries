@@ -1,5 +1,7 @@
 
 import { notEmptyString, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
+import { Events } from 'utils/config.js'
+import { editingStore } from './stores.js'
 
 export default {
 	data: {
@@ -12,6 +14,10 @@ export default {
 		hateOrResolve: 'Hate',
 		parry: null,
 		armour: null,
+	},
+
+	created() {
+		editingStore.on(Events.CHANGE, () => this.emit(Events.CHANGE))
 	},
 
 	computed: {
@@ -46,6 +52,14 @@ export default {
 		},
 		isValidMight() {
 			return notEmptyString(this.data.might)
+		},
+
+		hasAbilities() {
+			return editingStore.abilities.length > 0
+		},
+
+		abilities() {
+			return [ ...editingStore.abilities ]
 		},
 	},
 

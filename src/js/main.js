@@ -11,6 +11,9 @@ import TorTopMenu from 'tor/top-menu.js'
 import { TOR_LOG_KEY } from 'tor/logger.js'
 import { isVersionedPath } from 'utils/lib.js'
 
+import { DIRECTIVES_LOG_KEY } from 'q/reactive/config.js'
+
+//setLogger(DIRECTIVES_LOG_KEY, ConsoleLogger, LOG_LEVEL_INFO)
 setLogger(TOR_LOG_KEY, ConsoleLogger, isVersionedPath() ? LOG_LEVEL_ERROR : LOG_LEVEL_INFO)
 
 // register create form components
