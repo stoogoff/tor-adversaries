@@ -36,10 +36,18 @@ export default {
 
 			return data.filter(item => normalise(item.name).indexOf(filter) !== -1)
 				.filter(item => !current.includes(item.name))
+				.map(item => ({
+					...item,
+					rank: null,
+					isNumber: item.ranked && item.type === 'number',
+					isList: item.ranked && item.type === 'list',
+					// NOTE the `on: () => void` function here is to prevent an error in q
+					values: item.type === "list" ? item.values.map(value => ({ value, on: () => {} })) : null,
+				}))
 		},
 	},
 
-	handleClick(_evt, context) {
+	handleAdd(_evt, context) {
 		editingStore.addAbility({ ...context.scope.data })
 	},
 

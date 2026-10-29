@@ -21,6 +21,13 @@ export default {
 	},
 
 	computed: {
+ 		chosenAbilities() {
+ 			console.log({
+ 				chosenAbilities: [ ...editingStore.abilities ]
+ 			})
+			return [ ...editingStore.abilities ]
+		},
+
 		hasTouchedForm() {
 			console.log({
 				title: notNull(this.data.title),
@@ -53,14 +60,6 @@ export default {
 		isValidMight() {
 			return notEmptyString(this.data.might)
 		},
-
-		hasAbilities() {
-			return editingStore.abilities.length > 0
-		},
-
-		abilities() {
-			return [ ...editingStore.abilities ]
-		},
 	},
 
 	submit(evt) {
@@ -77,7 +76,7 @@ export default {
 				parry: parseInt(this.data.parry ?? '0'),
 				armour: parseInt(this.data.armour ?? '0'),
 			},
-			attacks: [], // TODO
+			attacks: [ ...editingStore.abilities ],
 			abilities: [], // TODO
 			group: 'Mine',
 		}

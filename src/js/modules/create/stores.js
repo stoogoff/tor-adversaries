@@ -19,9 +19,15 @@ class EditingAdversaryStore extends Emittable {
 	}
 
 	addAbility(ability) {
+		console.log({ ability })
+
 		throwIfNull(ability, 'ability')
 		throwIfNull(ability.name, 'name')
 		throwIfNull(ability.ability, 'ability')
+
+		if(ability.ranked) {
+			throwIfNull(ability.rank, 'rank')
+		}
 
 		this.#abilities.push(ability)
 

@@ -37,7 +37,8 @@
 	{
 		"name": "Dreadful Spells",
 		"ability": "Spend 1 :hate: to make one Player-hero gain :rank: Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable fall unconscious and may be roused only with a SONG roll. Otherwise, they wake up after one hour.",
-		"ranked": true
+		"ranked": true,
+		"type": "number"
 	},
 	{
 		"name": "Fearless",
@@ -117,12 +118,16 @@
 	{
 		"name": "Orc-poison",
 		"ability": "If an attack results in a Wound, the target is also poisoned (:rank: Endurance loss; see *The One Ring*, page 134, for the effects of poison).",
-		"ranked": true
+		"ranked": true,
+		"type": "list",
+		"values": ["moderate", "severe", "grievous"]
 	},
 	{
 		"name": "Poison",
 		"ability": "If an attack results in a Wound, the target is also poisoned (:rank: Endurance loss; see *The One Ring*, page 134, for the effects of poison).",
-		"ranked": true
+		"ranked": true,
+		"type": "list",
+		"values": ["moderate", "severe", "grievous"]
 	},
 	{
 		"name": "Savage Assault",
@@ -137,7 +142,8 @@
 	{
 		"name": "Strike Fear",
 		"ability": "Spend 1 :hate: to make all Player-heroes in sight gain :rank: Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight.",
-		"ranked": true
+		"ranked": true,
+		"type": "number"
 	},
 	{
 		"name": "Thick Armour",
