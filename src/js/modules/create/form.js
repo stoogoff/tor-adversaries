@@ -91,15 +91,20 @@ export default {
 				armour: parseInt(this.data.armour ?? '0'),
 			},
 			attacks: [ ...chosenAttackStore.all ],
-			abilities: [ ...chosenAbilityStore.all ],
+			abilities: chosenAbilityStore.all.map(ability => ({
+				name: ability.name,
+				ability: ability.ability
+					.replace(/:rank:/g, ability.rank)
+					.replace(/:hate:/g, this.data.hateOrResolve)
+					.replace(/:group:/g, 'TODO') // TODO group needs to be set by the user
+					.replace(/\s\*/g, ' <em>')
+					.replace(/\*([\s\.,])/g, '</em>$1'),
+			})),
 			group: 'Mine',
 			sources: ['Mine'],
 		}
 
-		console.log(newAdversary)
-
 		customStore.add(newAdversary)
 		document.getElementById('create-modal').close()
-		// TODO save this to a store somewhere
 	},
 }
