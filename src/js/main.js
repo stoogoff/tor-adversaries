@@ -1,5 +1,6 @@
 
 import { setLogger, ConsoleLogger, LOG_LEVEL_INFO, LOG_LEVEL_ERROR } from 'q/utils/logger.js'
+import { notEmptyString } from 'q/utils/assert.js'
 import { directives } from 'q/reactive/directives.js'
 import CreateForm from 'create/form.js'
 import CreateAbilityFilter from 'create/ability-filter.js'
@@ -16,6 +17,15 @@ import { DIRECTIVES_LOG_KEY } from 'q/reactive/config.js'
 
 //setLogger(DIRECTIVES_LOG_KEY, ConsoleLogger, LOG_LEVEL_INFO)
 setLogger(TOR_LOG_KEY, ConsoleLogger, isVersionedPath() ? LOG_LEVEL_ERROR : LOG_LEVEL_INFO)
+
+// register custom component
+directives.register('tooltip', (context) => {
+	if(notEmptyString(context.value)) {
+		context.node.setAttribute('data-tooltip', context.value)
+	}
+
+	return false
+})
 
 // register create form components
 directives.registerComponent('form', CreateForm)

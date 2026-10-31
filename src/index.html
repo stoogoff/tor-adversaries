@@ -53,7 +53,7 @@
 			<menu>
 				<li data-q-each="adversaries" data-q-click="handleClick">
 					<span data-q-text="title"></span>
-					<span data-q-if="isFavourite" data-q-url="/media/img/star.svg"></span>
+					<span data-q-if="isFavourite" data-q-url="/media/img/star-filled.svg"></span>
 				</li>
 			</menu>
 		</div>
@@ -79,23 +79,6 @@
 <dialog id="create-modal" data-q-component="form">
 	<form>
 		<h1>Create Adversary</h1>
-		<!--
-			name
-			description <-- reinstate this but update the data builder to remove it from the official ones
-			attribute level
-			might
-			endurance
-			hate / resolve
-			armour
-			parry
-			attacks[]
-				attack
-				skill
-				damage
-				injury
-				properties[]
-			abilities[] <-- will need to expose the available list
-		-->
 		<div data-q-if="hasTouchedForm">Has touched form</div>
 		<label>
 			<span>Name <strong>*</strong></span>
@@ -197,6 +180,7 @@
 						<th class="sm-up">Damage</th>
 						<th class="sm-up">Injury</th>
 						<th>Properties</th>
+						<th>&nbsp;</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -208,6 +192,9 @@
 						<td class="sm-up" data-q-text="damage"></td>
 						<td class="sm-up" data-q-text="injury"></td>
 						<td data-q-text="properties"></td>
+						<td>
+							<button type="button" data-q-click="removeAttack">Remove</button>
+						</td>
 						<!-- TODO remove button, properties -->
 					</tr>
 				</tbody>
@@ -248,10 +235,8 @@
 	<div>
 		<h1>
 			<span data-q-text="title"></span>
-			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="m12 2l3.104 6.728l7.358.873l-5.44 5.03l1.444 7.268L12 18.28L5.534 21.9l1.444-7.268L1.538 9.6l7.359-.873z"></path></svg>
-			</button>
-			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star.svg"></button>
+			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg"></button>
+			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg"></button>
 		</h1>
 		<p data-q-text="description" data-q-if="description"></p>
 		<div>
@@ -324,7 +309,10 @@
 								<td class="xs-only" data-q-text="injury"></td>
 								<td class="sm-up" data-q-text="damage"></td>
 								<td class="sm-up" data-q-text="injury"></td>
-								<td data-q-text="properties"></td>
+								<td>
+									<span data-q-each="properties" data-q-text="property" data-q-tooltip="tooltip"></span>
+									<span data-q-if="!hasProperties">–</span>
+								</td>
 							</tr>
 						</tbody>
 					</table>

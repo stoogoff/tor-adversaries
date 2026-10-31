@@ -14,3 +14,10 @@ export const Events = {
 	LOADING: 'loading',
 	LOADED: 'loaded',
 }
+
+export const AttackPropertiesMap = {
+	'Pierce': '+2 Feat die result',
+	'Break Shield': 'Break target’s shield unless it has rewards',
+	'Seize': 'Target can only make Brawling attacks in Forward stance',
+	'Knockback': '',
+}

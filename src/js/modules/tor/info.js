@@ -6,7 +6,7 @@ import {
 	filterStore,
 	favouriteStore,
 } from 'tor/stores.js'
-import { Events } from 'utils/config.js'
+import { AttackPropertiesMap, Events } from 'utils/config.js'
 
 export default {
 	created() {
@@ -84,10 +84,18 @@ export default {
 		attacks() {
 			const attacks = infoStore?.item?.attacks ?? []
 
-			return attacks.map(attack => ({
+			const r = attacks.map(attack => ({
 				...attack,
-				properties: attack.properties.length === 0 ? '—' : attack.properties.join(', ')
+				hasProperties: attack.properties.length > 0,
+				properties: attack.properties.map(property => ({
+					property,
+					tooltip: property in AttackPropertiesMap ? AttackPropertiesMap[property] : null,
+					on: () => {},
+				}))
 			}))
+
+			console.log(r)
+			return r
 		},
 		abilities() {
 			return infoStore?.item?.abilities ?? []
