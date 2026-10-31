@@ -11,4 +11,4 @@ export const chosenAbilityStore = new ListStore()
 // attacks which have been chosen in the form
 export const chosenAttackStore = new ListStore()
 
-
+export { customStore } from 'tor/stores.js'

@@ -3,10 +3,11 @@ import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
 import {
-	infoStore,
-	filterStore,
+	customStore,
 	dataStore,
 	favouriteStore,
+	filterStore,
+	infoStore,
 } from 'tor/stores.js'
 import { closeMenu } from 'utils/menu.js'
 import { Events } from 'utils/config.js'
@@ -29,6 +30,7 @@ export default {
 		})
 
 		favouriteStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
+		customStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
 
 		await dataStore.load()
 	},
@@ -43,7 +45,7 @@ export default {
 		},
 
 		adversaries() {
-			const data = (dataStore?.all ?? []).sort(sortByProperty('title'))
+			const data = ([...dataStore?.all, ...customStore.all ]).sort(sortByProperty('title'))
 				.map(adversary => (
 				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
 				))

@@ -3,6 +3,7 @@
 export const STORAGE_KEY_OBJECT = 'tor:adversary'
 export const STORAGE_KEY_LIST = 'tor:adversaries'
 export const STORAGE_KEY_FAVOURITES = 'tor:favourites'
+export const STORAGE_KEY_CUSTOM = 'tor:custom'
 
 export const CHIP_FAVOURITE = 'Favourite'
 

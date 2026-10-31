@@ -1,6 +1,11 @@
 
 import { local } from 'q/utils/storage.js'
-import { STORAGE_KEY_LIST, STORAGE_KEY_OBJECT, STORAGE_KEY_FAVOURITES } from 'utils/config.js'
+import {
+	STORAGE_KEY_LIST,
+	STORAGE_KEY_OBJECT,
+	STORAGE_KEY_FAVOURITES,
+	STORAGE_KEY_CUSTOM,
+} from 'utils/config.js'
 import { FetchStore } from 'utils/fetch-store.js'
 import { ListStore } from 'utils/list-store.js'
 import { ObjectStore } from 'utils/object-store.js'
@@ -23,6 +28,9 @@ export const dataStore = new FetchStore('data/adversaries.json')
 
 // all adversaries stored as favourites
 export const favouriteStore = new FavouriteStore()
+
+// custom made adversaries
+export const customStore = new ListStore()
 
 // changes to the primary stores are save to local storage
 // and loaded when the page is refreshed
@@ -61,10 +69,23 @@ dataStore.on(Events.LOADING, () => {
 		logger().log(STORAGE_KEY_FAVOURITES, favourites)
 		favouriteStore.set(favourites)
 	}
+
+	if(local.has(STORAGE_KEY_CUSTOM)) {
+		const custom = local.get(STORAGE_KEY_CUSTOM)
+
+		logger().log(STORAGE_KEY_CUSTOM, custom)
+		customStore.set(custom)
+	}
 })
 
 favouriteStore.on(Events.CHANGE_ALL, () => {
 	logger().log('favouriteStore::change:all', favouriteStore.all)
 
 	local.set(STORAGE_KEY_FAVOURITES, [ ...favouriteStore.all ])
+})
+
+customStore.on(Events.CHANGE_ALL, () => {
+	logger().log('customStore::change:all', customStore.all)
+
+	local.set(STORAGE_KEY_CUSTOM, [ ...customStore.all ])
 })

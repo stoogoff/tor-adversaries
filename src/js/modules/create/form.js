@@ -1,7 +1,7 @@
 
 import { notEmptyString, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
 import { Events } from 'utils/config.js'
-import { chosenAbilityStore, chosenAttackStore } from './stores.js'
+import { customStore, chosenAbilityStore, chosenAttackStore } from './stores.js'
 
 export default {
 	data: {
@@ -93,10 +93,13 @@ export default {
 			attacks: [ ...chosenAttackStore.all ],
 			abilities: [ ...chosenAbilityStore.all ],
 			group: 'Mine',
+			sources: ['Mine'],
 		}
 
 		console.log(newAdversary)
 
+		customStore.add(newAdversary)
+		document.getElementById('create-modal').close()
 		// TODO save this to a store somewhere
 	},
 }
