@@ -1,7 +1,7 @@
 
 import { notEmptyString, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
 import { Events } from 'utils/config.js'
-import { editingStore } from './stores.js'
+import { chosenAbilityStore, chosenAttackStore } from './stores.js'
 
 export default {
 	data: {
@@ -17,15 +17,21 @@ export default {
 	},
 
 	created() {
-		editingStore.on(Events.CHANGE, () => this.emit(Events.CHANGE))
+		chosenAbilityStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
+		chosenAttackStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
 	},
 
 	computed: {
  		chosenAbilities() {
- 			console.log({
- 				chosenAbilities: [ ...editingStore.abilities ]
- 			})
-			return [ ...editingStore.abilities ]
+			return [ ...chosenAbilityStore.all ]
+		},
+
+		chosenAttacks() {
+			return [ ...chosenAttackStore.all ]
+		},
+
+		hasChosenAttacks() {
+			return chosenAttackStore.all.length > 0
 		},
 
 		hasTouchedForm() {
@@ -62,6 +68,14 @@ export default {
 		},
 	},
 
+	removeAbility(_evt, context) {
+		chosenAbilityStore.remove({ ...context.scope.data })
+	},
+
+	removeAttack(_evt, context) {
+		chosenAttackStore.remove({ ...context.scope.data })
+	},
+
 	submit(evt) {
 		const attributeLevel = parseInt(this.data.attribute)
 		const newAdversary = {
@@ -76,8 +90,8 @@ export default {
 				parry: parseInt(this.data.parry ?? '0'),
 				armour: parseInt(this.data.armour ?? '0'),
 			},
-			attacks: [ ...editingStore.abilities ],
-			abilities: [], // TODO
+			attacks: [ ...chosenAttackStore.all ],
+			abilities: [ ...chosenAbilityStore.all ],
 			group: 'Mine',
 		}
 

@@ -1,8 +1,8 @@
 
-import { isEmptyString } from 'q/utils/assert.js'
+import { isEmptyString, throwIfNull } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
-import { abilityStore, editingStore } from 'create/stores.js'
+import { abilityStore, chosenAbilityStore } from 'create/stores.js'
 import { Events } from 'utils/config.js'
 
 export default {
@@ -12,7 +12,7 @@ export default {
 	},
 
 	async created() {
-		editingStore.on(Events.CHANGE, () => this.emit(Events.CHANGE))
+		chosenAbilityStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
 
 		abilityStore.on(Events.LOADING, () => this.data.loading = true)
 		abilityStore.on(Events.LOADED, () => {
@@ -31,7 +31,7 @@ export default {
 				return []
 			}
 
-			const current = editingStore.abilities.map(ability => ability.name)
+			const current = chosenAbilityStore.all.map(ability => ability.name)
 			const filter = normalise(this.data.filter).trim()
 
 			return data.filter(item => normalise(item.name).indexOf(filter) !== -1)
@@ -48,7 +48,24 @@ export default {
 	},
 
 	handleAdd(_evt, context) {
-		editingStore.addAbility({ ...context.scope.data })
+		const ability = {
+			name: context.scope.data.name,
+			ability: context.scope.data.ability,
+			rank: context.scope.data.rank,
+			ranked: context.scope.data.ranked,
+		}
+
+		// TODO need to show a toast for these
+		// TODO only the ranked stuff should be able to error
+		throwIfNull(ability, 'ability')
+		throwIfNull(ability.name, 'name')
+		throwIfNull(ability.ability, 'ability')
+
+		if(ability.ranked) {
+			throwIfNull(ability.rank, 'rank')
+		}
+
+		chosenAbilityStore.add(ability)
 	},
 
 	handleFilter(evt) {

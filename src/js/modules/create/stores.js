@@ -1,38 +1,14 @@
 
-import { throwIfNull } from 'q/utils/assert.js'
-import { Emittable } from 'q/utils/emittable.js'
 import { FetchStore } from 'utils/fetch-store.js'
-import { Events } from 'utils/config.js'
+import { ListStore } from 'utils/list-store.js'
 
 // all abilities loaded from JSON
 export const abilityStore = new FetchStore('data/abilities.json', 'name')
 
-// TODO this needs to be set up to handle changes to a created adversary
-// but it should be more like the FavouriteStore and only expose
-// specific, relevant information, rather than relying on a grab
-// bag of properties
-class EditingAdversaryStore extends Emittable {
-	#abilities = []
+// abilities which have been chosen in the form
+export const chosenAbilityStore = new ListStore()
 
-	get abilities() {
-		return this.#abilities
-	}
+// attacks which have been chosen in the form
+export const chosenAttackStore = new ListStore()
 
-	addAbility(ability) {
-		console.log({ ability })
 
-		throwIfNull(ability, 'ability')
-		throwIfNull(ability.name, 'name')
-		throwIfNull(ability.ability, 'ability')
-
-		if(ability.ranked) {
-			throwIfNull(ability.rank, 'rank')
-		}
-
-		this.#abilities.push(ability)
-
-		this._emitter.emit(Events.CHANGE, this.#abilities)
-	}
-}
-
-export const editingStore = new EditingAdversaryStore()

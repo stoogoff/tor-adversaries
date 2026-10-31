@@ -3,6 +3,7 @@ import { setLogger, ConsoleLogger, LOG_LEVEL_INFO, LOG_LEVEL_ERROR } from 'q/uti
 import { directives } from 'q/reactive/directives.js'
 import CreateForm from 'create/form.js'
 import CreateAbilityFilter from 'create/ability-filter.js'
+import CreateAttacks from 'create/attacks.js'
 import TorAdversary from 'tor/adversary.js'
 import TorInfo from 'tor/info.js'
 import TorManager from 'tor/manager.js'
@@ -19,6 +20,7 @@ setLogger(TOR_LOG_KEY, ConsoleLogger, isVersionedPath() ? LOG_LEVEL_ERROR : LOG_
 // register create form components
 directives.registerComponent('form', CreateForm)
 directives.registerComponent('ability-filter', CreateAbilityFilter)
+directives.registerComponent('attacks', CreateAttacks)
 
 // register TOR display components
 directives.registerComponent('adversary', TorAdversary)
