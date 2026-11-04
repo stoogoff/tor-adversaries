@@ -35,7 +35,7 @@
 	<button id="mobile-toggle" data-q-click="toggleMenu" data-q-url="/media/img/menu.svg"></button>
 	<strong class="logo">The One Ring</strong>
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
-	<button command="show-modal" commandfor="create-modal">Create</button><!-- TODO add icon -->
+	<button data-q-click="openCreateModal">Create</button><!-- TODO add icon -->
 </div>
 
 <div class="container">
@@ -77,163 +77,165 @@
 </div>
 
 <dialog id="create-modal" data-q-component="form">
-	<form>
-		<h1>Create Adversary</h1>
-		<div data-q-if="hasTouchedForm">Has touched form</div>
-		<label>
-			<span>Name <strong>*</strong></span>
-			<input name="title" type="text" data-q-input="title" />
-			<span class="error" data-q-if="!isValidTitle">This field is required.</span>
-		</label>
-		<label>
-			<span>Description</span>
-			<textarea name="description" data-q-input="description"></textarea>
-		</label>
-		<label>
-			<span>Traits</span>
-			<input name="traits" type="text" data-q-input="traits" />
-			<span class="info">Use a comma to separate traits.</span>
-		</label>
-		<label>
-			<span>Group</span>
-			<input name="group" type="text" data-q-input="group" />
-			<span class="info">The group this adversary belongs to e.g. Orcs. This can be left blank and may affect some Fell Abilities.</span>
-		</label>
-		<div class="grid grid-cols-2">
+	<div class="form-container">
+		<form>
+			<h1>Create Adversary</h1>
+			<div data-q-if="hasTouchedForm">Has touched form</div>
 			<label>
-				<span>Attribute Level <strong>*</strong></span>
-				<input name="attribute" type="number" data-q-input="attribute" />
-				<span class="error" data-q-if="!isValidAttribute">This field is required.</span>
+				<span>Name <strong>*</strong></span>
+				<input name="title" type="text" data-q-input="title" />
+				<span class="error" data-q-if="!isValidTitle">This field is required.</span>
 			</label>
 			<label>
-				<span>Endurance <strong>*</strong></span>
-				<input name="endurance" type="number" data-q-input="endurance" />
-				<span class="error" data-q-if="!isValidEndurance">This field is required.</span>
+				<span>Description</span>
+				<textarea name="description" data-q-input="description"></textarea>
 			</label>
 			<label>
-				<span>Might <strong>*</strong></span>
-				<input name="might" type="number" data-q-input="might" />
-				<span class="error" data-q-if="!isValidMight">This field is required.</span>
+				<span>Traits</span>
+				<input name="traits" type="text" data-q-input="traits" />
+				<span class="info">Use a comma to separate traits.</span>
 			</label>
 			<label>
-				<span>Hate / Resolve <strong>*</strong></span>
-				<select name="hateOrResolve" data-q-input="hateOrResolve" />
-					<option>Hate</option>
-					<option>Resolve</option>
-				</select>
-				<span class="info">Hate / Resolve is equal to Attribute Level.</span>
+				<span>Group</span>
+				<input name="group" type="text" data-q-input="group" />
+				<span class="info">The group this adversary belongs to e.g. Orcs. This can be left blank and may affect some Fell Abilities.</span>
 			</label>
-			<label>
-				<span>Parry</span>
-				<input name="parry" type="number" data-q-input="parry" />
-			</label>
-			<label>
-				<span>Armour</span>
-				<input name="armour" type="number" data-q-input="armour" />
-			</label>
-		</div>
-
-		<div class="card">
-			<h3>Fell Abilities</h3>
-
-			<div data-q-each="chosenAbilities">
-				<button type="button" data-q-url="/media/img/cross.svg" data-q-click="removeAbility"></button>
-				<details>
-					<summary>
-						<span data-q-text="name"></span>
-						<span data-q-if="ranked">(rank: <span data-q-text="rank"></span>)</span>
-					</summary>
-					<p data-q-text="ability"></p>
-				</details>
-			</div>
-
-			<!-- search or create -->
-			<div class="ability-filter" data-q-component="ability-filter">
+			<div class="grid grid-cols-2">
 				<label>
-					<div>
-						<span>Ability</span>
-					</div>
-					<input name="filter-ability" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
-					<span class="info">Use the filter to find an ability and click to add it.</span>
+					<span>Attribute Level <strong>*</strong></span>
+					<input name="attribute" type="number" data-q-input="attribute" />
+					<span class="error" data-q-if="!isValidAttribute">This field is required.</span>
 				</label>
-				<menu>
-					<li data-q-each="abilities">
-						<span data-q-text="name"></span>
-						<span data-q-if="ranked">
-							<input type="number" data-q-input="rank" data-q-if="isNumber" />
-							<select data-q-input="rank" data-q-if="isList">
-								<option value="">Choose...</option>
-								<option data-q-each="values" data-q-text="value" data-q-value="value"></option>
-							</select>
-						</span>
-						<button type="button" data-q-click="handleAdd" data-q-url="/media/img/add.svg"></button>
-					</li>
-				</menu>
+				<label>
+					<span>Endurance <strong>*</strong></span>
+					<input name="endurance" type="number" data-q-input="endurance" />
+					<span class="error" data-q-if="!isValidEndurance">This field is required.</span>
+				</label>
+				<label>
+					<span>Might <strong>*</strong></span>
+					<input name="might" type="number" data-q-input="might" />
+					<span class="error" data-q-if="!isValidMight">This field is required.</span>
+				</label>
+				<label>
+					<span>Hate / Resolve <strong>*</strong></span>
+					<select name="hateOrResolve" data-q-input="hateOrResolve" />
+						<option>Hate</option>
+						<option>Resolve</option>
+					</select>
+					<span class="info">Hate / Resolve is equal to Attribute Level.</span>
+				</label>
+				<label>
+					<span>Parry</span>
+					<input name="parry" type="number" data-q-input="parry" />
+				</label>
+				<label>
+					<span>Armour</span>
+					<input name="armour" type="number" data-q-input="armour" />
+				</label>
 			</div>
-		</div>
 
-		<div class="card">
-			<h3>Attacks</h3>
+			<div class="card">
+				<h3>Fell Abilities</h3>
 
-			<table data-q-if="hasChosenAttacks">
-				<thead>
-					<tr>
-						<th>Attack</th>
-						<th>Skill</th>
-						<th class="xs-only">D.</th>
-						<th class="xs-only">I.</th>
-						<th class="sm-up">Damage</th>
-						<th class="sm-up">Injury</th>
-						<th>Properties</th>
-						<th>&nbsp;</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr data-q-each="chosenAttacks">
-						<td data-q-text="attack"></td>
-						<td data-q-text="skill"></td>
-						<td class="xs-only" data-q-text="damage"></td>
-						<td class="xs-only" data-q-text="injury"></td>
-						<td class="sm-up" data-q-text="damage"></td>
-						<td class="sm-up" data-q-text="injury"></td>
-						<td data-q-text="properties"></td>
-						<td>
-							<button type="button" data-q-click="removeAttack">Remove</button>
-						</td>
-						<!-- TODO remove button, properties -->
-					</tr>
-				</tbody>
-			</table>
-
-			<div data-q-component="attacks">
-				<div class="grid grid-cols-2">
-					<label>
-						<span>Name</span>
-						<input type="text" name="attack" data-q-input="attack" />
-					</label>
-					<label>
-						<span>Skill</span>
-						<input type="number" name="skill" data-q-input="skill" />
-					</label>
-					<label>
-						<span>Damage</span>
-						<input type="number" name="damage" data-q-input="damage" />
-					</label>
-					<label>
-						<span>Injury</span>
-						<input type="number" name="injury" data-q-input="injury" />
-					</label>
-					<!-- TODO properties -->
+				<div data-q-each="chosenAbilities">
+					<button type="button" data-q-url="/media/img/cross.svg" data-q-click="removeAbility"></button>
+					<details>
+						<summary>
+							<span data-q-text="name"></span>
+							<span data-q-if="ranked">(rank: <span data-q-text="rank"></span>)</span>
+						</summary>
+						<p data-q-text="ability"></p>
+					</details>
 				</div>
-				<button type="button" data-q-click="addAttack">Add</button>
-			</div>
-		</div>
 
-		<div class="form-actions">
-			<button class="btn-outline" type="button" command="close" commandfor="create-modal">Cancel</button>
-			<button type="button" data-q-click="submit" data-q-disabled="!isValid">Save</button>
-		</div>
-	</form>
+				<!-- search or create -->
+				<div class="ability-filter" data-q-component="ability-filter">
+					<label>
+						<div>
+							<span>Ability</span>
+						</div>
+						<input name="filter-ability" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
+						<span class="info">Use the filter to find an ability and click to add it.</span>
+					</label>
+					<menu>
+						<li data-q-each="abilities">
+							<span data-q-text="name"></span>
+							<span data-q-if="ranked">
+								<input type="number" data-q-input="rank" data-q-if="isNumber" />
+								<select data-q-input="rank" data-q-if="isList">
+									<option value="">Choose...</option>
+									<option data-q-each="values" data-q-text="value" data-q-value="value"></option>
+								</select>
+							</span>
+							<button type="button" data-q-click="handleAdd" data-q-url="/media/img/add.svg"></button>
+						</li>
+					</menu>
+				</div>
+			</div>
+
+			<div class="card">
+				<h3>Attacks</h3>
+
+				<table data-q-if="hasChosenAttacks">
+					<thead>
+						<tr>
+							<th>Attack</th>
+							<th>Skill</th>
+							<th class="xs-only">D.</th>
+							<th class="xs-only">I.</th>
+							<th class="sm-up">Damage</th>
+							<th class="sm-up">Injury</th>
+							<th>Properties</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-q-each="chosenAttacks">
+							<td data-q-text="attack"></td>
+							<td data-q-text="skill"></td>
+							<td class="xs-only" data-q-text="damage"></td>
+							<td class="xs-only" data-q-text="injury"></td>
+							<td class="sm-up" data-q-text="damage"></td>
+							<td class="sm-up" data-q-text="injury"></td>
+							<td data-q-text="properties"></td>
+							<td>
+								<button type="button" data-q-click="removeAttack">Remove</button>
+							</td>
+							<!-- TODO remove button, properties -->
+						</tr>
+					</tbody>
+				</table>
+
+				<div data-q-component="attacks">
+					<div class="grid grid-cols-2">
+						<label>
+							<span>Name</span>
+							<input type="text" name="attack" data-q-input="attack" />
+						</label>
+						<label>
+							<span>Skill</span>
+							<input type="number" name="skill" data-q-input="skill" />
+						</label>
+						<label>
+							<span>Damage</span>
+							<input type="number" name="damage" data-q-input="damage" />
+						</label>
+						<label>
+							<span>Injury</span>
+							<input type="number" name="injury" data-q-input="injury" />
+						</label>
+						<!-- TODO properties -->
+					</div>
+					<button type="button" data-q-click="addAttack">Add</button>
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<button class="btn-outline" type="button" data-q-click="cancel">Cancel</button>
+				<button type="button" data-q-click="submit" data-q-disabled="!isValid">Save</button>
+			</div>
+		</form>
+	</div>
 </dialog>
 
 <template id="adversary-info">
@@ -242,7 +244,8 @@
 			<span data-q-text="title"></span>
 			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg"></button>
 			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg"></button>
-			<button class="btn-icon" data-q-if="canEdit" data-q-click="editAdversary" data-q-url="/media/img/edit.svg"></button>
+			<button class="btn-icon" data-q-if="isCustom" data-q-click="editAdversary" data-q-url="/media/img/edit.svg"></button>
+			<button class="btn-icon" data-q-if="isCustom" data-q-click="deleteAdversary" data-q-url="/media/img/bin.svg"></button>
 		</h1>
 		<p data-q-text="description" data-q-if="description"></p>
 		<div>
@@ -370,6 +373,8 @@
 		</section>
 	</div>
 </template>
+
+<div id="backdrop" data-q-click="close"></div>
 
 <div id="responsive" data-xs="xs" data-sm="sm" data-md="md" data-lg="lg" data-xl="xl" data-2xl="2xl"></div>
 

@@ -100,6 +100,10 @@ export default {
 		chosenAttackStore.remove({ ...context.scope.data })
 	},
 
+	cancel() {
+		closeCreateModal()
+	},
+
 	submit(evt) {
 		const attributeLevel = parseInt(this.data.attribute)
 		const newAdversary = {

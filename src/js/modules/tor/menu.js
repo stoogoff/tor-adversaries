@@ -9,7 +9,7 @@ import {
 	filterStore,
 	infoStore,
 } from 'tor/stores.js'
-import { closeMenu, openMenu } from 'utils/menu.js'
+import { closeMenu, openMenu } from 'utils/lib.js'
 import { Events } from 'utils/config.js'
 
 export default {

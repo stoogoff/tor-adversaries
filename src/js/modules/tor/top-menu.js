@@ -1,7 +1,7 @@
 
-import { openMenu, toggleMenu } from 'utils/menu.js'
 import { favouriteStore, filterStore } from 'tor/stores.js'
 import { Events, CHIP_FAVOURITE } from 'utils/config.js'
+import { openMenu, toggleMenu, openCreateModal } from 'utils/lib.js'
 
 export default {
 	mounted() {
@@ -21,5 +21,9 @@ export default {
 	openFavourites() {
 		filterStore.item = CHIP_FAVOURITE
 		openMenu()
+	},
+
+	openCreateModal() {
+		openCreateModal()
 	},
 }

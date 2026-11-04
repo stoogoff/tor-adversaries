@@ -1,6 +1,6 @@
 
-import { isNull } from 'q/utils/assert.js'
-import { infoStore, adversaryStore } from 'tor/stores.js'
+import { isIn, isNull, notNull } from 'q/utils/assert.js'
+import { infoStore, adversaryStore, customStore } from 'tor/stores.js'
 import { Events } from 'utils/config.js'
 
 export default {
@@ -26,15 +26,19 @@ export default {
 	},
 
 	showInfo() {
-		const data = { ...this.data }
+		const data = { ...this.data, _id: undefined }
 
-		delete data._id
+		// if this is a custom adversary load it from the data set
+		// in case it has been edited
+		if(isIn('isCustom', data) && data.isCustom) {
+			const fromCustom = customStore.all.find(item => item._customId === data._customId)
 
-		// TODO if this is a custom adversary which has been edited it will show stale data
-		// TODO this either needs to make it load by _customId
-		// TODO or saving a custom adversary needs to clear out any in the adversary list
-		// TODO ideally the former incase the user is has update Endurance or whatever
-		// TODO basically it shouldn't reset anything which is in progress for the user
+			if(notNull(fromCustom)) {
+				infoStore.item = fromCustom
+
+				return
+			}
+		}
 
 		infoStore.item = data
 	},

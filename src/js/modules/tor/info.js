@@ -2,6 +2,7 @@
 import { isIn, isNull } from 'q/utils/assert.js'
 import {
 	adversaryStore,
+	customStore,
 	editingStore,
 	favouriteStore,
 	filterStore,
@@ -26,7 +27,7 @@ export default {
 			return favouriteStore.hasFavourite(infoStore.item.title)
 		},
 
-		canEdit() {
+		isCustom() {
 			if(isNull(infoStore?.item)) return false
 
 			return infoStore.item.isCustom ?? false
@@ -147,5 +148,10 @@ export default {
 
 	editAdversary() {
 		editingStore.item = infoStore.item
+	},
+
+	deleteAdversary() {
+		customStore.remove(infoStore.item)
+		infoStore.item = null
 	},
 }

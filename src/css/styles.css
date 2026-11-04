@@ -261,7 +261,7 @@ nav {
 	bottom: 0;
 	transform: translateX(calc(var(--menu-width) * -1));
 	transition: transform .5s;
-	z-index: 10;
+	z-index: 50;
 
 	&.active {
 		transform: translateX(0);
@@ -462,17 +462,23 @@ article {
 }
 
 /* Modal dialogues */
-dialog form {
+dialog .form-container {
 	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
+	z-index: 150;
+	pointer-events: none;
 
-	overflow-y: scroll;
-	background-color: var(--primary-bg);
-	color: var(--primary-fg);
-	padding: var(--spacing-4);
+	form {
+		overflow-y: scroll;
+		background-color: var(--primary-bg);
+		color: var(--primary-fg);
+		padding: var(--spacing-4);
+		height: 100%;
+		pointer-events: all;
+	}
 
 	.grid {
 		gap: var(--spacing-2);
@@ -541,5 +547,28 @@ dialog form {
 	&:hover::before {
 		opacity:1;
 		bottom: 100%;
+	}
+}
+
+/* Modal backdrop */
+#backdrop {
+	opacity: 0;
+	pointer-events: none;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transition: opacity var(--transition-duration);
+
+	&.full-screen {
+		z-index: 110;
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
 	}
 }
