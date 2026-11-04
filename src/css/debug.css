@@ -17,6 +17,7 @@
 	padding: 0.5rem;
 	color: oklch(88.5% 0.062 18.334);
 	background-color: oklch(44.4% 0.177 26.899);
+	z-index: 1000;
 
 	&:before {
 		content: attr(data-xs);

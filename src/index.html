@@ -94,6 +94,11 @@
 			<input name="traits" type="text" data-q-input="traits" />
 			<span class="info">Use a comma to separate traits.</span>
 		</label>
+		<label>
+			<span>Group</span>
+			<input name="group" type="text" data-q-input="group" />
+			<span class="info">The group this adversary belongs to e.g. Orcs. This can be left blank and may affect some Fell Abilities.</span>
+		</label>
 		<div class="grid grid-cols-2">
 			<label>
 				<span>Attribute Level <strong>*</strong></span>
@@ -237,6 +242,7 @@
 			<span data-q-text="title"></span>
 			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg"></button>
 			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg"></button>
+			<button class="btn-icon" data-q-if="canEdit" data-q-click="editAdversary" data-q-url="/media/img/edit.svg"></button>
 		</h1>
 		<p data-q-text="description" data-q-if="description"></p>
 		<div>
@@ -311,7 +317,7 @@
 								<td class="sm-up" data-q-text="injury"></td>
 								<td>
 									<span data-q-each="properties" data-q-text="property" data-q-tooltip="tooltip"></span>
-									<span data-q-if="!hasProperties">–</span>
+									<span data-q-if="!hasProperties">—</span>
 								</td>
 							</tr>
 						</tbody>
@@ -357,8 +363,8 @@
 			</div>
 			<div class="button">
 				<button data-q-click="removeAdversary">
-					<span data-q-url="/media/img/cross.svg"></span>
-					<span>Remove</span>
+					<span class="icon" data-q-url="/media/img/cross.svg"></span>
+					<span class="text">Remove</span>
 				</button>
 			</div>
 		</section>

@@ -12,3 +12,6 @@ export const versionedPath = () => {
 
 	return { baseUrl, versionPath }
 }
+
+export const openCreateModal = () => document.getElementById('create-modal').showModal()
+export const closeCreateModal = () => document.getElementById('create-modal').close()

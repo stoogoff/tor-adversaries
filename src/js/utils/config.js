@@ -22,3 +22,5 @@ export const AttackPropertiesMap = {
 	'Seize': 'Target can only make Brawling attacks in Forward stance',
 	'Knockback': '',
 }
+
+export const ID_LENGTH = 12

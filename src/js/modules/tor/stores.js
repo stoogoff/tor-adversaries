@@ -32,6 +32,9 @@ export const favouriteStore = new FavouriteStore()
 // custom made adversaries
 export const customStore = new ListStore()
 
+// editing a custom adversary
+export const editingStore = new ObjectStore()
+
 // changes to the primary stores are save to local storage
 // and loaded when the page is refreshed
 infoStore.on(Events.CHANGE, () => {
@@ -89,3 +92,10 @@ customStore.on(Events.CHANGE_ALL, () => {
 
 	local.set(STORAGE_KEY_CUSTOM, [ ...customStore.all ])
 })
+
+customStore.on(Events.ADD, (model) => {
+	logger().log('customStore::add', model)
+
+	infoStore.item = model
+})
+

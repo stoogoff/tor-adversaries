@@ -49,7 +49,7 @@
 			}
 		}
 
-		.button button span {
+		.button button span.text {
 			display: inline-block;
 		}
 
@@ -124,7 +124,7 @@
 			}
 		}
 
-		.button button span {
+		.button button span.icon {
 			display: inline-block;
 		}
 	}
@@ -152,7 +152,7 @@
 			gap: var(--spacing-2);
 		}
 
-		.adversary .button button span {
+		.adversary .button button span.text {
 			display: none;
 		}
 	}

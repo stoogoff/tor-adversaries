@@ -1,10 +1,13 @@
 
-import { notEmptyString, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
-import { Events } from 'utils/config.js'
-import { customStore, chosenAbilityStore, chosenAttackStore } from './stores.js'
+import { notEmptyString, isIn, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
+import { createId } from 'q/utils/string.js'
+import { Events, ID_LENGTH } from 'utils/config.js'
+import { closeCreateModal, openCreateModal } from 'utils/lib.js'
+import { customStore, chosenAbilityStore, chosenAttackStore, editingStore } from './stores.js'
 
 export default {
 	data: {
+		_id: null,
 		title: null,
 		description: null,
 		traits: null,
@@ -14,11 +17,32 @@ export default {
 		hateOrResolve: 'Hate',
 		parry: null,
 		armour: null,
+		group: null,
 	},
 
 	created() {
 		chosenAbilityStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
 		chosenAttackStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
+		editingStore.on(Events.CHANGE, () => {
+			const editing = editingStore.item
+
+			this.data._id = editing._customId
+			this.data.title = editing.title
+			this.data.description = editing.description
+			this.data.traits = editing.traits.join(', ')
+			this.data.attribute = editing.attributes.level
+			this.data.endurance = editing.attributes.endurance
+			this.data.might = editing.attributes.might
+			this.data.hateOrResolve = isIn('hate', editing.attributes) ? 'Hate' : 'Resolve'
+			this.data.parry = editing.attributes.parry
+			this.data.armour = editing.attributes.armour
+			this.data.group = editing.group
+
+			chosenAbilityStore.set(editing.abilities)
+			chosenAttackStore.set(editing.attacks)
+
+			openCreateModal()
+		})
 	},
 
 	computed: {
@@ -91,20 +115,33 @@ export default {
 				armour: parseInt(this.data.armour ?? '0'),
 			},
 			attacks: [ ...chosenAttackStore.all ],
-			abilities: chosenAbilityStore.all.map(ability => ({
-				name: ability.name,
-				ability: ability.ability
-					.replace(/:rank:/g, ability.rank)
-					.replace(/:hate:/g, this.data.hateOrResolve)
-					.replace(/:group:/g, 'TODO') // TODO group needs to be set by the user
-					.replace(/\s\*/g, ' <em>')
-					.replace(/\*([\s\.,])/g, '</em>$1'),
-			})),
-			group: 'Mine',
+			abilities: [ ...chosenAbilityStore.all ],
+			group: this.data.group,
 			sources: ['Mine'],
+			isCustom: true,
 		}
 
+		newAdversary._id = newAdversary._customId = notNull(this.data._id)
+			? this.data._id
+			: createId(ID_LENGTH)
+
 		customStore.add(newAdversary)
-		document.getElementById('create-modal').close()
+
+		this.data._id = null
+		this.data.title = null
+		this.data.description = null
+		this.data.traits = null
+		this.data.attribute = null
+		this.data.endurance = null
+		this.data.might = null
+		this.data.hateOrResolve = 'Hate'
+		this.data.parry = null
+		this.data.armour = null
+		this.data.group = null
+
+		chosenAbilityStore.clear()
+		chosenAttackStore.clear()
+
+		closeCreateModal()
 	},
 }

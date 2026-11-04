@@ -192,6 +192,7 @@ button {
 		background-color: transparent;
 		color: var(--button-bg);
 		border: 0;
+		cursor: pointer;
 
 		&:hover {
 			color: var(--button-hover-bg);
@@ -436,7 +437,7 @@ article {
 			justify-items: center;
 			gap: var(--spacing-2);
 
-			span {
+			span.text {
 				display: none;
 			}
 		}

@@ -1,5 +1,5 @@
 
-import { toggleMenu } from 'utils/menu.js'
+import { openMenu, toggleMenu } from 'utils/menu.js'
 import { favouriteStore, filterStore } from 'tor/stores.js'
 import { Events, CHIP_FAVOURITE } from 'utils/config.js'
 
@@ -20,10 +20,6 @@ export default {
 
 	openFavourites() {
 		filterStore.item = CHIP_FAVOURITE
-		this.toggleMenu()
-	},
-
-	createAdversary() {
-		
+		openMenu()
 	},
 }

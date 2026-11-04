@@ -1,10 +1,11 @@
 
-import { isNull } from 'q/utils/assert.js'
+import { isIn, isNull } from 'q/utils/assert.js'
 import {
-	infoStore,
 	adversaryStore,
-	filterStore,
+	editingStore,
 	favouriteStore,
+	filterStore,
+	infoStore,
 } from 'tor/stores.js'
 import { AttackPropertiesMap, Events } from 'utils/config.js'
 
@@ -23,6 +24,12 @@ export default {
 			if(isNull(infoStore?.item)) return false
 
 			return favouriteStore.hasFavourite(infoStore.item.title)
+		},
+
+		canEdit() {
+			if(isNull(infoStore?.item)) return false
+
+			return infoStore.item.isCustom ?? false
 		},
 
 		hasHate() {
@@ -84,7 +91,7 @@ export default {
 		attacks() {
 			const attacks = infoStore?.item?.attacks ?? []
 
-			const r = attacks.map(attack => ({
+			return attacks.map(attack => ({
 				...attack,
 				hasProperties: attack.properties.length > 0,
 				properties: attack.properties.map(property => ({
@@ -93,12 +100,20 @@ export default {
 					on: () => {},
 				}))
 			}))
-
-			console.log(r)
-			return r
 		},
 		abilities() {
-			return infoStore?.item?.abilities ?? []
+			const group = infoStore?.item?.group ?? ''
+			const hateOrResolve = isIn('hate', infoStore?.item?.attributes ?? {}) ? 'Hate' : 'Resolve'
+
+			return (infoStore?.item?.abilities ?? []).map(ability => ({
+				name: ability.name,
+				ability: ability.ability
+					.replace(/:rank:/g, ability.rank)
+					.replace(/:hate:/g, hateOrResolve)
+					.replace(/:group:/g, group)
+					.replace(/\s\*/g, ' <em>')
+					.replace(/\*([\s\.,])/g, '</em>$1'),
+			}))
 		},
 		hasAbilities() {
 			return (infoStore?.item?.abilities ?? []).length > 0
@@ -114,6 +129,7 @@ export default {
 
 		adversaryStore.add({
 			...adversary,
+			_id: undefined,
 			currentEndurance: adversary.attributes.endurance,
 			currentMight: adversary.attributes.might,
 			currentHate: adversary.attributes.hate,
@@ -127,5 +143,9 @@ export default {
 
 	removeFavourite() {
 		favouriteStore.removeFavourite(infoStore.item.title)
+	},
+
+	editAdversary() {
+		editingStore.item = infoStore.item
 	},
 }

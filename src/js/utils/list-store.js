@@ -2,9 +2,9 @@
 import { throwIfNull } from 'q/utils/assert.js'
 import { createId } from 'q/utils/string.js'
 import { Emittable } from 'q/utils/emittable.js'
-import { Events } from 'utils/config.js'
+import { Events, ID_LENGTH } from 'utils/config.js'
 
-const mapItem = item => ({ ...item, _id: item._id ?? createId(12) })
+const mapItem = item => ({ ...item, _id: item._id ?? createId(ID_LENGTH) })
 
 export class ListStore extends Emittable {
 	#data = {}
@@ -51,5 +51,10 @@ export class ListStore extends Emittable {
 		this._emitter.emit(Events.CHANGE_ALL, 'all', this.all)
 
 		return item
+	}
+
+	clear() {
+		this.#data = {}
+		this._emitter.emit(Events.CHANGE_ALL, 'all', this.all)
 	}
 }

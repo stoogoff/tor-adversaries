@@ -9,7 +9,7 @@ import {
 	filterStore,
 	infoStore,
 } from 'tor/stores.js'
-import { closeMenu } from 'utils/menu.js'
+import { closeMenu, openMenu } from 'utils/menu.js'
 import { Events } from 'utils/config.js'
 
 export default {
@@ -27,6 +27,7 @@ export default {
 
 		filterStore.on(Events.CHANGE, () => {
 			this.data.filter = filterStore.item
+			openMenu()
 		})
 
 		favouriteStore.on(Events.CHANGE_ALL, () => this.emit(Events.CHANGE))
@@ -47,7 +48,11 @@ export default {
 		adversaries() {
 			const data = ([...dataStore?.all, ...customStore.all ]).sort(sortByProperty('title'))
 				.map(adversary => (
-				 { ...adversary, isFavourite: favouriteStore.hasFavourite(adversary.title) }
+					{
+				 		...adversary,
+				 		isFavourite: favouriteStore.hasFavourite(adversary.title),
+				 		isCustom: adversary.isCustom ?? false,
+					}
 				))
 
 			if(isEmptyString(this.data.filter)) {
