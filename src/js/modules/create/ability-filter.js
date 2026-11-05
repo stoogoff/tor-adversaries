@@ -2,9 +2,9 @@
 import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
-import { abilityStore, chosenAbilityStore } from 'create/stores.js'
 import { Events } from 'utils/config.js'
 import { showToast } from 'utils/lib.js'
+import { abilityStore, chosenAbilityStore } from 'create/stores.js'
 
 export default {
 	data: {

@@ -1,9 +1,9 @@
 
 import { throwIfNullOrEmpty, isNull } from 'q/utils/assert.js'
-import { chosenAttackStore } from 'create/stores.js'
 import { AttackPropertiesMap } from 'utils/config.js'
 import { logger } from 'utils/logger.js'
 import { showToast } from 'utils/lib.js'
+import { chosenAttackStore } from 'create/stores.js'
 
 export default {
 	data: {

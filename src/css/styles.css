@@ -558,25 +558,30 @@ dialog .form-container {
 		content: attr(data-tooltip);
 		display: inline-block;
 		position: absolute;
-		bottom: 50%;
+		top: 50%;
 		right: 0;
 		background: var(--button-bg);
 		color: var(--button-fg);
-		padding: var(--spacing-1) var(--spacing-2);
+		padding: var(--spacing-1) var(--spacing-3);
 		border-radius: var(--spacing-1);
+		border: 1px solid var(--primary-bg);
 		opacity: 0;
 		transition: 0.3s;
 		overflow: hidden;
 		pointer-events: none;
 		text-transform: none;
-		width: 15rem;
 		font-size: var(--font-sm);
+		font-weight: normal;
 		text-align: left;
+		max-width: 16rem;
+		width: max-content;
+		z-index: 500;
+		box-shadow: var(--shadow-lg);
 	}
 
 	&:hover::before {
-		opacity:1;
-		bottom: 100%;
+		opacity: 1;
+		top: 100%;
 	}
 }
 

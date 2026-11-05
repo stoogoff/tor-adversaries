@@ -80,40 +80,40 @@
 	<div class="form-container">
 		<form>
 			<h1>Create Adversary</h1>
-			<label>
+			<label data-q-component="form-input">
 				<span>Name <strong>*</strong></span>
-				<input name="title" type="text" data-q-input="title" />
-				<span class="error" data-q-if="!isValidTitle">This field is required.</span>
+				<input name="title" type="text" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
+				<span class="error" data-q-if="!isValid">This field is required.</span>
 			</label>
-			<label>
+			<label data-q-component="form-input">
 				<span>Description</span>
-				<textarea name="description" data-q-input="description"></textarea>
+				<textarea name="description" data-q-input="value" data-q-blur="blur" data-q-keyup="update"></textarea>
 			</label>
-			<label>
+			<label data-q-component="form-input">
 				<span>Traits</span>
-				<input name="traits" type="text" data-q-input="traits" />
+				<input name="traits" type="text" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
 				<span class="info">Use a comma to separate traits.</span>
 			</label>
-			<label>
+			<label data-q-component="form-input">
 				<span>Group</span>
-				<input name="group" type="text" data-q-input="group" />
+				<input name="group" type="text" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
 				<span class="info">The group this adversary belongs to e.g. Orcs. This will be used in some Fell Abilities (e.g. <em>Howl of Triumph</em>) but can be left blank.</span>
 			</label>
 			<div class="grid grid-cols-2">
-				<label>
+				<label data-q-component="form-input">
 					<span>Attribute Level <strong>*</strong></span>
-					<input name="attribute" type="number" data-q-input="attribute" />
-					<span class="error" data-q-if="!isValidAttribute">This field is required.</span>
+					<input name="attribute" type="number" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
+					<span class="error" data-q-if="!isValid">This field is required.</span>
 				</label>
-				<label>
+				<label data-q-component="form-input">
 					<span>Endurance <strong>*</strong></span>
-					<input name="endurance" type="number" data-q-input="endurance" />
-					<span class="error" data-q-if="!isValidEndurance">This field is required.</span>
+					<input name="endurance" type="number" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
+					<span class="error" data-q-if="!isValid">This field is required.</span>
 				</label>
-				<label>
+				<label data-q-component="form-input">
 					<span>Might <strong>*</strong></span>
-					<input name="might" type="number" data-q-input="might" />
-					<span class="error" data-q-if="!isValidMight">This field is required.</span>
+					<input name="might" type="number" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
+					<span class="error" data-q-if="!isValid">This field is required.</span>
 				</label>
 				<label>
 					<span>Hate / Resolve <strong>*</strong></span>
@@ -123,13 +123,13 @@
 					</select>
 					<span class="info">Hate / Resolve is equal to Attribute Level.</span>
 				</label>
-				<label>
+				<label data-q-component="form-input">
 					<span>Parry</span>
-					<input name="parry" type="number" data-q-input="parry" />
+					<input name="parry" type="number" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
 				</label>
-				<label>
+				<label data-q-component="form-input">
 					<span>Armour</span>
-					<input name="armour" type="number" data-q-input="armour" />
+					<input name="armour" type="number" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />
 				</label>
 			</div>
 
@@ -252,10 +252,10 @@
 	<div>
 		<h1>
 			<span data-q-text="title"></span>
-			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg"></button>
-			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg"></button>
-			<button class="btn-icon" data-q-if="isCustom" data-q-click="editAdversary" data-q-url="/media/img/edit.svg"></button>
-			<button class="btn-icon" data-q-if="isCustom" data-q-click="deleteAdversary" data-q-url="/media/img/bin.svg"></button>
+			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg" data-tooltip="Add favourite"></button>
+			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg" data-tooltip="Remove favourite"></button>
+			<button class="btn-icon" data-q-if="isCustom" data-q-click="editAdversary" data-q-url="/media/img/edit.svg" data-tooltip="Edit adversary"></button>
+			<button class="btn-icon" data-q-if="isCustom" data-q-click="deleteAdversary" data-q-url="/media/img/bin.svg" data-tooltip="Delete adversary"></button>
 		</h1>
 		<p data-q-text="description" data-q-if="description"></p>
 		<div>
