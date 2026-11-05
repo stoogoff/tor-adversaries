@@ -10,7 +10,7 @@ import TorInfo from 'tor/info.js'
 import TorManager from 'tor/manager.js'
 import TorMenu from 'tor/menu.js'
 import TorTopMenu from 'tor/top-menu.js'
-import { TOR_LOG_KEY } from 'tor/logger.js'
+import { TOR_LOG_KEY } from 'utils/logger.js'
 import { isVersionedPath, closeMenu, closeCreateModal } from 'utils/lib.js'
 
 import { DIRECTIVES_LOG_KEY } from 'q/reactive/config.js'

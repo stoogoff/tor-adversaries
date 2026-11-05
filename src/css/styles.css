@@ -374,6 +374,7 @@ article {
 	border-radius: var(--spacing-4);
 	cursor: pointer;
 	transition: transform var(--transition-duration), filter var(--transition-duration);
+	box-shadow: var(--shadow-md);
 
 	&:hover {
 		filter: brightness(1.2);
@@ -485,8 +486,8 @@ dialog .form-container {
 
 			.btn-icon {
 				position: absolute;
-				top: var(--spacing-2);
-				right: var(--spacing-2);
+				top: 0;
+				right: 0;
 			}
 		}
 
@@ -586,3 +587,23 @@ dialog .form-container {
 		pointer-events: auto;
 	}
 }
+
+/* Toast messages */
+#toast {
+	background-color: var(--toast-bg);
+	border: var(--toast-border);
+	color: var(--toast-fg);
+	padding: var(--spacing-2);
+	border-radius: var(--spacing-2);
+  display: none;
+  position: fixed;
+  bottom: var(--spacing-6);
+  right: var(--spacing-6);
+  z-index: 200;
+  animation:
+    toast-in .3s ease forwards,
+    toast-out .3s ease 3s forwards;
+}
+
+@keyframes toast-in  { from { transform: translateX(120%); } }
+@keyframes toast-out { to   { transform: translateX(120%); opacity: 0; } }

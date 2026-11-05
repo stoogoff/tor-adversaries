@@ -10,7 +10,7 @@ import { FetchStore } from 'utils/fetch-store.js'
 import { ListStore } from 'utils/list-store.js'
 import { ObjectStore } from 'utils/object-store.js'
 import { FavouriteStore } from 'utils/favourite-store.js'
-import { logger } from 'tor/logger.js'
+import { logger } from 'utils/logger.js'
 import { Events } from 'utils/config.js'
 
 // the adversary displayed in the info panel at the top

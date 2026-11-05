@@ -1,9 +1,10 @@
 
-import { isEmptyString, throwIfNull } from 'q/utils/assert.js'
+import { isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
 import { abilityStore, chosenAbilityStore } from 'create/stores.js'
 import { Events } from 'utils/config.js'
+import { showToast } from 'utils/lib.js'
 
 export default {
 	data: {
@@ -55,9 +56,9 @@ export default {
 			ranked: context.scope.data.ranked,
 		}
 
-		// TODO show toast on error
-		if(ability.ranked) {
-			throwIfNull(ability.rank, 'rank')
+		if(ability.ranked && isEmptyString(ability.rank)) {
+			showToast('Please fill in the rank for this ability')
+			return
 		}
 
 		chosenAbilityStore.add(ability)

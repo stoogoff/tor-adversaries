@@ -211,22 +211,21 @@
 				<div data-q-component="attacks">
 					<div class="grid grid-cols-2">
 						<label>
-							<span>Name</span>
+							<span>Name <strong>*</strong></span>
 							<input type="text" name="attack" data-q-input="attack" />
 						</label>
 						<label>
-							<span>Skill</span>
+							<span>Skill <strong>*</strong></span>
 							<input type="number" name="skill" data-q-input="skill" />
 						</label>
 						<label>
-							<span>Damage</span>
+							<span>Damage <strong>*</strong></span>
 							<input type="number" name="damage" data-q-input="damage" />
 						</label>
 						<label>
-							<span>Injury</span>
+							<span>Injury <strong>*</strong></span>
 							<input type="number" name="injury" data-q-input="injury" />
 						</label>
-						<!-- TODO properties -->
 						<label>
 							<span>Properties</span>
 							<select name="properties" data-q-input="properties">
@@ -384,6 +383,7 @@
 </template>
 
 <div id="backdrop" data-q-click="close"></div>
+<div id="toast" class="toast"></div>
 
 <div id="responsive" data-xs="xs" data-sm="sm" data-md="md" data-lg="lg" data-xl="xl" data-2xl="2xl"></div>
 

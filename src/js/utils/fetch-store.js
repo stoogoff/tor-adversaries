@@ -1,6 +1,6 @@
 
 import { Emittable } from 'q/utils/emittable.js'
-import { logger } from 'tor/logger.js'
+import { logger } from 'utils/logger.js'
 import { isVersionedPath, versionedPath } from 'utils/lib.js'
 import { Events } from 'utils/config.js'
 

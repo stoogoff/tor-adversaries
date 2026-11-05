@@ -67,3 +67,19 @@ export const convertAbilityText = ({ text, rank, hateOrResolve, group }) => text
 	.replace(/:group:/g, group)
 	.replace(/\s\*/g, ' <em>')
 	.replace(/\*([\s\.,])/g, '</em>$1')
+
+/**
+ * Display toast message.
+ */
+export const showToast = text => {
+	const toast = document.getElementById('toast')
+
+	if(toast.style.display === 'flex') {
+		toast.style.display = 'none'
+	}
+
+	window.setTimeout(() => {
+		toast.innerText = text
+		toast.style.display = 'flex'
+	}, 0)
+}

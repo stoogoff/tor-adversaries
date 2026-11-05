@@ -74,7 +74,7 @@
 	--button-disabled-fg: var(--grey-300);
 	--button-disabled-border: 2px solid var(--grey-800);
 
-	--toast-bg: var(--emerald-200);
-	--toast-fg: var(--emerald-700);
-	--toast-border: 2px solid var(--emerald-500);
+	--toast-bg: var(--title-fg);
+	--toast-fg: var(--primary-bg);
+	--toast-border: 2px solid rgb(from var(--title-fg) h s calc(l + 20%));
 }

@@ -1,7 +1,9 @@
 
-import { throwIfNull, isNull } from 'q/utils/assert.js'
+import { throwIfNullOrEmpty, isNull } from 'q/utils/assert.js'
 import { chosenAttackStore } from 'create/stores.js'
 import { AttackPropertiesMap } from 'utils/config.js'
+import { logger } from 'utils/logger.js'
+import { showToast } from 'utils/lib.js'
 
 export default {
 	data: {
@@ -27,11 +29,18 @@ export default {
 			properties: isNull(this.data.properties) ? [] : [this.data.properties],
 		}
 
-		// TODO show toast rather than throw error
-		throwIfNull(attack, 'attack')
-		throwIfNull(attack.skill, 'skill')
-		throwIfNull(attack.damage, 'damage')
-		throwIfNull(attack.injury, 'injury')
+		try {
+			throwIfNullOrEmpty(attack.attack, 'attack', 'Please fill in the attack name field.')
+			throwIfNullOrEmpty(attack.skill, 'skill', 'Please fill in the skill field.')
+			throwIfNullOrEmpty(attack.damage, 'damage', 'Please fill in the damage field.')
+			throwIfNullOrEmpty(attack.injury, 'injury', 'Please fill in the injury field.')
+		}
+		catch(error) {
+			logger().error(error)
+			showToast(error.message)
+
+			return
+		}
 
 		chosenAttackStore.add(attack)
 

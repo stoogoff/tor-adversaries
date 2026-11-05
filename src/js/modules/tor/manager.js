@@ -1,7 +1,7 @@
 
 import { notEmptyArray } from 'q/utils/assert.js'
 import { adversaryStore } from 'tor/stores.js'
-import { logger } from 'tor/logger.js'
+import { logger } from 'utils/logger.js'
 import { Events } from 'utils/config.js'
 
 export default {
