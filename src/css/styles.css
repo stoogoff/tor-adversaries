@@ -478,45 +478,57 @@ dialog .form-container {
 		padding: var(--spacing-4);
 		height: 100%;
 		pointer-events: all;
-	}
 
-	.grid {
-		gap: var(--spacing-2);
+		.chosen-abilities {
+			position: relative;
+			margin-bottom: var(--spacing-4);
+
+			.btn-icon {
+				position: absolute;
+				top: var(--spacing-2);
+				right: var(--spacing-2);
+			}
+		}
+
+		.grid {
+			gap: var(--spacing-2);
+
+			label {
+				margin-bottom: var(--spacing-2);
+			}
+		}
+
+		.form-actions {
+			margin-top: var(--spacing-4);
+			display: flex;
+			gap: var(--spacing-2);
+			justify-content: end;
+		}
+
+		input[type=text], textarea, select {
+			width: 100%;
+		}
 
 		label {
-			margin-bottom: var(--spacing-2);
-		}
-	}
+			span.error, span.info {
+				text-transform: none;
+				margin-top: var(--spacing-2);
+				font-size: var(--font-sm);
+				line-height: 140%;
+			}
 
-	.form-actions {
-		margin-top: var(--spacing-4);
-		display: flex;
-		gap: var(--spacing-2);
-		justify-content: end;
-	}
+			span.error {
+				color: var(--title-fg);
+			}
 
-	input[type=text], textarea, select {
-		width: 100%;
-	}
-
-	label {
-		span.error, span.info {
-			text-transform: none;
-			margin-top: var(--spacing-2);
-			font-size: var(--font-sm);
+			strong {
+				color: var(--title-fg);
+			}
 		}
 
-		span.error {
-			color: var(--title-fg);
+		&>label {
+			margin-bottom: var(--spacing-4);
 		}
-
-		strong {
-			color: var(--title-fg);
-		}
-	}
-
-	&>label {
-		margin-bottom: var(--spacing-4);
 	}
 }
 
@@ -542,6 +554,8 @@ dialog .form-container {
 		overflow: hidden;
 		pointer-events: none;
 		white-space: pre;
+		text-transform: none;
+		font-size: var(--font-sm);
 	}
 
 	&:hover::before {

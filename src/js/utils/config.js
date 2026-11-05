@@ -7,6 +7,9 @@ export const STORAGE_KEY_CUSTOM = 'tor:custom'
 
 export const CHIP_FAVOURITE = 'Favourite'
 
+export const HATE = 'Hate'
+export const RESOLVE = 'Resolve'
+
 export const Events = {
 	CHANGE: 'change',
 	CHANGE_ALL: 'change:all',

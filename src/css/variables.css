@@ -70,7 +70,6 @@
 	--button-hover-fg: var(--grey-50);
 	--button-hover-border: 2px solid var(--grey-950);
 
-	/* None of these have been used so far */
 	--button-disabled-bg: var(--grey-600);
 	--button-disabled-fg: var(--grey-300);
 	--button-disabled-border: 2px solid var(--grey-800);

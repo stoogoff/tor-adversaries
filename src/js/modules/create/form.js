@@ -1,9 +1,22 @@
 
-import { notEmptyString, isIn, isNull, isNumber, notNull, notNumber } from 'q/utils/assert.js'
+import {
+	notEmptyString,
+	notEmptyArray,
+	isIn,
+	isNull,
+	isNumber,
+	notNull,
+	notNumber,
+} from 'q/utils/assert.js'
 import { createId } from 'q/utils/string.js'
-import { Events, ID_LENGTH } from 'utils/config.js'
-import { closeCreateModal, openCreateModal } from 'utils/lib.js'
-import { customStore, chosenAbilityStore, chosenAttackStore, editingStore } from './stores.js'
+import { Events, ID_LENGTH, HATE, RESOLVE, AttackPropertiesMap } from 'utils/config.js'
+import { closeCreateModal, openCreateModal, convertAbilityText } from 'utils/lib.js'
+import {
+	customStore,
+	chosenAbilityStore,
+	chosenAttackStore,
+	editingStore,
+} from './stores.js'
 
 export default {
 	data: {
@@ -14,7 +27,7 @@ export default {
 		attribute: null,
 		endurance: null,
 		might: null,
-		hateOrResolve: 'Hate',
+		hateOrResolve: HATE,
 		parry: null,
 		armour: null,
 		group: null,
@@ -33,7 +46,7 @@ export default {
 			this.data.attribute = editing.attributes.level
 			this.data.endurance = editing.attributes.endurance
 			this.data.might = editing.attributes.might
-			this.data.hateOrResolve = isIn('hate', editing.attributes) ? 'Hate' : 'Resolve'
+			this.data.hateOrResolve = isIn('hate', editing.attributes) ? HATE : RESOLVE
 			this.data.parry = editing.attributes.parry
 			this.data.armour = editing.attributes.armour
 			this.data.group = editing.group
@@ -47,29 +60,31 @@ export default {
 
 	computed: {
  		chosenAbilities() {
-			return [ ...chosenAbilityStore.all ]
+			return (chosenAbilityStore.all ?? []).map(ability => ({
+				...ability,
+				ability: convertAbilityText({
+					text: ability.ability,
+					rank: ability.rank,
+					hateOrResolve: this.data.hateOrResolve === HATE ? HATE : RESOLVE,
+					group: this.data.group,
+				})
+			}))
 		},
 
 		chosenAttacks() {
-			return [ ...chosenAttackStore.all ]
+			return (chosenAttackStore.all ?? []).map(attack => ({
+				...attack,
+				hasProperties: notEmptyArray(attack.properties),
+				properties: attack.properties.map(property => ({
+					property,
+					tooltip: property in AttackPropertiesMap ? AttackPropertiesMap[property] : null,
+					on: () => {},
+				})),
+			}))
 		},
 
 		hasChosenAttacks() {
 			return chosenAttackStore.all.length > 0
-		},
-
-		hasTouchedForm() {
-			console.log({
-				title: notNull(this.data.title),
-				attribute: notNull(this.data.attribute),
-				endurance: notNull(this.data.endurance),
-				might: notNull(this.data.might),
-			})
-
-			return notNull(this.data.title) ||
-				notNull(this.data.attribute) ||
-				notNull(this.data.endurance) ||
-				notNull(this.data.might)
 		},
 
 		isValid() {
@@ -101,7 +116,26 @@ export default {
 	},
 
 	cancel() {
+		this.reset()
+
 		closeCreateModal()
+	},
+
+	reset() {
+		this.data._id = null
+		this.data.title = null
+		this.data.description = null
+		this.data.traits = null
+		this.data.attribute = null
+		this.data.endurance = null
+		this.data.might = null
+		this.data.hateOrResolve = HATE
+		this.data.parry = null
+		this.data.armour = null
+		this.data.group = null
+
+		chosenAbilityStore.clear()
+		chosenAttackStore.clear()
 	},
 
 	submit(evt) {
@@ -131,20 +165,7 @@ export default {
 
 		customStore.add(newAdversary)
 
-		this.data._id = null
-		this.data.title = null
-		this.data.description = null
-		this.data.traits = null
-		this.data.attribute = null
-		this.data.endurance = null
-		this.data.might = null
-		this.data.hateOrResolve = 'Hate'
-		this.data.parry = null
-		this.data.armour = null
-		this.data.group = null
-
-		chosenAbilityStore.clear()
-		chosenAttackStore.clear()
+		this.reset()
 
 		closeCreateModal()
 	},

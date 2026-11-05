@@ -1,5 +1,5 @@
 
-import { isIn, isNull } from 'q/utils/assert.js'
+import { isIn, isNull, notEmptyArray } from 'q/utils/assert.js'
 import {
 	adversaryStore,
 	customStore,
@@ -8,7 +8,8 @@ import {
 	filterStore,
 	infoStore,
 } from 'tor/stores.js'
-import { AttackPropertiesMap, Events } from 'utils/config.js'
+import { AttackPropertiesMap, Events, HATE, RESOLVE } from 'utils/config.js'
+import { convertAbilityText } from 'utils/lib.js'
 
 export default {
 	created() {
@@ -90,11 +91,9 @@ export default {
 			return infoStore?.item?.attributes.armour ?? 0
 		},
 		attacks() {
-			const attacks = infoStore?.item?.attacks ?? []
-
-			return attacks.map(attack => ({
+			return (infoStore?.item?.attacks ?? []).map(attack => ({
 				...attack,
-				hasProperties: attack.properties.length > 0,
+				hasProperties: notEmptyArray(attack.properties),
 				properties: attack.properties.map(property => ({
 					property,
 					tooltip: property in AttackPropertiesMap ? AttackPropertiesMap[property] : null,
@@ -104,16 +103,16 @@ export default {
 		},
 		abilities() {
 			const group = infoStore?.item?.group ?? ''
-			const hateOrResolve = isIn('hate', infoStore?.item?.attributes ?? {}) ? 'Hate' : 'Resolve'
+			const hateOrResolve = isIn('hate', infoStore?.item?.attributes ?? {}) ? HATE : RESOLVE
 
 			return (infoStore?.item?.abilities ?? []).map(ability => ({
 				name: ability.name,
-				ability: ability.ability
-					.replace(/:rank:/g, ability.rank)
-					.replace(/:hate:/g, hateOrResolve)
-					.replace(/:group:/g, group)
-					.replace(/\s\*/g, ' <em>')
-					.replace(/\*([\s\.,])/g, '</em>$1'),
+				ability: convertAbilityText({
+					text: ability.ability,
+					rank: ability.rank,
+					hateOrResolve,
+					group,
+				}),
 			}))
 		},
 		hasAbilities() {

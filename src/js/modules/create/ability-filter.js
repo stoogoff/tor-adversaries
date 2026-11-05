@@ -55,12 +55,7 @@ export default {
 			ranked: context.scope.data.ranked,
 		}
 
-		// TODO need to show a toast for these
-		// TODO only the ranked stuff should be able to error
-		throwIfNull(ability, 'ability')
-		throwIfNull(ability.name, 'name')
-		throwIfNull(ability.ability, 'ability')
-
+		// TODO show toast on error
 		if(ability.ranked) {
 			throwIfNull(ability.rank, 'rank')
 		}

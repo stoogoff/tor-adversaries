@@ -80,7 +80,6 @@
 	<div class="form-container">
 		<form>
 			<h1>Create Adversary</h1>
-			<div data-q-if="hasTouchedForm">Has touched form</div>
 			<label>
 				<span>Name <strong>*</strong></span>
 				<input name="title" type="text" data-q-input="title" />
@@ -98,7 +97,7 @@
 			<label>
 				<span>Group</span>
 				<input name="group" type="text" data-q-input="group" />
-				<span class="info">The group this adversary belongs to e.g. Orcs. This can be left blank and may affect some Fell Abilities.</span>
+				<span class="info">The group this adversary belongs to e.g. Orcs. This will be used in some Fell Abilities (e.g. <em>Howl of Triumph</em>) but can be left blank.</span>
 			</label>
 			<div class="grid grid-cols-2">
 				<label>
@@ -137,25 +136,26 @@
 			<div class="card">
 				<h3>Fell Abilities</h3>
 
-				<div data-q-each="chosenAbilities">
-					<button type="button" data-q-url="/media/img/cross.svg" data-q-click="removeAbility"></button>
+				<div class="chosen-abilities" data-q-each="chosenAbilities">
+					<button type="button" class="btn-icon" data-q-url="/media/img/cross.svg" data-q-click="removeAbility" data-tooltip="Remove ability"></button>
 					<details>
 						<summary>
 							<span data-q-text="name"></span>
 							<span data-q-if="ranked">(rank: <span data-q-text="rank"></span>)</span>
 						</summary>
-						<p data-q-text="ability"></p>
+						<p data-q-html="ability"></p>
 					</details>
 				</div>
 
 				<!-- search or create -->
 				<div class="ability-filter" data-q-component="ability-filter">
+					<!-- TODO create new ability should be an option -->
 					<label>
 						<div>
 							<span>Ability</span>
 						</div>
 						<input name="filter-ability" type="search" data-q-input="filter" data-q-keyup="handleFilter" data-q-search="handleFilter" />
-						<span class="info">Use the filter to find an ability and click to add it.</span>
+						<span class="info">Use the filter to find an ability and click the plus icon to add it.</span>
 					</label>
 					<menu>
 						<li data-q-each="abilities">
@@ -167,7 +167,7 @@
 									<option data-q-each="values" data-q-text="value" data-q-value="value"></option>
 								</select>
 							</span>
-							<button type="button" data-q-click="handleAdd" data-q-url="/media/img/add.svg"></button>
+							<button type="button" class="btn-icon" data-q-click="handleAdd" data-q-url="/media/img/add.svg" data-tooltip="Add ability"></button>
 						</li>
 					</menu>
 				</div>
@@ -197,11 +197,13 @@
 							<td class="xs-only" data-q-text="injury"></td>
 							<td class="sm-up" data-q-text="damage"></td>
 							<td class="sm-up" data-q-text="injury"></td>
-							<td data-q-text="properties"></td>
 							<td>
-								<button type="button" data-q-click="removeAttack">Remove</button>
+								<span data-q-each="properties" data-q-text="property" data-q-tooltip="tooltip"></span>
+								<span data-q-if="!hasProperties">—</span>
 							</td>
-							<!-- TODO remove button, properties -->
+							<td>
+								<button type="button" class="btn-icon" data-q-click="removeAttack" data-q-url="/media/img/cross.svg" data-tooltip="Remove attack"></button>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -225,6 +227,13 @@
 							<input type="number" name="injury" data-q-input="injury" />
 						</label>
 						<!-- TODO properties -->
+						<label>
+							<span>Properties</span>
+							<select name="properties" data-q-input="properties">
+								<option value="">Choose...</option>
+								<option data-q-each="availableProperties" data-q-text="value" data-q-value="value"></option>
+							</select>
+						</label>
 					</div>
 					<button type="button" data-q-click="addAttack">Add</button>
 				</div>

@@ -57,3 +57,13 @@ export const closeCreateModal = () => {
 export const openBackdrop = () => document.getElementById('backdrop').classList.add('active')
 export const closeBackdrop = () => document.getElementById('backdrop').classList.remove('active')
 export const toggleBackdrop = () => document.getElementById('backdrop').classList.toggle('active')
+
+/**
+ * Ability property conversion.
+ */
+export const convertAbilityText = ({ text, rank, hateOrResolve, group }) => text
+	.replace(/:rank:/g, rank)
+	.replace(/:hate:/g, hateOrResolve)
+	.replace(/:group:/g, group)
+	.replace(/\s\*/g, ' <em>')
+	.replace(/\*([\s\.,])/g, '</em>$1')
