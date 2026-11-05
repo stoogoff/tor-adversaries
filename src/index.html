@@ -209,7 +209,7 @@
 				</table>
 
 				<div data-q-component="attacks">
-					<div class="grid grid-cols-2">
+					<div class="attack-form">
 						<label>
 							<span>Name <strong>*</strong></span>
 							<input type="text" name="attack" data-q-input="attack" />
@@ -223,18 +223,20 @@
 							<input type="number" name="damage" data-q-input="damage" />
 						</label>
 						<label>
-							<span>Injury <strong>*</strong></span>
-							<input type="number" name="injury" data-q-input="injury" />
-						</label>
-						<label>
 							<span>Properties</span>
 							<select name="properties" data-q-input="properties">
 								<option value="">Choose...</option>
 								<option data-q-each="availableProperties" data-q-text="value" data-q-value="value"></option>
 							</select>
 						</label>
+						<label>
+							<span>Injury <strong>*</strong></span>
+							<input type="number" name="injury" data-q-input="injury" />
+						</label>
+						<div class="add-button">
+							<button type="button" data-q-click="addAttack">Add</button>
+						</div>
 					</div>
-					<button type="button" data-q-click="addAttack">Add</button>
 				</div>
 			</div>
 

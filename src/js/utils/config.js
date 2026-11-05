@@ -23,7 +23,7 @@ export const AttackPropertiesMap = {
 	'Pierce': '+2 Feat die result',
 	'Break Shield': 'Break target’s shield unless it has rewards',
 	'Seize': 'Target can only make Brawling attacks in Forward stance',
-	'Knockback': '',
+	'Knockback': 'Target takes half Endurance and must spend main action recovering',
 }
 
 export const ID_LENGTH = 12

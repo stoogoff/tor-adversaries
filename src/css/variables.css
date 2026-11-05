@@ -50,7 +50,7 @@
 
 	--primary-bg: rgb(255,253,239);
 	--primary-fg: rgb(20,20,20);
-	--primary-border: 1px solid var(--grey-400);
+	--primary-border: 1px solid var(--slate-400);
 
 	--secondary-bg: rgb(250,247,232);
 	--secondary-fg: rgb(91,80,62);
@@ -62,19 +62,19 @@
 	--menu-border: 1px solid rgb(181,170,157);
 	--menu-width: 20rem;
 
-	--button-bg: var(--grey-800);
-	--button-fg: var(--grey-50);
-	--button-border: 2px solid var(--grey-950);
+	--button-bg: var(--slate-800);
+	--button-fg: var(--slate-50);
+	--button-border: 2px solid var(--slate-950);
 
-	--button-hover-bg: var(--grey-700);
-	--button-hover-fg: var(--grey-50);
-	--button-hover-border: 2px solid var(--grey-950);
+	--button-hover-bg: var(--slate-700);
+	--button-hover-fg: var(--slate-50);
+	--button-hover-border: 2px solid var(--slate-950);
 
-	--button-disabled-bg: var(--grey-600);
-	--button-disabled-fg: var(--grey-300);
-	--button-disabled-border: 2px solid var(--grey-800);
+	--button-disabled-bg: var(--slate-600);
+	--button-disabled-fg: var(--slate-300);
+	--button-disabled-border: var(--slate-700);
 
 	--toast-bg: var(--title-fg);
 	--toast-fg: var(--primary-bg);
-	--toast-border: 2px solid rgb(from var(--title-fg) h s calc(l + 20%));
+	--toast-border: 2px solid rgb(107,56,48);
 }
