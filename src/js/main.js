@@ -12,7 +12,7 @@ import TorManager from 'tor/manager.js'
 import TorMenu from 'tor/menu.js'
 import TorTopMenu from 'tor/top-menu.js'
 import { TOR_LOG_KEY } from 'utils/logger.js'
-import { isVersionedPath, closeMenu, closeCreateModal } from 'utils/lib.js'
+import { isVersionedPath, closeMenu, closeCreateModal, closeMenuButtonMenus } from 'utils/lib.js'
 
 import { DIRECTIVES_LOG_KEY } from 'q/reactive/config.js'
 
@@ -43,6 +43,11 @@ directives.registerComponent('top-menu', TorTopMenu)
 
 // load
 directives.load(document.body, {
+	// close menu button menus from clicks on the body
+	clickAwayListener() {
+		closeMenuButtonMenus()
+	},
+
 	// event handler for clicks on the backdrop
 	close() {
 		closeMenu()

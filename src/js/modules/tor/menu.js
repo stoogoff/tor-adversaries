@@ -42,7 +42,7 @@ export default {
 		},
 
 		total() {
-			return (dataStore?.all ?? []).length
+			return dataStore.all.length + customStore.all.length
 		},
 
 		adversaries() {

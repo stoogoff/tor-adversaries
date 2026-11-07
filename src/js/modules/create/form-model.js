@@ -2,7 +2,7 @@
 import { notEmptyString, notNull } from 'q/utils/assert.js'
 import { Emittable } from 'q/utils/emittable.js'
 import { createId } from 'q/utils/string.js'
-import { Events, ID_LENGTH } from 'utils/config.js'
+import { Events, ID_LENGTH, FILTER_CUSTOM } from 'utils/config.js'
 
 export class FormModel extends Emittable {
 	#model = {}
@@ -72,7 +72,7 @@ export class FormModel extends Emittable {
 			attacks: [ ...chosenAttackStore.all ],
 			abilities: [ ...chosenAbilityStore.all ],
 			group: this.#model.group,
-			sources: ['Mine'],
+			sources: [FILTER_CUSTOM],
 			isCustom: true,
 		}
 

@@ -83,3 +83,14 @@ export const showToast = text => {
 		toast.style.display = 'flex'
 	}, 0)
 }
+
+/**
+ * Close menus from menu buttons.
+ */
+export const closeMenuButtonMenus = () => {
+	const menus = Array.from(document.getElementsByClassName('btn-menu'))
+
+	for(const menu of menus) {
+		menu.removeAttribute('open')
+	}
+}

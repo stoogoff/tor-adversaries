@@ -28,16 +28,30 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:secure_url" content="https://cdn.we-evolve.co.uk/img/tor-og.jpg" />
 </head>
-<body>
+<body data-q-click="clickAwayListener">
 
 <div class="topbar" data-q-component="top-menu">
 	<button id="mobile-toggle" data-q-click="toggleMenu" data-q-url="/media/img/menu.svg"></button>
 	<strong class="logo">The One Ring</strong>
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
-	<button id="create" data-q-click="openCreateModal">
-		<span class="icon" data-q-url="/media/img/new.svg"></span>
-		<span class="text">Create</span>
-	</button>
+	<span class="chip" data-q-click="openCustom" data-q-if="hasCustom">Mine</span>
+	<details id="more" class="btn-menu">
+		<summary class="btn" data-q-url="/media/img/more.svg"></summary>
+		<menu class="right">
+			<li data-q-click="openCreateModal">
+				<span data-q-url="/media/img/new.svg"></span>
+				<span>Create</span>
+			</li>
+			<li>
+				<span data-q-url="/media/img/download.svg"></span>
+				<span>Download</span>
+			</li>
+			<li>
+				<span data-q-url="/media/img/upload.svg"></span>
+				<span>Upload</span>
+			</li>
+		</menu>
+	</details>
 </div>
 
 <div class="container">
@@ -252,13 +266,33 @@
 
 <template id="adversary-info">
 	<div>
-		<h1>
-			<span data-q-text="title"></span>
-			<button class="btn-icon" data-q-if="!isFavourite" data-q-click="addFavourite" data-q-url="/media/img/star-outline.svg" data-tooltip="Add favourite"></button>
-			<button class="btn-icon" data-q-if="isFavourite" data-q-click="removeFavourite" data-q-url="/media/img/star-filled.svg" data-tooltip="Remove favourite"></button>
-			<button class="btn-icon" data-q-if="isCustom" data-q-click="editAdversary" data-q-url="/media/img/edit.svg" data-tooltip="Edit adversary"></button>
-			<button class="btn-icon" data-q-if="isCustom" data-q-click="deleteAdversary" data-q-url="/media/img/bin.svg" data-tooltip="Delete adversary"></button>
-		</h1>
+		<header>
+			<h1>
+				<span data-q-if="isFavourite" data-q-url="/media/img/star-filled.svg"></span>
+				<span data-q-text="title"></span>
+			</h1>
+			<details class="btn-menu">
+				<summary class="btn btn-icon" data-q-url="/media/img/more.svg"></summary>
+				<menu>
+					<li data-q-if="!isFavourite" data-q-click="addFavourite">
+						<span data-q-url="/media/img/star-outline.svg"></span>
+						<span>Add Favourite</span>
+					</li>
+					<li data-q-if="isFavourite" data-q-click="removeFavourite">
+						<span data-q-url="/media/img/star-filled.svg"></span>
+						<span>Remove Favourite</span>
+					</li>
+					<li data-q-if="isCustom" data-q-click="editAdversary">
+						<span data-q-url="/media/img/edit.svg"></span>
+						<span>Edit Adversary</span>
+					</li>
+					<li data-q-if="isCustom" data-q-click="deleteAdversary">
+						<span data-q-url="/media/img/bin.svg"></span>
+						<span>Delete Adversary</span>
+					</li>
+				</menu>
+			</details>
+		</header>
 		<p data-q-text="description" data-q-if="description"></p>
 		<div>
 			<span class="chip" data-q-click="openChip" data-q-text="group"></span>

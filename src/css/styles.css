@@ -34,6 +34,11 @@ h3 {
 	margin: 0 0 var(--spacing-2);
 }
 
+header {
+	display: flex;
+	gap: var(--spacing-2);
+}
+
 p {
 	margin-bottom: var(--spacing-4);
 }
@@ -68,6 +73,36 @@ details {
 summary {
 	font-weight: bold;
 	cursor: pointer;
+}
+
+/* Drop down button */
+details.btn-menu {
+	margin-bottom: 0;
+	position: relative;
+	display: inline-block;
+
+	summary {
+		font-weight: normal;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-2);
+		margin: 0;
+	}
+
+	menu {
+		background-color: var(--menu-bg);
+		border: var(--menu-border);
+		box-shadow: var(--shadow-md);
+		position: absolute;
+		left: 0;
+		z-index: 50;
+
+		&.right {
+			left: auto;
+			right: 0;
+		}
+	}
 }
 
 table {
@@ -160,7 +195,7 @@ input[type=search] {
 	width: 100%;
 }
 
-button {
+button, .btn {
 	padding: var(--spacing-1) var(--spacing-2);
 	background-color: var(--button-bg);
 	color: var(--button-fg);
@@ -243,19 +278,6 @@ button {
 		}
 	}
 
-	button#create {
-		display: flex;
-		align-items: center;
-		gap: var(--spacing-2);
-
-		span.text {
-			display: none;
-		}
-		span.icon {
-			display: inline-block;
-		}
-	}
-
 	.logo {
 		flex-grow: 1;
 		font-family: var(--font-heading);
@@ -300,6 +322,7 @@ menu li {
 	border-bottom: var(--menu-border);
 	cursor: pointer;
 	display: flex;
+	gap: var(--spacing-2);
 
 	&:last-child {
 		border-bottom: 0;

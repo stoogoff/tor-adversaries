@@ -12,7 +12,7 @@ import {
 
 export default {
 	data: {
-		hateOrResolve: 'Hate',
+		hateOrResolve: HATE,
 	},
 
 	created() {

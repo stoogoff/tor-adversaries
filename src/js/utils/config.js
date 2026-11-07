@@ -5,7 +5,8 @@ export const STORAGE_KEY_LIST = 'tor:adversaries'
 export const STORAGE_KEY_FAVOURITES = 'tor:favourites'
 export const STORAGE_KEY_CUSTOM = 'tor:custom'
 
-export const CHIP_FAVOURITE = 'Favourite'
+export const FILTER_FAVOURITE = 'Favourite'
+export const FILTER_CUSTOM = 'Mine'
 
 export const HATE = 'Hate'
 export const RESOLVE = 'Resolve'
