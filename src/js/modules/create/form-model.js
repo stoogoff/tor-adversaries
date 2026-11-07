@@ -3,6 +3,7 @@ import { notEmptyString, notNull } from 'q/utils/assert.js'
 import { Emittable } from 'q/utils/emittable.js'
 import { createId } from 'q/utils/string.js'
 import { Events, ID_LENGTH, FILTER_CUSTOM } from 'utils/config.js'
+import { chosenAbilityStore, chosenAttackStore } from 'create/stores.js'
 
 export class FormModel extends Emittable {
 	#model = {}
