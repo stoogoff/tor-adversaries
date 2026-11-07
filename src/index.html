@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="/css/debug.css" />
 <link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/responsive.css" />
+<!--		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.4/", -->
 <script type="importmap">
 {
 	"imports": {
-		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.3/",
+		"q/": "./q/",
 		"utils/": "./js/utils/",
 		"create/": "./js/modules/create/",
 		"tor/": "./js/modules/tor/"
@@ -28,7 +29,7 @@
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:secure_url" content="https://cdn.we-evolve.co.uk/img/tor-og.jpg" />
 </head>
-<body data-q-click="clickAwayListener">
+<body data-q-click="clickAwayHandler">
 
 <div class="topbar" data-q-component="top-menu">
 	<button id="mobile-toggle" data-q-click="toggleMenu" data-q-url="/media/img/menu.svg"></button>
@@ -36,7 +37,7 @@
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
 	<span class="chip" data-q-click="openCustom" data-q-if="hasCustom">Mine</span>
 	<details id="more" class="btn-menu">
-		<summary class="btn" data-q-url="/media/img/more.svg"></summary>
+		<summary class="btn btn-icon" data-q-url="/media/img/more.svg"></summary>
 		<menu class="right">
 			<li data-q-click="openCreateModal">
 				<span data-q-url="/media/img/new.svg"></span>
@@ -46,7 +47,7 @@
 				<span data-q-url="/media/img/download.svg"></span>
 				<span>Download</span>
 			</li>
-			<li>
+			<li data-q-click="openCustomUploadModal">
 				<span data-q-url="/media/img/upload.svg"></span>
 				<span>Upload</span>
 			</li>
@@ -92,9 +93,51 @@
 	</main>
 </div>
 
+<dialog id="upload-modal" data-q-component="upload">
+	<div class="modal-container">
+		<form class="modal-content">
+			<h1>Upload</h1>
+
+			<div
+				data-q-class="dropzoneClass"
+				data-q-click="openFileDialog"
+				data-q-dragenter="dragenter"
+				data-q-dragover="dragenter"
+				data-q-dragleave="dragleave"
+				data-q-drop="drop"
+			>
+				<input type="file" class="hidden" multiple accept="*.json,application/json,text/json" data-q-change="selectFileFromInput" />
+				<span data-q-url="/media/img/upload.svg"></span>
+				<em>Click or drop file here to upload</em>
+			</div>
+
+			<details data-q-each="files">
+				<summary>
+					<span data-q-text="name"></span>
+					<span class="success" data-q-if="valid" data-q-url="/media/img/tick.svg"></span>
+					<span class="error" data-q-if="!valid" data-q-url="/media/img/cross.svg"></span>
+				</summary>
+				<div data-q-if="!valid">
+					<p class="error" data-q-text="content"></p>
+				</div>
+				<ul data-g-if="valid">
+					<li data-q-each="content">
+						<span data-q-text="title"></span>
+					</li>
+				</ul>
+			</details>
+
+			<div class="form-actions">
+				<button class="btn-outline" type="button" data-q-click="cancel">Cancel</button>
+				<button type="button" data-q-click="submit" data-q-disabled="!isValid">Save</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
 <dialog id="create-modal" data-q-component="form">
-	<div class="form-container">
-		<form>
+	<div class="modal-container">
+		<form class="modal-content">
 			<h1>Create Adversary</h1>
 			<label data-q-component="form-input">
 				<span>Name <strong>*</strong></span>

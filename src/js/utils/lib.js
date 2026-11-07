@@ -1,5 +1,6 @@
 
 import { notNull } from 'q/utils/assert.js'
+import { MODAL_CREATE, MODAL_UPLOAD } from 'utils/config.js'
 
 /**
  * Menu opening and closing.
@@ -40,16 +41,22 @@ export const versionedPath = () => {
 /**
  * Modal opening and closing.
  */
-export const openCreateModal = () => {
-	document.getElementById('create-modal').show()
+const openModal = id => {
+	document.getElementById(id).show()
 	document.getElementById('backdrop').classList.add('full-screen')
 	openBackdrop()
 }
-export const closeCreateModal = () => {
-	document.getElementById('create-modal').close()
+const closeModal = id => {
+	document.getElementById(id).close()
 	document.getElementById('backdrop').classList.remove('full-screen')
 	closeBackdrop()
 }
+
+export const openCreateModal = () => openModal(MODAL_CREATE)
+export const closeCreateModal = () => closeModal(MODAL_CREATE)
+export const openCustomUploadModal = () => openModal(MODAL_UPLOAD)
+export const closeCustomUploadModal = () => closeModal(MODAL_UPLOAD)
+export const closeAllModals = () => [MODAL_CREATE, MODAL_UPLOAD].forEach(id => closeModal(id))
 
 /**
  * Backdrop opening and closing.

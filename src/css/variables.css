@@ -81,4 +81,12 @@
 	--toast-bg: var(--title-fg);
 	--toast-fg: var(--primary-bg);
 	--toast-border: 2px solid rgb(107,56,48);
+
+	--dropzone-bg: var(--secondary-bg);
+	--dropzone-fg: var(--secondary-fg);
+	--dropzone-border: 1px solid var(--slate-400);
+
+	--dropzone-highlight-bg: var(--primary-bg);
+	--dropzone-highlight-fg: var(--primary-fg);
+	--dropzone-highlight-border: 1px solid var(--slate-600);
 }

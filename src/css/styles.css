@@ -12,6 +12,11 @@ body {
 	overflow: hidden;
 }
 
+svg {
+	width: 24px;
+	height: 24px;
+}
+
 h1 {
 	text-align: left;
 	font-family: var(--font-heading);
@@ -313,6 +318,11 @@ nav {
 		overflow-y: scroll;
 		list-style-type: none;
 		margin-top: var(--spacing-2);
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
 	}
 }
 
@@ -428,6 +438,16 @@ article {
 	}
 }
 
+.hidden {
+	display: none;
+}
+.error {
+	color: red;
+}
+.success {
+	color: green;
+}
+
 /* Adversary component */
 .adversary {
 	position: relative;
@@ -500,7 +520,7 @@ article {
 }
 
 /* Modal dialogues */
-dialog .form-container {
+dialog .modal-container {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -509,13 +529,42 @@ dialog .form-container {
 	z-index: 150;
 	pointer-events: none;
 
-	form {
+	.modal-content {
 		overflow-y: scroll;
 		background-color: var(--primary-bg);
 		color: var(--primary-fg);
 		padding: var(--spacing-4);
 		height: 100%;
 		pointer-events: all;
+	}
+
+	form {
+		.dropzone {
+			background-color: var(--dropzone-bg);
+			color: var(--dropzone-fg);
+			border: var(--dropzone-border);
+			height: 14rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			&.highlight {
+				background-color: var(--dropzone-highlight-bg);
+				color: var(--dropzone-highlight-fg);
+				border: var(--dropzone-highlight-border);
+			}
+
+			/* {
+				pointer-events: none;
+			}*/
+
+			svg {
+				width: 80px;
+				height: 80px;
+			}
+		}
 
 		.chosen-abilities {
 			position: relative;

@@ -8,6 +8,9 @@ export const STORAGE_KEY_CUSTOM = 'tor:custom'
 export const FILTER_FAVOURITE = 'Favourite'
 export const FILTER_CUSTOM = 'Mine'
 
+export const MODAL_CREATE = 'create-modal'
+export const MODAL_UPLOAD = 'upload-modal'
+
 export const HATE = 'Hate'
 export const RESOLVE = 'Resolve'
 
