@@ -120,11 +120,14 @@
 				<div data-q-if="!valid">
 					<p class="error" data-q-text="content"></p>
 				</div>
-				<ul data-g-if="valid">
-					<li data-q-each="content">
-						<span data-q-text="title"></span>
-					</li>
-				</ul>
+				<div data-g-if="valid">
+					<table>
+						<thead>
+							<th>New</th>
+						</thead>
+						<tbody data-q-html="render"></tbody>
+					</table>
+				</div>
 			</details>
 
 			<div class="form-actions">

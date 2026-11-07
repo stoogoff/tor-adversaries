@@ -1,10 +1,14 @@
 
+import { throwIfNull, isString } from 'q/utils/assert.js'
+
 export class FileModel {
 	#file
+	#custom
 	#content = null
 
-	constructor(file) {
+	constructor(file, custom) {
 		this.#file = file
+		this.#custom = custom
 	}
 
 	get name() {
@@ -33,11 +37,7 @@ export class FileModel {
 
 			reader.onload = evt => {
 				try {
-					this.#content = JSON.parse(evt.target.result).map(item => ({
-						...item,
-						// Keep q happy
-						on: () => {},
-					}))
+					this.#content = JSON.parse(evt.target.result)
 					resolve(this.#content)
 				}
 				catch(error) {
@@ -48,5 +48,22 @@ export class FileModel {
 
 			reader.readAsText(this.#file)
 		})
+	}
+
+	get render() {
+		throwIfNull(this.#content, 'content', 'File must be read before rendering.')
+
+		if(isString(this.#content)) throw new Error('Failed to parse JSON file.')
+
+		// loop over content and display it in a table
+		// check to see if this thing already exists
+		// if it does show it as different if there are changes
+		// otherwise somehow mark it as not needing to be updated
+
+		const html = this.#content.map(item => {
+			return `<tr><td>${item.title}</td></tr>`
+		}).join('')
+
+		return html
 	}
 }

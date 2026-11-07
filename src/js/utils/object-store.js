@@ -16,6 +16,6 @@ export class ObjectStore extends Emittable {
 	}
 
 	get has() {
-		return notNull(this.#data)
+		return notNull(this.#data) && JSON.stringify(this.#data) !== '{}'
 	}
 }

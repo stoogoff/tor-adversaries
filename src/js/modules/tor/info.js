@@ -23,24 +23,24 @@ export default {
 		},
 
 		isFavourite() {
-			if(isNull(infoStore?.item)) return false
+			if(isNull(infoStore.item)) return false
 
 			return favouriteStore.hasFavourite(infoStore.item.title)
 		},
 
 		isCustom() {
-			if(isNull(infoStore?.item)) return false
+			if(isNull(infoStore.item)) return false
 
 			return infoStore.item.isCustom ?? false
 		},
 
 		hasHate() {
-			if(isNull(infoStore?.item)) return false
+			if(isNull(infoStore.item) || isNull(infoStore.item?.attributes)) return false
 
 			return 'hate' in infoStore.item.attributes
 		},
 		hasResolve() {
-			if(isNull(infoStore?.item)) return false
+			if(isNull(infoStore.item) || isNull(infoStore.item?.attributes)) return false
 
 			return 'resolve' in infoStore.item.attributes
 		},
@@ -64,22 +64,22 @@ export default {
 			return (infoStore?.item?.traits ?? []).join(', ')
 		},
 		level() {
-			return infoStore?.item?.attributes.level ?? 1
+			return infoStore?.item?.attributes?.level ?? 1
 		},
 		endurance() {
-			return infoStore?.item?.attributes.endurance ?? 1
+			return infoStore?.item?.attributes?.endurance ?? 1
 		},
 		might() {
-			return infoStore?.item?.attributes.might ?? 1
+			return infoStore?.item?.attributes?.might ?? 1
 		},
 		hate() {
-			return infoStore?.item?.attributes.hate ?? 0
+			return infoStore?.item?.attributes?.hate ?? 0
 		},
 		resolve() {
-			return infoStore?.item?.attributes.resolve ?? 0
+			return infoStore?.item?.attributes?.resolve ?? 0
 		},
 		parry() {
-			const parry = infoStore?.item?.attributes.parry ?? 0
+			const parry = infoStore?.item?.attributes?.parry ?? 0
 
 			if(parry === 0) {
 				return "—"
@@ -88,7 +88,7 @@ export default {
 			return parry < 0 ? `-${parry}` : `+${parry}`
 		},
 		armour() {
-			return infoStore?.item?.attributes.armour ?? 0
+			return infoStore?.item?.attributes?.armour ?? 0
 		},
 		attacks() {
 			return (infoStore?.item?.attacks ?? []).map(attack => ({

@@ -2,6 +2,7 @@
 import { logger } from 'utils/logger.js'
 import { closeCustomUploadModal } from 'utils/lib.js'
 import { FileModel } from 'utils/file-model.js'
+import { customStore } from 'tor/stores.js'
 
 export default {
 	data: {
@@ -60,7 +61,7 @@ export default {
 
 		for(const file of files) {
 			try {
-				const model = new FileModel(file)
+				const model = new FileModel(file, [ ...customStore.all ])
 
 				updatedFiles.push(model)
 
