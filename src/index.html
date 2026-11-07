@@ -7,11 +7,10 @@
 <link rel="stylesheet" href="/css/debug.css" />
 <link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/responsive.css" />
-<!--		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.0/", -->
 <script type="importmap">
 {
 	"imports": {
-		"q/": "./q/",
+		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.3/",
 		"utils/": "./js/utils/",
 		"create/": "./js/modules/create/",
 		"tor/": "./js/modules/tor/"
@@ -35,7 +34,10 @@
 	<button id="mobile-toggle" data-q-click="toggleMenu" data-q-url="/media/img/menu.svg"></button>
 	<strong class="logo">The One Ring</strong>
 	<span class="chip" data-q-click="openFavourites" data-q-if="hasFavourites">Favourites</span>
-	<button data-q-click="openCreateModal">Create</button><!-- TODO add icon -->
+	<button id="create" data-q-click="openCreateModal">
+		<span class="icon" data-q-url="/media/img/new.svg"></span>
+		<span class="text">Create</span>
+	</button>
 </div>
 
 <div class="container">

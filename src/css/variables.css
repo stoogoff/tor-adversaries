@@ -74,6 +74,10 @@
 	--button-disabled-fg: var(--slate-300);
 	--button-disabled-border: var(--slate-700);
 
+	--button-icon-fg: var(--grey-900);
+	--button-icon-hover-fg: var(--slate-950);
+	--button-icon-hover-bg: oklch(from var(--slate-300) l c h / 70%);
+
 	--toast-bg: var(--title-fg);
 	--toast-fg: var(--primary-bg);
 	--toast-border: 2px solid rgb(107,56,48);
