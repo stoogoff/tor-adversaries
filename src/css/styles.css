@@ -114,6 +114,20 @@ table {
 	width: 100%;
 	margin-bottom: var(--spacing-4);
 
+	th, td {
+		&.left {
+			text-align: left !important;
+		}
+
+		&.right {
+			text-align: right !important;
+		}
+
+		&.centre {
+			text-align: center !important;
+		}
+	}
+
 	th {
 		text-transform: uppercase;
 		font-size: var(--font-sm);
@@ -441,11 +455,11 @@ article {
 .hidden {
 	display: none;
 }
-.error {
-	color: red;
+.text-error {
+	color: var(--alert-error-bg);
 }
-.success {
-	color: green;
+.text-success {
+	color: var(--alert-success-bg);
 }
 
 /* Adversary component */
@@ -549,6 +563,7 @@ dialog .modal-container {
 			align-items: center;
 			justify-content: center;
 			cursor: pointer;
+			margin-bottom: var(--spacing-4);
 
 			&.highlight {
 				background-color: var(--dropzone-highlight-bg);
@@ -556,14 +571,14 @@ dialog .modal-container {
 				border: var(--dropzone-highlight-border);
 			}
 
-			/* {
-				pointer-events: none;
-			}*/
-
 			svg {
 				width: 80px;
 				height: 80px;
 			}
+		}
+
+		section {
+			margin-bottom: var(--spacing-2);
 		}
 
 		.chosen-abilities {
@@ -696,9 +711,6 @@ dialog .modal-container {
 
 /* Toast messages */
 #toast {
-	background-color: var(--toast-bg);
-	border: var(--toast-border);
-	color: var(--toast-fg);
 	padding: var(--spacing-2);
 	border-radius: var(--spacing-2);
   display: none;
@@ -709,7 +721,41 @@ dialog .modal-container {
   animation:
     toast-in .3s ease forwards,
     toast-out .3s ease 3s forwards;
+
+  &.error {
+		background-color: var(--alert-error-bg);
+		border: var(--alert-error-border);
+		color: var(--alert-error-fg);
+  }
+
+  &.success {
+		background-color: var(--alert-success-bg);
+		border: var(--alert-success-border);
+		color: var(--alert-success-fg);
+  }
 }
 
 @keyframes toast-in  { from { transform: translateX(120%); } }
 @keyframes toast-out { to   { transform: translateX(120%); opacity: 0; } }
+
+/* Badge, similar to a chip */
+.badge {
+	display: inline-block;
+	padding: var(--spacing-1) var(--spacing-2);
+	font-size: var(--font-xs);
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+	border-radius: var(--spacing-1);
+	background-color: var(--alert-default-bg);
+	color: var(--alert-default-fg);
+
+  &.error {
+		background-color: var(--alert-error-bg);
+		color: var(--alert-error-fg);
+  }
+
+  &.success {
+		background-color: var(--alert-success-bg);
+		color: var(--alert-success-fg);
+  }
+}

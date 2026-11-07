@@ -111,27 +111,29 @@
 				<em>Click or drop file here to upload</em>
 			</div>
 
-			<details data-q-each="files">
-				<summary>
-					<span data-q-text="name"></span>
-					<span class="success" data-q-if="valid" data-q-url="/media/img/tick.svg"></span>
-					<span class="error" data-q-if="!valid" data-q-url="/media/img/cross.svg"></span>
-				</summary>
-				<div data-q-if="!valid">
-					<p class="error" data-q-text="content"></p>
+			<section data-q-each="files">
+				<header>
+					<h4 data-q-text="name"></h4>
+					<span class="text-success" data-q-if="validFile" data-q-url="/media/img/tick.svg"></span>
+					<span class="text-error" data-q-if="!validFile" data-q-url="/media/img/cross.svg"></span>
+				</header>
+				<div data-q-if="!validFile">
+					<p class="text-error" data-q-text="error"></p>
 				</div>
-				<div data-g-if="valid">
+				<div data-q-if="validFile">
 					<table>
 						<thead>
-							<th>New</th>
+							<th class="left">New</th>
+							<th class="left">Current</th>
+							<th class="right">Action</th>
 						</thead>
 						<tbody data-q-html="render"></tbody>
 					</table>
 				</div>
-			</details>
+			</section>
 
 			<div class="form-actions">
-				<button class="btn-outline" type="button" data-q-click="cancel">Cancel</button>
+				<button class="btn-outline" type="button" data-q-click="close">Cancel</button>
 				<button type="button" data-q-click="submit" data-q-disabled="!isValid">Save</button>
 			</div>
 		</form>
@@ -467,7 +469,7 @@
 </template>
 
 <div id="backdrop" data-q-click="close"></div>
-<div id="toast" class="toast"></div>
+<div id="toast"></div>
 
 <div id="responsive" data-xs="xs" data-sm="sm" data-md="md" data-lg="lg" data-xl="xl" data-2xl="2xl"></div>
 

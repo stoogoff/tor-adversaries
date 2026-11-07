@@ -1,10 +1,13 @@
 
-import { throwIfNull, isString } from 'q/utils/assert.js'
+import { notEmptyString } from 'q/utils/assert.js'
+import { MergeStatus } from 'utils/config.js'
+import { equals, isValidAdversary } from 'utils/lib.js'
 
 export class FileModel {
 	#file
 	#custom
-	#content = null
+	#error = null
+	#adversaries = []
 
 	constructor(file, custom) {
 		this.#file = file
@@ -15,21 +18,25 @@ export class FileModel {
 		return this.#file.name
 	}
 
-	get valid() {
+	get validFile() {
 		return this.#file.name.endsWith('json')
 			|| this.#file.type === 'application/json'
 			|| this.#file.type === 'text/json'
 	}
 
-	get content() {
-		return this.#content
+	get error() {
+		return this.#error
+	}
+
+	get hasError() {
+		return notEmptyString(this.#error)
 	}
 
 	read() {
 		return new Promise((resolve, reject) => {
-			if(!this.valid) {
-				this.#content = 'File is not a JSON file.'
-				reject(this.#content)
+			if(!this.validFile) {
+				this.#error = 'File is not a JSON file.'
+				reject(this.#error)
 				return
 			}
 
@@ -37,33 +44,76 @@ export class FileModel {
 
 			reader.onload = evt => {
 				try {
-					this.#content = JSON.parse(evt.target.result)
-					resolve(this.#content)
+					this.parseAdversaries(JSON.parse(evt.target.result))
+					resolve(this.#adversaries)
 				}
 				catch(error) {
-					this.#content = 'Failed to parse JSON file.'
+					this.#error = 'Failed to parse JSON file.'
 					reject(error.message)
 				}
+
 			}
 
 			reader.readAsText(this.#file)
 		})
 	}
 
+	parseAdversaries(content) {
+		this.#adversaries = content.map(item => {
+			const match = this.#custom.find(
+				existing =>
+					existing._customId === item._customId || existing.title === item.title
+			)
+
+			const exact = equals(item, match)
+
+			let status = MergeStatus.ADD
+
+			if(!isValidAdversary(item)) {
+				status = MergeStatus.INVALID
+			}
+			else if(match && exact) {
+				status = MergeStatus.IGNORE
+			}
+			else if(match && !exact) {
+				status = MergeStatus.OVERWRITE
+			}
+
+			return {
+				adversary: item,
+				match,
+				status,
+			}			
+		})
+	}
+
+	get adversaries() {
+		return this.#adversaries
+	}
+
 	get render() {
-		throwIfNull(this.#content, 'content', 'File must be read before rendering.')
+		return this.adversaries.map(item => {
+			let badge = null
 
-		if(isString(this.#content)) throw new Error('Failed to parse JSON file.')
+			switch(item.status) {
+				case MergeStatus.IGNORE:
+					badge = '<span class="badge">Ignore</span>'
+					break
+				case MergeStatus.OVERWRITE:
+					badge = '<span class="badge error">Overwrite</span>'
+					break
+				case MergeStatus.INVALID:
+					badge = '<span class="badge">Invalid</span>'
+					break
+				default:
+					badge = '<span class="badge success">Add</span>'
+			}
 
-		// loop over content and display it in a table
-		// check to see if this thing already exists
-		// if it does show it as different if there are changes
-		// otherwise somehow mark it as not needing to be updated
-
-		const html = this.#content.map(item => {
-			return `<tr><td>${item.title}</td></tr>`
+			return `<tr>
+				<td class="left">${item.adversary.title}</td>
+				<td class="left">${item.match?.title ?? '—'}</td>
+				<td class="right">${badge}</td>
+			</tr>`
 		}).join('')
-
-		return html
 	}
 }

@@ -31,3 +31,10 @@ export const AttackPropertiesMap = {
 }
 
 export const ID_LENGTH = 12
+
+export const MergeStatus = {
+	ADD: 'Add',
+	OVERWRITE: 'Overwrite',
+	IGNORE: 'Ignore',
+	INVALID: 'Invalid',
+}

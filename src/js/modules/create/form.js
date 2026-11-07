@@ -1,7 +1,12 @@
 
 import { notEmptyArray, isIn } from 'q/utils/assert.js'
 import { Events, HATE, RESOLVE, AttackPropertiesMap } from 'utils/config.js'
-import { closeCreateModal, openCreateModal, convertAbilityText } from 'utils/lib.js'
+import {
+	closeCreateModal,
+	convertAbilityText,
+	openCreateModal,
+	showToast,
+} from 'utils/lib.js'
 import {
 	customStore,
 	chosenAbilityStore,
@@ -96,5 +101,6 @@ export default {
 		this.reset()
 
 		closeCreateModal()
+		showToast(`Successfully saved ${newAdversary.title}.`, 'success')
 	},
 }

@@ -1,7 +1,8 @@
 
 import { logger } from 'utils/logger.js'
-import { closeCustomUploadModal } from 'utils/lib.js'
+import { closeCustomUploadModal, showToast } from 'utils/lib.js'
 import { FileModel } from 'utils/file-model.js'
+import { Events, MergeStatus } from 'utils/config.js'
 import { customStore } from 'tor/stores.js'
 
 export default {
@@ -9,11 +10,17 @@ export default {
 		dragging: false,
 		fileInput: null,
 		files: [],
+		errorFiles: [],
 	},
 
 	computed: {
 		isValid() {
-			return false
+			return this.data.files.length - this.data.errorFiles.length > 0
+				&& this.data.files.some(file =>
+					file.adversaries.filter(item => 
+						item.status === MergeStatus.ADD || item.status === MergeStatus.OVERWRITE
+					).length > 0
+				)
 		},
 
 		dropzoneClass() {
@@ -69,18 +76,41 @@ export default {
 			}
 			catch(error) {
 				logger().error(error)
+				this.data.errorFiles = [...this.data.errorFiles, file]
 			}
 		}
 
 		this.data.files = [...this.data.files, ...updatedFiles]
 	},
 
-	cancel() {
+	close() {
 		this.data.files = []
+		this.data.errorFiles = []
 		closeCustomUploadModal()
 	},
 
 	submit() {
+		let saved = 0
 
+		for(const file of this.data.files) {
+			if(file.hasError) {
+				logger().info(`Skipping file '${file.name}`)
+				continue
+			}
+
+			for(const item of file.adversaries.filter(item => item.status !== MergeStatus.IGNORE && item.status !== MergeStatus.INVALID)) {
+				customStore.add(item.adversary)
+				saved++
+			}
+		}
+
+		if(saved === 0) {
+			showToast('Failed to save any adversaries.', 'error')
+		}
+		else {
+			showToast(`Saved ${saved} adversaries.`, 'success')
+		}
+
+		this.close()
 	},
 }

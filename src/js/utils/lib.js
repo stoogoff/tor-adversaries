@@ -1,5 +1,5 @@
 
-import { notNull } from 'q/utils/assert.js'
+import { notNull, notIn } from 'q/utils/assert.js'
 import { MODAL_CREATE, MODAL_UPLOAD } from 'utils/config.js'
 
 /**
@@ -78,8 +78,10 @@ export const convertAbilityText = ({ text, rank, hateOrResolve, group }) => text
 /**
  * Display toast message.
  */
-export const showToast = text => {
+export const showToast = (text, className = 'error') => {
 	const toast = document.getElementById('toast')
+
+	toast.setAttribute('class', className)
 
 	if(toast.style.display === 'flex') {
 		toast.style.display = 'none'
@@ -100,4 +102,44 @@ export const closeMenuButtonMenus = () => {
 	for(const menu of menus) {
 		menu.removeAttribute('open')
 	}
+}
+
+/**
+ * Deep compare two objects.
+ */
+export const equals = (a, b) => {
+	if(a === b) return true
+
+	if(a instanceof Date && b instanceof Date)
+		return a.getTime() === b.getTime()
+
+	if(!a || !b || (typeof a !== 'object' && typeof b !== 'object'))
+		return a === b
+
+	if(a.prototype !== b.prototype) return false
+
+	const keys = Object.keys(a)
+
+	if(keys.length !== Object.keys(b).length) return false
+
+	return keys.every(k => equals(a[k], b[k]));
+}
+
+/**
+ * Checks the input has the minimum required properties
+ * to be an adversary.
+ */
+export const isValidAdversary = input => {
+	const rootProps = ['title', 'traits', 'attributes', 'attacks', 'abilities', 'group', 'sources']
+	const attrProps = ['level', 'endurance', 'might', 'hate', 'parry', 'armour']
+
+	for(const prop of rootProps) {
+		if(notIn(prop, input)) return false
+	}
+
+	for(const prop of attrProps) {
+		if(notIn(prop, input.attributes)) return false
+	}
+
+	return true
 }
