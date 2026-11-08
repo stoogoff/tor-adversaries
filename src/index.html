@@ -7,11 +7,10 @@
 <link rel="stylesheet" href="/css/debug.css" />
 <link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/responsive.css" />
-<!--		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.4/", -->
 <script type="importmap">
 {
 	"imports": {
-		"q/": "./q/",
+		"q/": "https://cdn.we-evolve.co.uk/js/q/v1.2.4/",
 		"utils/": "./js/utils/",
 		"create/": "./js/modules/create/",
 		"tor/": "./js/modules/tor/"
@@ -144,6 +143,10 @@
 	<div class="modal-container">
 		<form class="modal-content">
 			<h1>Create Adversary</h1>
+			<div class="alert success">
+				<p>Any adversary you create is saved to your device — no data is stored by this site.</p>
+				<p>You can back up your creations using the download menu and upload them to another device using the upload menu.</p>
+			</div>
 			<label data-q-component="form-input">
 				<span>Name <strong>*</strong></span>
 				<input name="title" type="text" data-q-input="value" data-q-blur="blur" data-q-keyup="update" />

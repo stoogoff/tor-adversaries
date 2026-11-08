@@ -86,9 +86,9 @@
 	--alert-error-fg: var(--primary-bg);
 	--alert-error-border: 2px solid rgb(107,56,48);
 
-	--alert-success-bg: var(--emerald-700);
+	--alert-success-bg: var(--lime-700);
 	--alert-success-fg: var(--primary-bg);
-	--alert-success-border: 2px solid var(--emerald-900);
+	--alert-success-border: 2px solid var(--lime-900);
 
 	--dropzone-bg: var(--secondary-bg);
 	--dropzone-fg: var(--secondary-fg);

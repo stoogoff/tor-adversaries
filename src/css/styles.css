@@ -759,3 +759,26 @@ dialog .modal-container {
 		color: var(--alert-success-fg);
   }
 }
+
+/* Alert, similar to a badge but block level. */
+.alert {
+	padding: var(--spacing-2);
+	margin: var(--spacing-4) 0;
+	border-radius: var(--spacing-1);
+	background-color: var(--alert-default-bg);
+	color: var(--alert-default-fg);
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+
+  &.error {
+		background-color: var(--alert-error-bg);
+		color: var(--alert-error-fg);
+  }
+
+  &.success {
+		background-color: var(--alert-success-bg);
+		color: var(--alert-success-fg);
+  }	
+}
