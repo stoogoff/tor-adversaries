@@ -2,7 +2,7 @@
 import { logger } from 'utils/logger.js'
 import { closeCustomUploadModal, showToast } from 'utils/lib.js'
 import { FileModel } from 'utils/file-model.js'
-import { Events, MergeStatus } from 'utils/config.js'
+import { MergeStatus } from 'utils/config.js'
 import { customStore } from 'tor/stores.js'
 
 export default {

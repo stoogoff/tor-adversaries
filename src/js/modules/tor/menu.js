@@ -1,5 +1,5 @@
 
-import { isEmptyString } from 'q/utils/assert.js'
+import { notEmptyString, isEmptyString } from 'q/utils/assert.js'
 import { sortByProperty } from 'q/utils/list.js'
 import { normalise } from 'q/utils/string.js'
 import {
@@ -62,7 +62,7 @@ export default {
 			const filter = normalise(this.data.filter).trim()
 
 			return data.filter(item => 
-				normalise(item.group) === filter ||
+				(notEmptyString(item.group) && normalise(item.group) === filter) ||
 				item.sources.filter(source => normalise(source) === filter).length > 0 ||
 				(item.adventures ?? []).filter(source => normalise(source) === filter).length > 0 ||
 				normalise(item.title).indexOf(filter) !== -1 ||

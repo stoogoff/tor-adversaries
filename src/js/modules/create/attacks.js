@@ -20,7 +20,7 @@ export default {
 		},
 	},
 
-	addAttack(evt, context) {
+	addAttack() {
 		const attack = {
 			attack: this.data.attack,
 			skill: this.data.skill,

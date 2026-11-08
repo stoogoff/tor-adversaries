@@ -85,7 +85,7 @@ export default {
 				return "—"
 			}
 
-			return parry < 0 ? `-${parry}` : `+${parry}`
+			return parry < 0 ? `-${Math.abs(parry)}` : `+${parry}`
 		},
 		armour() {
 			return infoStore?.item?.attributes?.armour ?? 0

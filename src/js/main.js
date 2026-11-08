@@ -15,9 +15,6 @@ import TorUpload from 'tor/upload.js'
 import { TOR_LOG_KEY } from 'utils/logger.js'
 import { isVersionedPath, closeMenu, closeAllModals, closeMenuButtonMenus } from 'utils/lib.js'
 
-import { DIRECTIVES_LOG_KEY } from 'q/reactive/config.js'
-
-//setLogger(DIRECTIVES_LOG_KEY, ConsoleLogger, LOG_LEVEL_INFO)
 setLogger(TOR_LOG_KEY, ConsoleLogger, isVersionedPath() ? LOG_LEVEL_ERROR : LOG_LEVEL_INFO)
 
 // register custom tooltip component
