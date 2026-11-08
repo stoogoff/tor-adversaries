@@ -51,6 +51,9 @@ const mediaDirs = ['css', 'js', 'data']
 
 await Promise.all(mediaDirs.map(dir => copy(join(source, dir), join(distVersioned, dir))))
 
+// copy non-versioned images
+await copy(join(source, 'media'), join(dist, 'media'))
+
 // copy and update HTML
 await versionHtml(source, dist, version)
 
