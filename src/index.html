@@ -438,10 +438,22 @@
 
 <template id="active-adversaries-group">
 	<div class="adversaries-group" data-q-if="hasAdversaries">
-		<section class="card adversary" data-q-each="adversaries" data-q-component="adversary">
+		<section class="card adversary" data-q-classlist="customColour" data-q-each="adversaries" data-q-component="adversary">
 			<div class="title">
-				<h2 class="link" data-q-text="title" data-q-click="showInfo"></h2>
-				<div data-q-text="joinedTraits"></div>
+				<header>
+					<h2 class="link" data-q-text="title" data-q-click="showInfo"></h2>
+					<div data-q-text="joinedTraits"></div>
+				</header>
+				<div class="colours" data-q-click="highlight">
+					<span data-highlight="red"></span>
+					<span data-highlight="blue"></span>
+					<span data-highlight="green"></span>
+					<span data-highlight="amber"></span>
+					<span data-highlight="violet"></span>
+					<span data-highlight="pink"></span>
+					<span data-highlight="slate"></span>
+					<span data-highlight="default"></span>
+				</div>
 			</div>
 			<div class="stat-block">
 				<label>

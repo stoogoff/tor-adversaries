@@ -465,6 +465,35 @@ article {
 /* Adversary component */
 .adversary {
 	position: relative;
+	border: 2px solid transparent;
+	margin-bottom: var(--spacing-2);
+	border-radius: var(--spacing-2);
+
+	&.red {
+		border: 2px solid var(--highlight-red);
+	}
+	&.blue {
+		border: 2px solid var(--highlight-blue);
+	}
+	&.green {
+		border: 2px solid var(--highlight-green);
+	}
+	&.amber {
+		border: 2px solid var(--highlight-amber);
+	}
+	&.violet {
+		border: 2px solid var(--highlight-violet);
+	}
+	&.pink {
+		border: 2px solid var(--highlight-pink);
+	}
+	&.slate {
+		border: 2px solid var(--highlight-slate);
+	}
+
+	header {
+		display: block;
+	}
 
 	label {
 		background-color: var(--primary-bg);
@@ -517,6 +546,48 @@ article {
 
 	.grid {
 		flex-grow: 1;
+	}
+
+	.colours {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing-2);
+		margin-bottom: var(--spacing-2);
+		margin-top: var(--spacing-2);
+
+		span {
+			display: inline-block;
+			width: var(--spacing-8);
+			height: var(--spacing-4);
+			border: var(--primary-border);
+			border-radius: var(--spacing-1);
+
+			&.active {
+				border-color: var(--slate-950);
+			}
+
+			&[data-highlight=red] {
+				background-color: var(--highlight-red);
+			}
+			&[data-highlight=blue] {
+				background-color: var(--highlight-blue);
+			}
+			&[data-highlight=green] {
+				background-color: var(--highlight-green);
+			}
+			&[data-highlight=amber] {
+				background-color: var(--highlight-amber);
+			}
+			&[data-highlight=violet] {
+				background-color: var(--highlight-violet);
+			}
+			&[data-highlight=pink] {
+				background-color: var(--highlight-pink);
+			}
+			&[data-highlight=slate] {
+				background-color: var(--highlight-slate);
+			}
+		}
 	}
 }
 

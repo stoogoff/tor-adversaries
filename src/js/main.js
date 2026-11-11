@@ -26,6 +26,17 @@ directives.register('tooltip', (context) => {
 	return false
 })
 
+directives.register('classlist', (context) => {
+	context.node.classList.add(context.value)
+
+	context.scope.on(`change:${context.property}`, (key, value, old) => {
+		context.node.classList.remove(old)
+		context.node.classList.add(value)
+	})
+
+	return false
+})
+
 // register create form components
 directives.registerComponent('form', CreateForm)
 directives.registerComponent('ability-filter', CreateAbilityFilter)

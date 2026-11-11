@@ -46,4 +46,8 @@ export default {
 	removeAdversary() {
 		adversaryStore.remove(this.data)
 	},
+
+	highlight(evt, context) {
+		this.data.customColour = evt.target.getAttribute('data-highlight')
+	},
 }

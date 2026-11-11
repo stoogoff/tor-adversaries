@@ -97,4 +97,13 @@
 	--dropzone-highlight-bg: var(--primary-bg);
 	--dropzone-highlight-fg: var(--primary-fg);
 	--dropzone-highlight-border: 1px solid var(--slate-600);
+
+	/* Highlight colours */
+	--highlight-red: var(--red-500);
+	--highlight-blue: var(--blue-500);
+	--highlight-green: var(--green-500);
+	--highlight-amber: var(--amber-500);
+	--highlight-violet: var(--purple-500);
+	--highlight-pink: var(--pink-500);
+	--highlight-slate: var(--slate-700);
 }

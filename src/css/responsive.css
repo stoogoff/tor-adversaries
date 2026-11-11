@@ -70,6 +70,10 @@
 	.adversary {
 		flex-direction: row;
 
+		header {
+			float: none;
+		}
+
 		.stat-block {
 			flex-grow: 1;
 		}
@@ -161,12 +165,14 @@
 		gap: var(--spacing-4);
 		grid-template-columns: 1fr 1fr;
 
-		.adversary .grid {
-			gap: var(--spacing-2);
-		}
+		.adversary {
+			.grid {
+				gap: var(--spacing-2);
+			}
 
-		.adversary .button button span.text {
-			display: none;
+			.button button span.text {
+				display: none;
+			}
 		}
 	}
 }
