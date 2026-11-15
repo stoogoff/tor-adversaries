@@ -40,7 +40,7 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 		// assign group if not set
 		item.group = item.group ?? group
 
-		// remove description from official statt blocks
+		// remove description from official stat blocks
 		item.description = null
 
 		// assign source based on book
@@ -74,7 +74,11 @@ for(const [group, obj] of Object.entries(adversaryFiles)) {
 				.replace(/\s\*/g, ' <em>')
 				.replace(/\*([\s\.,])/g, '</em>$1')
 
-			return ability
+			const name = ability.ranked && ability.type === "text"
+				? `${title} (${rank})`
+				: title
+
+			return { ...ability, name }
 		})
 	})
 

@@ -41,6 +41,7 @@ export default {
 					...item,
 					rank: null,
 					isNumber: item.ranked && item.type === 'number',
+					isText: item.ranked && item.type === 'text',
 					isList: item.ranked && item.type === 'list',
 					// NOTE the `on: () => void` function here is to prevent an error in q
 					values: item.type === "list" ? item.values.map(value => ({ value, on: () => {} })) : null,
@@ -59,6 +60,10 @@ export default {
 		if(ability.ranked && isEmptyString(ability.rank)) {
 			showToast('Please fill in the rank for this ability')
 			return
+		}
+
+		if(ability.ranked && context.scope.data.isText) {
+			ability.name = `${ability.name} (${ability.rank})`
 		}
 
 		chosenAbilityStore.add(ability)

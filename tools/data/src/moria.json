@@ -115,7 +115,7 @@
 			"Horrible Strength", "Thick Armour"
 		],
 		"group": "Orcs",
-		"adventures": ["Mordor Orcs"]
+		"adventures": ["Mordor Orcs", "Uruk-hai"]
 	},
 	{
 		"title": "Black Uruk Captain",
@@ -149,7 +149,7 @@
 			"Horrible Strength", "Yell of Triumph"
 		],
 		"group": "Orcs",
-		"adventures": ["Mordor Orcs"]
+		"adventures": ["Mordor Orcs", "Uruk-hai"]
 	},
 	{
 		"title": "Dwarven Thrall",
@@ -282,7 +282,8 @@
 		"abilities": [
 			"Craven", "Hate Sunlight", "Ghastly Wings",
 			{ "name": "Wind-like Speed", "ability": "All attack rolls against the creature are *Ill-favoured*." }
-		]
+		],
+		"group": "Creatures"
 	},
 	{
 		"title": "Marrow-eater",
@@ -312,7 +313,8 @@
 				"properties": ["Seize"]
 			}
 		],
-		"abilities": ["Denizen of the Dark", "Hate Sunlight"]
+		"abilities": ["Denizen of the Dark", "Hate Sunlight"],
+		"group": "Creatures"
 	},
 	{
 		"title": "Stone Toad",
@@ -342,7 +344,8 @@
 				"properties": ["Seize"]
 			}
 		],
-		"abilities": ["Great Leap", "Hideous Toughness", "Poison:moderate", "Thick Hide"]
+		"abilities": ["Great Leap", "Hideous Toughness", "Poison:moderate", "Thick Hide"],
+		"group": "Creatures"
 	},
 	{
 		"title": "Mocker Crawe",
@@ -368,11 +371,12 @@
 		"abilities": [
 			"Craven", "Ghastly Wings",
 			{ "name": "Wind-like Speed", "ability": "All attack rolls against the creature are *Ill-favoured*." }
-		]
+		],
+		"group": "Creatures"
 	},
 	{
 		"title": "Reekbat",
-		"description": "No-one is quite sure if Reekbat is a horribly twisted Goblin, or something that Malech fished out of the deepest pits. It is Goblin-­ like in size and shape, but long folds of foetid skin stretch between the creature’s ankles and wrists — it is something between a bat and a horrible, hairless squirrel. It shuffles around in an ungainly fashion, but can glide and flit between the pillars of the Second Hall.",
+		"description": "No-one is quite sure if Reekbat is a horribly twisted Goblin, or something that Malech fished out of the deepest pits. It is Goblin-like in size and shape, but long folds of foetid skin stretch between the creature’s ankles and wrists — it is something between a bat and a horrible, hairless squirrel. It shuffles around in an ungainly fashion, but can glide and flit between the pillars of the Second Hall.",
 		"traits": ["Foul", "Secretive"],
 		"attributes": {
 			"level": 4,
@@ -391,7 +395,8 @@
 				"properties": ["Pierce"]
 			}
 		],
-		"abilities": ["Denizen of the Dark", "Great Leap", "Hate Sunlight", "Snake-like Speed", "Yell of Alarm"]
+		"abilities": ["Denizen of the Dark", "Great Leap", "Hate Sunlight", "Snake-like Speed", "Yell of Alarm"],
+		"group": "Nameless Things"
 	},
 	{
 		"title": "Blood-vine",
@@ -417,7 +422,8 @@
 		"abilities": [
 			{ "name": "Craven", "ability": "The Blood-vine is immobile, but if reduced to 0 Resolve, it withdraws into the cracks of the stone and ceases to attack." },
 			"Fear of Fire", "Hideous Toughness", "Thick Hide", "Drain"
-		]
+		],
+		"group": "Nameless Things"
 	},
 	{
 		"title": "Hagrot the Sneak",
