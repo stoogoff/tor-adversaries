@@ -302,7 +302,7 @@
 				"properties": ["Break Shield", "Pierce"]
 			}
 		],
-		"abilities": ["Hatred (Dwarves)", "Hate Sunlight", "Horrible Strength", "Snake-like Speed", "Yell of Triumph"],
+		"abilities": ["Hatred:Dwarves", "Hate Sunlight", "Horrible Strength", "Snake-like Speed", "Yell of Triumph"],
 		"group": "Orcs",
 		"adventures": ["The Quest of Moria"]
 	},

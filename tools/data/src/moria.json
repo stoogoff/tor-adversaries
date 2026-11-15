@@ -1,0 +1,895 @@
+[
+	{
+		"title": "Udûn-orc Fanatic",
+		"description": "There isn’t an Udûn-orc who isn’t ready to die in battle or be sacrificed to the shadow and the flame. All fight relentlessly, never giving quarter or asking any.",
+		"traits": ["Crazed", "Tough"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Torch-staff",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Fiery Blow"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Fiery Blow:severe"],
+		"group": "Orcs",
+		"adventures": ["Udûn-orcs"]
+	},
+	{
+		"title": "Udûn-orc Fire-touched",
+		"description": "Chosen by Thu himself from among those that the Balrog has warped, the Fire-touched are so insanely aggressive that they make the Fanatics look like peaceful creatures.",
+		"traits": ["Frenzied", "Fearsome"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Torch-staff",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Fiery Blow"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Heartless", "Hideous Toughness", "Fiery Blow:severe"],
+		"group": "Orcs",
+		"adventures": ["Udûn-orcs"]
+	},
+	{
+		"title": "Messenger of Lugbúrz",
+		"description": "An emissary of the Shadow, the Messenger of Lugbúrz is always on an errand for the Eye, be it to spy on Men, Elves or Dwarves, or to rouse all creatures with evil intent in an area.",
+		"traits": ["Cruel", "Cunning"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Jagged Knife",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Snake-like Speed", "Yell of Triumph"
+		],
+		"group": "Orcs",
+		"adventures": ["Mordor Orcs"]
+	},
+	{
+		"title": "Black Uruk",
+		"description": "Large and evil Orcs of great strength, picked from among the fiercest to act as lieutenants, bodyguards or chosen warriors, sent to reinforce a colony of lesser Orcs.",
+		"traits": ["Fierce", "Strong"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"hate": 5,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Horrible Strength", "Thick Armour"
+		],
+		"group": "Orcs",
+		"adventures": ["Mordor Orcs"]
+	},
+	{
+		"title": "Black Uruk Captain",
+		"description": "Uruk Captains are hulking brutes with coal-black skin, clad in dark, metal armour, and wielding large, notched blades. They yell their orders with voices so fierce that not even Trolls can ignore them.",
+		"traits": ["Cruel", "Hardened"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 3,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Horrible Strength", "Yell of Triumph"
+		],
+		"group": "Orcs",
+		"adventures": ["Mordor Orcs"]
+	},
+	{
+		"title": "Dwarven Thrall",
+		"description": "The most crazed among the Slave Dwarves even fling themselves into battle for their Goblin tormentors. They are utterly lost in their visions, believing themselves to be fighting for the defence of Khazad-dûm against some foe.",
+		"traits": ["Grim", "Thrawn"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 1,
+			"resolve": 5,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Jagged Knife",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Fierce"],
+		"group": "Dwarves"
+	},
+	{
+		"title": "Durin’s Bane",
+		"description": "The Balrog of Moria is a spirit of the Elder Days; it saw the world being made, and walked in the darkness before the sun ever rose or the stars were kindled. No mortal can hinder it. It can afford to wait until it is summoned once again to war.",
+		"traits": ["Mighty", "Terrible"],
+		"attributes": {
+			"level": 12,
+			"endurance": 150,
+			"might": 3,
+			"hate": 12,
+			"parry": 0,
+			"armour": 5
+		},
+		"attacks": [
+			{
+				"attack": "Flaming Sword",
+				"skill": 4,
+				"damage": 8,
+				"injury": 24,
+				"properties": ["Fiery Blow"]
+			},
+			{
+				"attack": "Whip of Many Thongs",
+				"skill": 4,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [
+			"Deadly Wound",
+			{ "name": "Demon of Might", "ability": "The Balrog is immune to Endurance loss and Wounds from all sources of injury except magical weapons, and can spend 1 Hate to cancel a Wound from such weapons (unless they have been wrought for the Bane of the Enemy itself). When an attack inflicts damage to the Balrog that would cause it to go to zero Endurance, it causes a Piercing Blow instead. Then, if the Balrog is still alive, its Endurance score is set back at half its maximum rating." },
+			"Denizen of the Dark",
+			{ "name": "Dreadful Spells", "ability": "When a Player-hero in sight spends Hope, spend 1 Hate to make the Player-hero gain 3 Shadow points (Sorcery). The WISDOM roll is *Ill-favoured*, and if the Player-hero fails it or is miserable, the Hope point is lost and all its effects cancelled." },
+			{ "name": "Flame of Udûn", "ability": "When a Player-hero hits the Balrog with a close combat attack, the Player-hero suffers severe Endurance loss from fire damage. The Balrog cannot use this ability when immersed in water." },
+			"Great Leap",
+			"Heartless",
+			"Horrible Strength",
+			"Thing of Terror",
+			"Fiery Blow:grievous"
+		],
+		"group": "Nameless Things"
+	},
+	{
+		"title": "Ash-wraith",
+		"description": "Sparks from the flame of Udûn, Ash-wraiths are fearsome when encountered in great numbers.",
+		"traits": ["Fierce", "Swift"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 1,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Fiery Touch",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Fiery Blow"]
+			}
+		],
+		"abilities": [
+			{ "name": "Flame of Udûn", "ability": "When a Player-hero hits the Ash-wraith with a close combat attack, the Player-hero suffers moderate Endurance loss from fire damage. The creature cannot use this ability when immersed in water." },
+			"Heartless", "Snake-like Speed"
+		],
+		"group": "Undead"
+	},
+	{
+		"title": "Great Carrion Bat",
+		"description": "Despite their size and apparent strength, Great Carrion Bats favour attacking only weakened or exhausted prey.",
+		"traits": ["Hungry", "Swift"],
+		"attributes": {
+			"level": 3,
+			"endurance": 24,
+			"might": 2,
+			"hate": 3,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Claws",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Fangs",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Craven", "Hate Sunlight", "Ghastly Wings",
+			{ "name": "Wind-like Speed", "ability": "All attack rolls against the creature are *Ill-favoured*." }
+		]
+	},
+	{
+		"title": "Marrow-eater",
+		"description": "Tales insist that the Marrow-eaters have no skeletons themselves, and are able to squeeze through the smallest gap in the rock. Those same tales relate that Marrow-eaters like to capture prisoners and carry them away to their lairs in the depths, so that every scrap of skin, meat and marrow can be savoured…",
+		"traits": ["Lithe", "Stealthy"],
+		"attributes": {
+			"level": 4,
+			"endurance": 30,
+			"might": 1,
+			"hate": 4,
+			"parry": 1,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Obsidian Knife",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Sticky Fingers",
+				"skill": 3,
+				"damage": 1,
+				"injury": 10,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Hate Sunlight"]
+	},
+	{
+		"title": "Stone Toad",
+		"description": "Stone-toads standing stock-still are almost indistinguishable from ordinary rocks. They are territorial critters, and will rapidly animate to attack those who disturb their underground pools.",
+		"traits": ["Slow", "Stealthy"],
+		"attributes": {
+			"level": 5,
+			"endurance": 40,
+			"might": 2,
+			"resolve": 5,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 5,
+				"injury": 12,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Great Leap", "Hideous Toughness", "Poison:moderate", "Thick Hide"]
+	},
+	{
+		"title": "Mocker Crawe",
+		"description": "Mocker Crawe is the oldest and biggest of the crows who dwell in Dimrill Dale. Big enough to carry off a lamb (or snatch a baby from a Woodman’s crib), he has learned the speech of Men and Orcs.",
+		"traits": ["Cunning", "Greedy"],
+		"attributes": {
+			"level": 2,
+			"endurance": 8,
+			"might": 1,
+			"hate": 2,
+			"parry": 2,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Beak and Claws",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			"Craven", "Ghastly Wings",
+			{ "name": "Wind-like Speed", "ability": "All attack rolls against the creature are *Ill-favoured*." }
+		]
+	},
+	{
+		"title": "Reekbat",
+		"description": "No-one is quite sure if Reekbat is a horribly twisted Goblin, or something that Malech fished out of the deepest pits. It is Goblin-­ like in size and shape, but long folds of foetid skin stretch between the creature’s ankles and wrists — it is something between a bat and a horrible, hairless squirrel. It shuffles around in an ungainly fashion, but can glide and flit between the pillars of the Second Hall.",
+		"traits": ["Foul", "Secretive"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 1,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Claws",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Great Leap", "Hate Sunlight", "Snake-like Speed", "Yell of Alarm"]
+	},
+	{
+		"title": "Blood-vine",
+		"description": "The vine is no natural plant; it may be that the unquiet spirit of King Thrym inhabits it, and it seeks vengeance on those who despoiled his garden — or perhaps it is more akin to a Huorn, a spirit of the wild wood stranded in this distant cave.",
+		"traits": ["Hungry", "Mindless"],
+		"attributes": {
+			"level": 6,
+			"endurance": 50,
+			"might": 2,
+			"resolve": 6,
+			"parry": 0,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Whipping Vines",
+				"skill": 3,
+				"damage": 6,
+				"injury": 14,
+				"properties": ["Drain"]
+			}
+		],
+		"abilities": [
+			{ "name": "Craven", "ability": "The Blood-vine is immobile, but if reduced to 0 Resolve, it withdraws into the cracks of the stone and ceases to attack." },
+			"Fear of Fire", "Hideous Toughness", "Thick Hide", "Drain"
+		]
+	},
+	{
+		"title": "Hagrot the Sneak",
+		"description": "Hagrot is an ambitious wretch of an Orc, intent on rising in influence. All the Orcs know that war is coming, even if they are unable to say what this war will involve or what enemy they will be fighting — but they were made as weapons of the Enemy, and as Sauron’s dreadful Eye looks north across Middle-earth, the Orcs instinctively respond by growing in numbers, strength and ferocity.",
+		"traits": ["Ambitious", "Sneaky"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Bow of Horn",
+				"skill": 3,
+				"damage": 3,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Snake-like Speed", "Yell of Triumph", "Orc-poison:severe"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Angolath",
+		"description": "The Vault has not been looted by the Orcs — although they have tried many times. Another monster, the gigantic centipede Angolath, has claimed the vault as its lair. Whether this creature was spawned in the vaults of Thangorodrim and carried south by the Balrog, or if it crawled up from the lightless depths below Moria, none can say.",
+		"traits": ["Sneaky", "Swift"],
+		"attributes": {
+			"level": 11,
+			"endurance": 130,
+			"might": 3,
+			"hate": 11,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": [
+			{ "name": "Foul Dust", "ability": "Spend 1 Hate to inflict a moderate Endurance loss from Poison to all Player-heroes in close combat stance." },
+			"Hideous Toughness", "Poison:grievous", "Snake-like Speed", "Thick Hide"
+		],
+		"group": "Nameless Things"
+	},
+	{
+		"title": "Yagul the Snatcher",
+		"description": "Yagul is Malech’s right-hand Orc; his role is to keep the mines supplied with workers (see page 166). When Yagul runs low on slaves, he leads raiding parties out of Moria. They snatch travellers on the Dimrill Stair, or from the scattered farmsteads in Swanfleet, or in the Anduin Vale. Failing that, smaller Goblins will do.",
+		"traits": ["Cruel", "Sneaky"],
+		"attributes": {
+			"level": 6,
+			"endurance": 30,
+			"might": 2,
+			"hate": 6,
+			"parry": 3,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Broad-headed Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Great Leap", "Snake-like Speed", "Yell of Triumph"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Brute Uftak",
+		"description": "Uftak is a massive Orc, likely with some Trollish blood in him. He is certainly dumb as a Hill-troll. He worships Malech as a living legend and would do anything for his chieftain, even die for him.",
+		"traits": ["Huge", "Tough"],
+		"attributes": {
+			"level": 8,
+			"endurance": 50,
+			"might": 2,
+			"hate": 8,
+			"parry": 2,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Orc-axe",
+				"skill": 3,
+				"damage": 5,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Broad-headed Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Dull-witted", "Hideous Toughness", "Horrible Strength"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Malech One-eye",
+		"description": "The lurid scar that slices across the Orc’s face was left by a Dwarven axe at the Battle of Azanulbizar. Malech survived that dreadful wound, and he filled the empty eye-socket with molten gold looted from the treasures of Moria. When the call to war came again and the Orcs marched on the Lonely Mountain, Malech was among the honour guard of the War-chief Bolg son of Azog; he marched with a foul heart full of malice, eager to avenge himself on the Dwarves and to lay claim to the Dragon’s treasure.",
+		"traits": ["Cunning", "Fearful"],
+		"attributes": {
+			"level": 7,
+			"endurance": 40,
+			"might": 2,
+			"hate": 7,
+			"parry": 4,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Broad-headed Spear",
+				"skill": 3,
+				"damage": 5,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Craven", "Denizen of the Dark", "Hideous Toughness", "Snake-like Speed", "Yell of Triumph"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Red-nails",
+		"description": "The skin of Red-nails is corpse-pale, and she dresses all in white — only her long nails are red as blood.",
+		"traits": ["Ancient", "Ravenous"],
+		"attributes": {
+			"level": 7,
+			"endurance": 60,
+			"might": 2,
+			"hate": 7,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Nails",
+				"skill": 3,
+				"damage": 7,
+				"injury": 16,
+				"properties": ["Drain"]
+			}
+		],
+		"abilities": ["Deadly Wound", "Deathless", "Denizen of the Dark", "Fear of Fire", "Hate Sunlight", "Heartless"],
+		"group": "Undead"
+	},
+	{
+		"title": "Har, Would be Lord of Moria",
+		"description": "Some say that in some parts of the world wicked Dwarves had made alliances with Goblins. In the case of Har, there seems to be some truth to the rumours, for Har is a Dwarf, and he counts many Goblins among his acquaintances.",
+		"traits": ["Clever", "Corrupt"],
+		"attributes": {
+			"level": 6,
+			"endurance": 40,
+			"might": 2,
+			"hate": 6,
+			"parry": 2,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Battle Axe",
+				"skill": 3,
+				"damage": 6,
+				"injury": 18,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": [
+			"Fearless", "Thick Armour", "Hatred:Elves and Dúnedain",
+			{ "name": "Lesser Ring of Power", "ability": "Spend 1 Hate to cancel a success (not a Magical success) on any Skill roll made by a nearby Player-hero. The roll becomes a failure instead." }
+		],
+		"group": "Dwarves"
+	},
+	{
+		"title": "Spirits of Shadow",
+		"description": "Cold Spirits of Shadow haunt the tallest peaks of the Misty Mountains, above the mists of the world. They are creatures of the upper air, ancient servants of the Enemy. Perhaps they were drawn here by the presence of the Balrog, or maybe they are so old, so thinned by the passing years that they have forgotten all purpose, and can only survive here in this middle realm between earth and sky.",
+		"traits": ["Fierce", "Swift"],
+		"attributes": {
+			"level": 4,
+			"endurance": 16,
+			"might": 1,
+			"hate": 4,
+			"parry": 0,
+			"armour": 2
+		},
+		"attacks": [
+			{
+				"attack": "Chilling Touch",
+				"skill": 3,
+				"damage": 4,
+				"injury": 12,
+				"properties": ["Drain"]
+			}
+		],
+		"abilities": ["Heartless", "Drain", "Spirit"],
+		"group": "Undead"
+	},
+	{
+		"title": "Naglur, Sword of Sauron",
+		"description": "Naglur is a mighty Uruk, almost as big as a Troll. He is Har’s lieutenant and enforcer — for now, at least. The other Orcs see Naglur as their true leader, and consider Har to be a mere figurehead at most. Naglur has little patience for Har’s schemes and clever stratagems, and believes that slaughtering the chieftains of the Moria-orcs and bullying the rest of the maggots into submission would be a far more effective strategy. He especially loathes any prospect of dealing with Men, who he sees as inferiors to be enslaved or eradicated.",
+		"traits": ["Fierce", "Swift"],
+		"attributes": {
+			"level": 7,
+			"endurance": 40,
+			"might": 2,
+			"hate": 4,
+			"parry": 4,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Broad-bladed Sword",
+				"skill": 3,
+				"damage": 4,
+				"injury": 16,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Horrible Strength", "Thick Armour", "Yell of Triumph"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Stone Ghost",
+		"description": "A spirit haunts the portion of the cave beyond the Pillars of Fáin. If anyone trespasses here, they risk the spirit rising up to attack them. The Orcs call it the Stone Ghost — the spirit is invisible to mortal eyes, but it can hurl rocks and boulders as weapons, crushing and grinding its victims into a bloody pulp. The Ghost does not pursue enemies beyond the confines of the cave.",
+		"traits": ["Cryptic", "Mighty"],
+		"attributes": {
+			"level": 9,
+			"endurance": 70,
+			"might": 2,
+			"resolve": 9,
+			"parry": 0,
+			"armour": 5
+		},
+		"attacks": [
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Break Shield"]
+			},
+			{
+				"attack": "Hurled Rock",
+				"skill": 2,
+				"damage": 6,
+				"injury": 12,
+				"properties": []
+			}
+		],
+		"abilities": [
+			"Heartless",
+			"Invisible",
+			{ "name": "Lifeless", "ability": "Spend 1 Resolve to cancel a Wound. When an attack inflicts damage to the creature that would cause it to go to zero Endurance, spend 1 Resolve to bring the creature back to full Endurance again." },
+			{ "name": "Snap Blade", "ability": "When a close combat weapon scores a Piercing Blow against the Stone Ghost, spend 1 Resolve to break that weapon. This ability does not affect weapons with one or more Rewards (enchanted or otherwise)." }
+		],
+		"group": "Undead"
+	},
+	{
+		"title": "Ring-wight",
+		"description": "Dwarves wearing Rings of Power do not thin or fade — instead, they are consumed from within, becoming hollow husks who hunger for the life force of the living.",
+		"traits": ["Doleful", "Dreadful"],
+		"attributes": {
+			"level": 6,
+			"endurance": 24,
+			"might": 1,
+			"hate": 6,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Ancient Hammer",
+				"skill": 3,
+				"damage": 6,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Deathless", "Dreadful Spells:3", "Hate Sunlight", "Heartless", "Thing of Terror"],
+		"group": "Undead"
+	},
+	{
+		"title": "Mauler",
+		"description": "Despite its obsession with self-protection, the Mauler knows that the best defence is to crush your enemies to a pulp as swiftly as possible. If attacked, it will try to kill one of the aggressors as gruesomely as possible, believing that this might convince the others to flee (it’s a tactic that worked more often than not).",
+		"traits": ["Brutish", "Lumbering"],
+		"attributes": {
+			"level": 10,
+			"endurance": 80,
+			"might": 2,
+			"hate": 6,
+			"parry": 0,
+			"armour": 5
+		},
+		"attacks": [
+			{
+				"attack": "Crush",
+				"skill": 3,
+				"damage": 6,
+				"injury": 12,
+				"properties": ["Seize"]
+			},
+			{
+				"attack": "Maul",
+				"skill": 3,
+				"damage": 8,
+				"injury": 16,
+				"properties": ["Break Shield"]
+			}
+		],
+		"abilities": ["Dull-witted", "Hideous Toughness", "Strike Fear:2", "Thick Hide"],
+		"group": "Trolls"
+	},
+	{
+		"title": "Invisible Goblins",
+		"description": "Ordinary Goblins who got particularly lucky…",
+		"traits": ["Malicious", "Stealthy"],
+		"attributes": {
+			"level": 2,
+			"endurance": 8,
+			"might": 1,
+			"hate": 2,
+			"parry": 0,
+			"armour": 1
+		},
+		"attacks": [
+			{
+				"attack": "Jagged Knife",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Pierce"]
+			}
+		],
+		"abilities": ["Invisible", "Snake-like Speed"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Thu the Firespeaker",
+		"description": "Thu believes that Durin’s Bane chose him as its Prophet and Champion. Certainly, the Balrog has touched Thu; the Orc is horribly burned, his hide scorched so he looks like something scaly, or a log that was left in the embers of a camp-fire. His eyes burn like fiery sparks in the darkness of the tunnels. Thu claims the Balrog speaks to him through the flames, and teaches him the ways and worship of Morgoth, True King of Middle-earth.",
+		"traits": ["Faithful", "Secretive"],
+		"attributes": {
+			"level": 7,
+			"endurance": 28,
+			"might": 2,
+			"hate": 7,
+			"parry": 1,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Torch-staff",
+				"skill": 3,
+				"damage": 4,
+				"injury": 14,
+				"properties": ["Fiery Blow"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Dreadful Spells:3", "Heartless", "Hideous Toughness", "Strike Fear:2", "Yell of Triumph", "Fiery Blow:severe"],
+		"group": "Orcs",
+		"adventures": ["Udûn-orcs"]
+	},
+	{
+		"title": "Shagram, the “Merry Fellow”",
+		"description": "The Master of the Black Barbican is the happiest Orc in all of Moria, and sings merrily as he whips the slaves and Goblin-wretches to work in the mines every day. Shagram is monstrously sadistic, but he has always got a big grin on his toothy face, and positively bubbles with enthusiasm.",
+		"traits": ["Merry", "Sadistic"],
+		"attributes": {
+			"level": 5,
+			"endurance": 20,
+			"might": 2,
+			"hate": 5,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Scimitar",
+				"skill": 3,
+				"damage": 3,
+				"injury": 16,
+				"properties": []
+			},
+			{
+				"attack": "Whip",
+				"skill": 3,
+				"damage": 2,
+				"injury": 14,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Denizen of the Dark", "Fearless", "Hideous Toughness", "Great Leap", "Yell of Triumph"],
+		"group": "Orcs"
+	},
+	{
+		"title": "Watcher in the Water",
+		"description": "The monster lurks in deep waters, emerging on the surface to attack with its long, pale green tentacles.",
+		"traits": ["Secretive", "Watchful"],
+		"attributes": {
+			"level": 10,
+			"endurance": 100,
+			"might": 3,
+			"hate": 10,
+			"parry": 0,
+			"armour": 4
+		},
+		"attacks": [
+			{
+				"attack": "Tentacles",
+				"skill": 3,
+				"damage": 8,
+				"injury": 16,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": [
+				"Denizen of the Dark", "Foul Reek", "Hate Sunlight", "Hideous Toughness", "Horrible Strength",
+				{ "name": "Long Arms", "ability": "Spend 1 Hate to attack any Player-hero, in any combat stance, including rearward." },
+				{ "name": "Many Arms", "ability": "The Watcher in the Water makes one additional attack each round. Each time it receives a Wound, however, for the rest of the fight the Watcher in the Water can make one less attack." }
+			],
+		"group": "Nameless Things"
+	},
+	{
+		"title": "Wailing Horror",
+		"description": "This thing crawled up out of the depths, and now dwells near the Second Hall — but at times it creeps out the East-gate and lopes down to trouble the farmsteads along the Anduin Vales. The stout Men of that region have learned to dread the wailing wind.",
+		"traits": ["Hideous", "Slender"],
+		"attributes": {
+			"level": 9,
+			"endurance": 90,
+			"might": 2,
+			"hate": 9,
+			"parry": 0,
+			"armour": 3
+		},
+		"attacks": [
+			{
+				"attack": "Bite",
+				"skill": 3,
+				"damage": 7,
+				"injury": 14,
+				"properties": ["Pierce"]
+			},
+			{
+				"attack": "Claws",
+				"skill": 3,
+				"damage": 7,
+				"injury": 16,
+				"properties": ["Seize"]
+			}
+		],
+		"abilities": ["Deadly Wound", "Hate Sunlight", "Hideous Toughness", "Keening Wail:2", "Snake-like Speed"],
+		"group": "Nameless Things"
+	}
+]

@@ -35,6 +35,10 @@
 		"ranked": false
 	},
 	{
+		"name": "Drain",
+		"ability": "The attack seizes the target (identically to the Seize Special Damage), then drains its blood at the end of each round the target remains seized, inflicting a Piercing Blow and a moderate Endurance loss from poison damage (a severe one if the target is Wounded)."
+	},
+	{
 		"name": "Dreadful Spells",
 		"ability": "Spend 1 :hate: to make one Player-hero gain :rank: Shadow points (Sorcery). Targets who fail their Shadow test or who are Miserable fall unconscious and may be roused only with a SONG roll. Otherwise, they wake up after one hour.",
 		"ranked": true,
@@ -60,10 +64,26 @@
 		"ability": "Spend 1 :hate: point to *gain (1d)* and make the attack roll *Favoured*.",
 		"ranked": false
 	},
+	{ 
+		"name": "Fiery Blow",
+		"ability": "The attack burns the target, inflicting a :rank: Endurance loss from fire damage (see page 134 of The One Ring).",
+		"ranked": true,
+		"type": "list",
+		"values": ["moderate", "severe", "grievous"]
+	},
+	{
+		"name": "Foul Reek",
+		"ability": "Spend 1 :hate: to cause all combatants engaged with the creataure to lose (1d) on all attack rolls for the round.",
+		"ranked": false
+	},
 	{
 		"name": "Foul Slime",
 		"ability": "Spend 1 :hate: to cause all combatants engaged with the Beithir to *lose (1d)* on all rolls for the round.",
 		"ranked": false
+	},
+	{
+		"name": "Ghastly Wings",
+		"ability": "The creature can attack any Player-hero, in any combat stance, including Rearward."
 	},
 	{
 		"name": "Great Leap",
@@ -81,19 +101,10 @@
 		"ranked": false
 	},
 	{
-		"name": "Hatred (Dwarves)",
-		"ability": "When fighting Dwarves, all the creature’s rolls are *Favoured*.",
-		"ranked": false
-	},
-	{
-		"name": "Hatred (Hobbits)",
-		"ability": "When fighting Hobbits, all the creature’s rolls are *Favoured*.",
-		"ranked": false
-	},
-	{
-		"name": "Hatred (Rohirrim)",
-		"ability": "When targeting Rohirrim, all the creature’s rolls are *Favoured*.",
-		"ranked": false
+		"name": "Hatred",
+		"ability": "When fighting :rank:, all the creature’s rolls are *Favoured*.",
+		"ranked": true,
+		"type": "text"
 	},
 	{
 		"name": "Heartless",
@@ -114,6 +125,17 @@
 		"name": "Howl of Triumph",
 		"ability": "Spend 1 :hate: to restore 1 :hate: to all other :group: in the fight.",
 		"ranked": false
+	},
+	{
+		"name": "Invisible",
+		"ability": "This creature is invisible, and AWARENESS, SCAN, and attack rolls against it lose (2d), while the creature’s attack rolls are Favoured and gain (1d) against Player-heroes who cannot see it. A Player-hero who obtains a Magical success on an AWARENESS or SCAN roll can see the creature normally and ignores all penalties for the rest of the fight.",
+		"ranked": false	
+	},
+	{
+		"name": "Keening Wail",
+		"ability": "Spend 1 Hate to make all Player-heroes who can hear the creature gain :rank: Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight.",
+		"ranked": true,
+		"type": "number"
 	},
 	{
 		"name": "Orc-poison",
@@ -139,6 +161,11 @@
 		"ability": "When targeted by an attack, spend 1 :hate: to make the attack roll *Ill-favoured*.",
 		"ranked": false
 	},
+	{
+		"name": "Spirit",
+		"ability": "Spend 1 Hate to cancel a Wound. When an attack inflicts damage to the creature that would cause it to go to zero Endurance, it causes a Piercing Blow instead. Then, if the creature is still alive, it returns to full Endurance. This ability is ineffective against Player-heroes wielding any magical weapon.",
+		"ranked": false
+},
 	{
 		"name": "Strike Fear",
 		"ability": "Spend 1 :hate: to make all Player-heroes in sight gain :rank: Shadow points (Dread). Those who fail their Shadow test are daunted and cannot spend Hope for the rest of the fight.",
@@ -173,6 +200,11 @@
 	{
 		"name": "Yell of Triumph",
 		"ability": "Spend 1 :hate: to restore 1 :hate: to all other :group: in the fight.",
+		"ranked": false
+	},
+	{
+		"name": "Yell of Alarm",
+		"ability": "Spend 1 Hate to raise the Eye Awareness of the Company by 1. If the total Eye Awareness is equal to or greater than the Hunt Threshold, there is an immediate Revelation episode.",
 		"ranked": false
 	}
 ]
